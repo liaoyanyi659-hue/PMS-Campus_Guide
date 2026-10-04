@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="skip" href="#feed">跳到帖子</a>
-<header class="topbar"><a class="brand" href="index.html"><span class="logo">PMS<small>EXPLORE</small></span><span>校园社区<small>生活里的小事，在这里分享。</small></span></a><div class="header-actions"><a href="index.html" class="back-guide">← 校园指南</a><button id="account-button" data-action="account">登录 / 注册</button></div></header>
+<header class="topbar"><a class="brand" href="index.html"><span class="logo">PMS<small>EXPLORE</small></span><span>校园社区<small>生活里的小事，在这里分享。</small></span></a><div class="header-actions"><a href="index.html" class="back-guide">← 校园指南</a><select id="forum-language" aria-label="Language / Bahasa / 语言"><option value="zh">中文</option><option value="en">English</option><option value="ms">Bahasa Melayu</option></select><button id="account-button" data-action="account">登录 / 注册</button></div></header>
 <main>
 <section class="hero"><div><span class="eyebrow">PMS COMMUNITY</span><h1>今天，校园有什么新鲜事？</h1><p>记录一场夕阳，问一个问题，分享你的校园日常。</p></div><button class="primary" data-action="compose">＋ 分享见闻</button></section>
 <div id="connection" class="connection" role="status">正在连接校园社区…</div>
@@ -27,5 +27,5 @@
 <dialog id="post-dialog" class="wide-dialog"><div class="dialog-head"><h2>帖子详情</h2><button type="button" data-action="close" aria-label="关闭">×</button></div><div id="post-detail"></div><section class="comments"><h3>评论</h3><div id="comments"></div><button class="quiet" id="comments-more" data-action="comments-more" hidden>更多评论</button><form id="comment-form"><label class="sr-only" for="comment-text">写评论</label><textarea id="comment-text" name="body" rows="3" maxlength="2000" required placeholder="写下你的回复…"></textarea><p class="form-error" role="alert"></p><button type="submit" class="primary">发表评论</button></form></section></dialog>
 <dialog id="report-dialog"><div class="dialog-head"><h2>举报内容</h2><button type="button" data-action="close" aria-label="关闭">×</button></div><form id="report-form"><label>举报原因<textarea name="reason" rows="4" minlength="3" maxlength="1000" required placeholder="请具体说明问题，管理员会查看。"></textarea></label><p class="form-error" role="alert"></p><button type="submit" class="primary full">提交举报</button></form></dialog>
 <dialog id="admin-dialog" class="wide-dialog"><div class="dialog-head"><h2>社区管理</h2><button type="button" data-action="close" aria-label="关闭">×</button></div><p class="small">举报处理和隐藏帖子仅管理员可见。隐藏后，帖子及照片不再公开提供。</p><h3>待处理举报</h3><div id="reports"></div><h3>已隐藏帖子</h3><div id="hidden-posts"></div><button id="hidden-more" data-action="hidden-more" class="quiet" hidden>更多隐藏帖子</button></dialog>
-<script src="forum-config.js"></script><script src="forum.js"></script>
+<script src="forum-i18n.js"></script><script src="forum-config.js"></script><script src="forum.js"></script>
 </body></html>
