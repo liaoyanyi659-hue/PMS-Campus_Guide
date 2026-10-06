@@ -2,7 +2,7 @@
 (() => {
   const $ = s => document.querySelector(s);
   const apiBase = window.PMS_FORUM_CONFIG.api;
-  const labels = {campus:'校园见闻',scenery:'校园美景',help:'求助问答',vent:'吐槽交流'};
+  const labels = {campus:'校园见闻',scenery:'校园美景',help:'求助问答',vent:'吐槽交流',lost_found:'失物招领'};
   const state = {token:'',user:null,category:'',q:'',page:1,posts:new Map(),current:null,authMode:'login',editing:null,report:null,previews:[],feedRequest:0,hiddenPage:1};
   try { state.token = sessionStorage.getItem('pms-forum-token') || ''; } catch (_) {}
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -35,7 +35,7 @@
   function photos(p){return p.images?.length?`<div class="photos ${p.images.length===1?'single':''}">${p.images.map(id=>`<a href="${esc(url('image',{id}))}" target="_blank" rel="noopener noreferrer"><img src="${esc(url('image',{id}))}" alt="${esc(p.title)}" data-no-translate loading="lazy" decoding="async"></a>`).join('')}</div>`:'';}
   function card(p,detail=false){
     const own=p.is_owner===true||(state.user&&Number(state.user.id)===Number(p.user_id)), admin=state.user?.role==='admin';
-    return `<article class="${detail?'post-full':'post-card'}"><div class="post-meta"><span class="avatar" aria-hidden="true">${p.is_anonymous?'?':esc([...p.nickname][0]||'P')}</span><strong>${p.is_anonymous?'<span>匿名同学</span>':'<span data-no-translate>'+esc(p.nickname)+'</span>'}</strong>${p.is_anonymous&&admin?'<span data-no-translate>'+esc(p.nickname)+'</span>':''}<span class="date"><time data-date="${esc(p.created_at)}">${esc(date(p.created_at))}</time></span><span class="badge">${esc(labels[p.category])}</span>${p.is_pinned?'<span class="badge pinned">置顶</span>':''}${p.status==='hidden'?'<span class="badge">已隐藏</span>':''}</div>${detail?`<h2><span data-no-translate>${esc(p.title)}</span></h2>`:`<button class="post-title" data-action="open" data-id="${p.id}"><span data-no-translate>${esc(p.title)}</span></button>`}<p class="post-text ${detail?'':'preview'}"><span data-no-translate>${esc(p.body)}</span></p>${p.status==='published'?photos(p):''}<div class="post-actions">${p.status==='published'?`<button data-action="like" data-id="${p.id}" class="${p.liked?'liked':''}" aria-pressed="${!!p.liked}">${p.liked?'♥':'♡'} ${p.like_count}</button><button data-action="open" data-id="${p.id}">评论 ${p.comment_count}</button>`:''}${own&&p.status==='published'?`<button data-action="edit" data-id="${p.id}">编辑</button>`:''}${own||admin?`<button data-action="delete" data-id="${p.id}">删除</button>`:''}${admin?`<button data-action="pin" data-id="${p.id}">${p.is_pinned?'取消置顶':'置顶'}</button><button data-action="hide" data-id="${p.id}">${p.status==='hidden'?'恢复公开':'隐藏'}</button>`:''}${p.status==='published'?`<button class="report" data-action="report" data-id="${p.id}">举报</button>`:''}</div></article>`;
+    return `<article class="${detail?'post-full':'post-card'}"><div class="post-meta"><span class="avatar" aria-hidden="true">${p.is_anonymous?'?':esc([...p.nickname][0]||'P')}</span><strong>${p.is_anonymous?'<span>匿名同学</span>':'<span data-no-translate>'+esc(p.nickname)+'</span>'}</strong>${p.is_anonymous&&admin?'<span data-no-translate>'+esc(p.nickname)+'</span>':''}<span class="date"><time data-date="${esc(p.created_at)}">${esc(date(p.created_at))}</time></span><span class="badge">${esc(labels[p.category])}</span>${p.is_pinned?'<span class="badge pinned">置顶</span>':''}${p.status==='hidden'?'<span class="badge">已隐藏</span>':''}</div>${detail?`<h2><span data-no-translate>${esc(p.title)}</span></h2>`:`<button class="post-title" data-action="open" data-id="${p.id}"><span data-no-translate>${esc(p.title)}</span></button>`}<p class="post-text ${detail?'':'preview'}"><span data-no-translate>${esc(p.body)}</span></p>${p.category==='lost_found'?`<p class="lost-meta"><span>${p.lf_kind==='found'?'捡到':'遗失'}</span> · <span data-no-translate>${esc(p.lf_location)}</span> · <span data-no-translate>${esc(p.lf_date)}</span> · <strong>${p.lf_resolved?'已找回 / 已归还':'仍在寻找 / 待认领'}</strong></p>`:''}${p.status==='published'?photos(p):''}<div class="post-actions">${p.status==='published'?`<button data-action="like" data-id="${p.id}" class="${p.liked?'liked':''}" aria-pressed="${!!p.liked}">${p.liked?'♥':'♡'} ${p.like_count}</button><button data-action="open" data-id="${p.id}">评论 ${p.comment_count}</button>`:''}${(own||admin)&&p.category==='lost_found'&&p.status==='published'?`<button data-action="resolve-lost" data-id="${p.id}">${p.lf_resolved?'重新开放':'标记已找回 / 已归还'}</button>`:''}${own&&p.status==='published'?`<button data-action="edit" data-id="${p.id}">编辑</button>`:''}${own||admin?`<button data-action="delete" data-id="${p.id}">删除</button>`:''}${admin?`<button data-action="pin" data-id="${p.id}">${p.is_pinned?'取消置顶':'置顶'}</button><button data-action="hide" data-id="${p.id}">${p.status==='hidden'?'恢复公开':'隐藏'}</button>`:''}${p.status==='published'?`<button class="report" data-action="report" data-id="${p.id}">举报</button>`:''}</div></article>`;
   }
   function renderFeed(){const posts=[...state.posts.values()];$('#feed').innerHTML=posts.length?posts.map(p=>card(p)).join(''):`<div class="empty"><h3>${state.q?'没有找到相关帖子':'这里还很安静。'}</h3><p>${state.q?'试试其他关键词，或清空搜索。':'来分享第一张校园照片，或问一个新生问题吧。'}</p><button class="primary" data-action="compose">＋ 写一篇帖子</button></div>`;}
   async function loadFeed(append=false){
@@ -62,7 +62,9 @@
   }
   function clearPreviews(){state.previews.forEach(URL.revokeObjectURL);state.previews=[];$('#photo-preview').replaceChildren();}
   function compose(edit=null){if(!needUser())return;state.editing=edit;$('#compose-form').reset();$('#compose-form').elements.is_anonymous.checked=!!edit?.is_anonymous;$('#compose-form').elements.is_anonymous.disabled=!!edit;clearPreviews();$('#compose-title').textContent=edit?'编辑帖子':'分享校园日常';$('#publish-button').textContent=edit?'保存修改':'发布';$('#photo-input-wrap').hidden=!!edit;$('#edit-photo-note').hidden=!edit;
-    if(edit)for(const key of ['category','title','body'])$('#compose-form').elements[key].value=edit[key];openDialog('#compose-dialog');}
+    if(edit)for(const key of ['category','title','body'])$('#compose-form').elements[key].value=edit[key];if(edit){for(const key of ['lf_kind','lf_location','lf_date'])$('#compose-form').elements[key].value=edit[key]||'';$('#compose-form').elements.lf_resolved.checked=!!edit.lf_resolved;}syncLost();openDialog('#compose-dialog');}
+  function syncLost(){const f=$('#compose-form');const on=f.elements.category.value==='lost_found';$('#lost-fields').hidden=!on;$('#lost-fields').disabled=!on;const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kuala_Lumpur'}).format(new Date());f.elements.lf_date.max=today;if(on&&!f.elements.lf_date.value)f.elements.lf_date.value=today;}
+  $('#compose-form').elements.category.addEventListener('change',syncLost);
   async function compress(file){
     if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error('只支持 JPG、PNG、WebP 照片。');
     if(file.size>20*1024*1024)throw new Error('原图过大，请选择小于 20 MB 的照片。');
@@ -75,7 +77,7 @@
   async function submit(form,work){const button=form.querySelector('[type=submit]');if(button.disabled)return;const error=form.querySelector('.form-error');error.textContent='';button.disabled=true;try{await work();}catch(e){error.textContent=e.message;}finally{button.disabled=false;}}
   $('#auth-form').addEventListener('submit',e=>{e.preventDefault();submit(e.currentTarget,async()=>{const data=Object.fromEntries(new FormData(e.currentTarget));const r=await api(state.authMode,{method:'POST',data});setToken(r.token);state.user=r.user;updateAccount();$('#auth-dialog').close();$('#auth-form').reset();toast('登录成功，可以开始分享了。');await loadFeed();if(state.current&&$('#post-dialog').open)await openPost(state.current.id);});});
   $('#compose-form').addEventListener('submit',e=>{e.preventDefault();submit(e.currentTarget,async()=>{
-    const form=e.currentTarget;let id;if(!state.editing&&form.elements.is_anonymous.checked){const health=await api('health');if(health.anonymous_posts!==true)throw new Error('匿名投稿功能尚未在服务器启用，请先完成后端升级。');}
+    const form=e.currentTarget;let id;if(form.elements.category.value==='lost_found'){const h=await api('health');if(!h.campus_services)throw new Error('请先完成校园服务后台升级。');}if(!state.editing&&form.elements.is_anonymous.checked){const health=await api('health');if(health.anonymous_posts!==true)throw new Error('匿名投稿功能尚未在服务器启用，请先完成后端升级。');}
     if(state.editing){const data=Object.fromEntries(new FormData(form));data.id=state.editing.id;await api('edit_post',{method:'POST',data});id=state.editing.id;}
     else{const data=new FormData(form);const files=[...$('#photos').files];if(files.length>3)throw new Error('每篇最多三张照片。');for(const [i,file] of files.entries())data.append('photos[]',await compress(file),'photo-'+i+'.jpg');const r=await api('create_post',{method:'POST',data});id=r.id;}
     $('#compose-dialog').close();clearPreviews();state.editing=null;toast('已保存。');await loadFeed();await openPost(id);
@@ -97,7 +99,7 @@
     if(a==='account'){if(!state.user){authTab('login');openDialog('#auth-dialog');}else{if(state.user.role==='admin'){loadAdmin().catch(e=>toast(e.message));}else{$('#member-card').scrollIntoView({behavior:'smooth',block:'center'});}}return;}
     if(a==='edit'){if(p)compose(p);return;}
     if(a==='report'||a==='report-comment'){if(!needUser())return;state.report={post_id:a==='report'?id:state.current?.id};if(a==='report-comment')state.report.comment_id=id;$('#report-form').reset();openDialog('#report-dialog');return;}
-    if(['like','delete','delete-comment','pin','hide','hide-comment','hide-reported','restore','resolve','admin','hidden-more'].includes(a)&&!needUser())return;
+    if(['resolve-lost','like','delete','delete-comment','pin','hide','hide-comment','hide-reported','restore','resolve','admin','hidden-more'].includes(a)&&!needUser())return;
     b.disabled=true;
     try{
       if(a==='category'){state.category=b.dataset.category;document.querySelectorAll('[data-action="category"]').forEach(x=>{const selected=x===b;x.classList.toggle('selected',selected);x.setAttribute('aria-pressed',String(selected));});await loadFeed();}
@@ -106,6 +108,7 @@
       else if(a==='open')await openPost(id);
       else if(a==='comments-more'&&state.current)await openPost(state.current.id,true);
       else if(a==='logout'){try{await api('logout',{method:'POST',data:{}});}finally{setToken('');state.user=null;updateAccount();document.querySelectorAll('dialog[open]').forEach(d=>d.close());await loadFeed();toast('已退出登录。');}}
+      else if(a==='resolve-lost'&&p){await api('resolve_lost',{method:'POST',data:{id,resolved:!p.lf_resolved}});await loadFeed();if(state.current?.id===id)await openPost(id);}
       else if(a==='like'&&p){await api('like',{method:'POST',data:{post_id:id,liked:!p.liked}});p.like_count+=p.liked?-1:1;p.liked=!p.liked;if(state.posts.has(id))state.posts.set(id,p);renderFeed();if(state.current?.id===id)$('#post-detail').innerHTML=card(p,true);}
       else if(a==='delete'){if(!confirm(window.PMS_FORUM_I18N.t('删除这篇帖子及照片？此操作无法撤销。')))return;await api('delete_post',{method:'POST',data:{id}});$('#post-dialog').close();state.current=null;await loadFeed();toast('帖子已删除。');}
       else if(a==='delete-comment'){if(!confirm(window.PMS_FORUM_I18N.t('删除这条评论？')))return;await api('delete_comment',{method:'POST',data:{id}});await openPost(state.current.id);renderFeed();}
@@ -119,6 +122,7 @@
   });
   $('#compose-dialog').addEventListener('close',clearPreviews);
   async function start(){
+    if(new URL(location.href).searchParams.get('category')==='lost_found'){state.category='lost_found';document.querySelectorAll('[data-action="category"]').forEach(b=>{const selected=b.dataset.category==='lost_found';b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected));});}
     updateAccount();
     try{const health=await api('health',{publicRequest:true});if(!health.images_ready)toast('文字功能可用；照片上传需要开启 GD 扩展。');
       if(state.token){try{const r=await api('me');state.user=r.user;updateAccount();}catch(_){setToken('');state.user=null;updateAccount();}}
