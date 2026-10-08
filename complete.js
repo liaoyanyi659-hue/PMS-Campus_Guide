@@ -115,7 +115,7 @@
     const unknown = places.filter(
       (p) => matchesPlace(p, "") && todaySchedule(p[0]).state === "unknown",
     ).length;
-    today.innerHTML = `<h2>${L("Today at PMS", "Hari Ini di PMS", "Hari Ini di PMS")} <small>· ${esc(date)} · MYT</small></h2><div class="plus-grid"><div><h3>${L("Open by timetable", "Dibuka mengikut jadual", "按时间表开放")}</h3><p>${open.length} ${L("places", "tempat", "个地点")} · ${unknown} ${L("unconfirmed", "belum disahkan", "时间待确认")}</p>${
+    today.innerHTML = `<div class="today-heading"><h2>${L("Today at PMS", "Hari Ini di PMS", "Hari Ini di PMS")}</h2><small class="today-date">${esc(date)} · MYT</small></div><div class="plus-grid"><div class="today-panel today-schedule"><span class="service-icon" aria-hidden="true">◷</span><h3>${L("Open by timetable", "Dibuka mengikut jadual", "按时间表开放")}</h3><div class="today-stats"><div><strong>${open.length}</strong><span>${L("places", "tempat", "个地点")}</span></div><div><strong>${unknown}</strong><span>${L("unconfirmed", "belum disahkan", "时间待确认")}</span></div></div>${
       open.length
         ? "<ul>" +
           open
@@ -127,7 +127,7 @@
             .join("") +
           "</ul>"
         : `<p>${L("No open places confirmed.", "Tiada tempat dibuka yang disahkan.", "暂无已确认的开放地点。")}</p>`
-    }<small>${L("Timetables are not live availability.", "Jadual bukan status masa nyata.", "时间表不等于实时营业状态。")}</small></div><div><h3>${L("Today’s updates & events", "Info & aktiviti hari ini", "今日资讯与活动")}</h3>${
+    }<small>${L("Timetables are not live availability.", "Jadual bukan status masa nyata.", "时间表不等于实时营业状态。")}</small></div><div class="today-panel"><span class="service-icon" aria-hidden="true">▤</span><h3>${L("Today’s updates & events", "Info & aktiviti hari ini", "今日资讯与活动")}</h3>${
       updateError
         ? `<p>${L("Updates unavailable. Open Campus Updates to retry.", "Info tidak dapat dimuatkan. Cuba di Info Kampus.", "资讯暂时无法读取，请到校园资讯页面重试。")}</p>`
         : updates.length
@@ -139,7 +139,7 @@
               )
               .join("")
           : `<p>${L("No active entries today.", "Tiada maklumat aktif hari ini.", "今日暂无有效资讯。")}</p>`
-    }<a href="campus.html">${L("All campus updates", "Semua info kampus", "全部校园资讯")}</a></div><div><h3>${L("Lost & Found", "Lost & Found", "失物招领")}</h3><p>${L("Lost something or found an item? Check the community board.", "Barang hilang atau dijumpai? Semak papan komuniti.", "遗失或捡到物品？到社区查看。")}</p><a href="community.html?category=lost_found">${L("Open Lost & Found", "Buka Lost & Found", "打开失物招领")}</a></div></div>`;
+    }<a class="today-link" href="campus.html">${L("All campus updates", "Semua info kampus", "全部校园资讯")} <span aria-hidden="true">→</span></a></div><div class="today-panel"><span class="service-icon" aria-hidden="true">⌕</span><h3>${L("Lost & Found", "Lost & Found", "失物招领")}</h3><p>${L("Lost something or found an item? Check the community board.", "Barang hilang atau dijumpai? Semak papan komuniti.", "遗失或捡到物品？到社区查看。")}</p><a class="today-link" href="community.html?category=lost_found">${L("Open Lost & Found", "Buka Lost & Found", "打开失物招领")} <span aria-hidden="true">→</span></a></div></div>`;
   }
   today.onclick = (e) => {
     const b = e.target.closest("[data-today-place]");

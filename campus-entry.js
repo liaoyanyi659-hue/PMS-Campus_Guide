@@ -40,7 +40,7 @@
     } catch {}
     const d = dict[l] || dict.en;
     root.setAttribute("data-no-translate", "");
-    root.innerHTML = `<div><h2>${d.title}</h2><p>${d.body}</p></div><div class="campus-entry-actions"><a href="campus.html">${d.open}</a><a href="http://app.pms.edu.my/ecomplaint/" target="_blank" rel="noopener noreferrer">${d.aduan}</a><small>${d.hint}</small><a href="community.html">${d.lost}</a></div>`;
+    root.innerHTML = `<div class="service-heading"><h2>${d.title}</h2><p>${d.body}</p></div><div class="campus-entry-actions"><a class="service-tile" href="campus.html"><span class="service-icon" aria-hidden="true">▤</span><span>${d.open}</span><span class="service-arrow" aria-hidden="true">→</span></a><a class="service-tile" href="http://app.pms.edu.my/ecomplaint/" target="_blank" rel="noopener noreferrer"><span class="service-icon" aria-hidden="true">⚒</span><span>${d.aduan}<small>${d.hint}</small></span><span class="service-arrow" aria-hidden="true">↗</span></a><a class="service-tile" href="community.html?category=lost_found"><span class="service-icon" aria-hidden="true">⌕</span><span>${d.lost}</span><span class="service-arrow" aria-hidden="true">→</span></a></div>`;
   }
   render();
   root
