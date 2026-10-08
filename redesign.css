@@ -1,17 +1,17 @@
 /* PMS Explore · unified interface */
 :root {
-  --ink: #153f63;
-  --blue: #153f63;
-  --green: #153f63;
-  --mint: #e9f1f7;
-  --muted: #627486;
-  --line: #e9f1f7;
+  --ink: #292929;
+  --blue: #292929;
+  --green: #292929;
+  --mint: #f3f0ee;
+  --muted: #666464;
+  --line: #f3f0ee;
   --orange: #f4c66c;
   --surface: #fff;
-  --shadow: 0 8px 30px #153f6310;
+  --shadow: 0 8px 30px #29292910;
 }
 body {
-  background: #f2f5fb;
+  background: #faf9f7;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
@@ -56,8 +56,8 @@ header {
   padding: 13px max(4%, calc((100vw - 1252px) / 2));
   gap: 18px;
   background: #ffffffed;
-  border-bottom: 1px solid #e9f1f7;
-  box-shadow: 0 2px 18px #153f6304;
+  border-bottom: 1px solid #f3f0ee;
+  box-shadow: 0 2px 18px #29292904;
 }
 .logo {
   background: var(--blue);
@@ -83,8 +83,8 @@ header {
   margin-top: 3px;
 }
 header > nav {
-  background: #e9f1f7;
-  border: 1px solid #e9f1f7;
+  background: #f3f0ee;
+  border: 1px solid #f3f0ee;
   padding: 5px;
   border-radius: 16px;
   gap: 3px;
@@ -99,7 +99,7 @@ header > nav button {
 header > nav button.active {
   background: white;
   color: var(--blue);
-  box-shadow: 0 2px 8px #153f6314;
+  box-shadow: 0 2px 8px #29292914;
 }
 .nav-icon {
   width: 19px;
@@ -114,7 +114,7 @@ header > nav button.active {
   border-radius: 12px;
 }
 .language-control select {
-  background: #f2f5fb;
+  background: #faf9f7;
   border-color: transparent;
   border-radius: 12px;
   min-height: 44px;
@@ -128,10 +128,10 @@ header > nav button.active {
   padding: 40px 38px;
   min-height: 216px;
   border-radius: 25px;
-  background: #e9f1f7;
+  background: #f3f0ee;
   overflow: hidden;
   align-items: center;
-  border: 1px solid #e9f1f7;
+  border: 1px solid #f3f0ee;
 }
 .page > .intro:after {
   content: "";
@@ -139,8 +139,8 @@ header > nav button.active {
   z-index: -1;
   inset: 0 0 0 45%;
   background:
-    linear-gradient(90deg, #e9f1f7, transparent 68%),
-    linear-gradient(0deg, #e9f1f722, #e9f1f722),
+    linear-gradient(90deg, #f3f0ee, transparent 68%),
+    linear-gradient(0deg, #f3f0ee22, #f3f0ee22),
     url("photos/campus-lake-day.jpeg") center/cover;
   opacity: 0.65;
 }
@@ -156,7 +156,7 @@ header > nav button.active {
 .intro p {
   font-size: 16px;
   max-width: 620px;
-  color: #627486;
+  color: #666464;
 }
 .eyebrow {
   font-size: 11px;
@@ -167,37 +167,37 @@ header > nav button.active {
   display: none;
 }
 #explore > .intro {
-  background: #153f63;
-  border-color: #153f63;
+  background: #292929;
+  border-color: #292929;
   min-height: 250px;
   color: white;
 }
 #explore > .intro:after {
   inset: 0 0 0 25%;
   background:
-    linear-gradient(90deg, #153f63 5%, #153f63b3 40%, #153f6312),
+    linear-gradient(90deg, #292929 5%, #292929b3 40%, #29292912),
     url("photos/campus-lake-day.jpeg") center 52% / cover;
   opacity: 1;
 }
 #explore > .intro p {
-  color: #e9f1f7;
+  color: #f3f0ee;
 }
 #explore > .intro .eyebrow {
-  color: #dbe3ed;
+  color: #e3dddd;
 }
 #guide > .intro:after {
   background-image:
-    linear-gradient(90deg, #e9f1f7, transparent 75%),
+    linear-gradient(90deg, #f3f0ee, transparent 75%),
     url("photos/campus-evening-lane.jpeg");
 }
 #life > .intro:after {
   background-image:
-    linear-gradient(90deg, #e9f1f7, transparent 75%),
+    linear-gradient(90deg, #f3f0ee, transparent 75%),
     url("photos/campus-blossoms.jpeg");
 }
 #about > .intro:after {
   background-image:
-    linear-gradient(90deg, #e9f1f7, transparent 75%),
+    linear-gradient(90deg, #f3f0ee, transparent 75%),
     url("photos/campus-reflections.jpeg");
 }
 .map-tools {
@@ -208,7 +208,7 @@ header > nav button.active {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px #153f6304;
+  box-shadow: 0 4px 20px #29292904;
 }
 .map-tools .searchbar {
   order: -1;
@@ -220,15 +220,15 @@ header > nav button.active {
   letter-spacing: 0.3px;
 }
 .searchbar input {
-  background: #f2f5fb;
-  border-color: #dbe3ed;
+  background: #faf9f7;
+  border-color: #e3dddd;
   border-radius: 12px;
   min-height: 48px;
 }
 .searchbar button {
   border-radius: 12px;
-  background: #f2f5fb;
-  border-color: #e9f1f7;
+  background: #faf9f7;
+  border-color: #f3f0ee;
   font-size: 13px;
 }
 .searchbar #search-count {
@@ -242,8 +242,8 @@ header > nav button.active {
   font-size: 12px;
 }
 .quick-places button {
-  border: 1px solid #e9f1f7;
-  background: #f2f5fb;
+  border: 1px solid #f3f0ee;
+  background: #faf9f7;
   font-size: 13px;
   min-height: 36px;
   padding: 5px 13px;
@@ -252,11 +252,11 @@ header > nav button.active {
 .map-tools .selectrow {
   margin: 0;
   padding-top: 15px;
-  border-top: 1px solid #e9f1f7;
+  border-top: 1px solid #f3f0ee;
 }
 .selectrow button {
   border-color: transparent;
-  background: #f2f5fb;
+  background: #faf9f7;
   border-radius: 10px;
   padding: 8px 17px;
   font-size: 13px;
@@ -274,7 +274,7 @@ header > nav button.active {
 }
 .maplayout {
   border-radius: 22px;
-  border-color: #dbe3ed;
+  border-color: #e3dddd;
   box-shadow: var(--shadow);
   grid-template-columns: minmax(0, 1fr) 360px;
 }
@@ -310,7 +310,7 @@ header > nav button.active {
 .zoom {
   border-radius: 15px;
   padding: 5px;
-  box-shadow: 0 4px 24px #153f632b;
+  box-shadow: 0 4px 24px #2929292b;
 }
 .zoom button {
   border-radius: 11px;
@@ -320,8 +320,8 @@ header > nav button.active {
   max-width: calc(100% - 180px);
 }
 .today-panel {
-  background: #e9f1f7;
-  border-color: #dbe3ed;
+  background: #f3f0ee;
+  border-color: #e3dddd;
   border-radius: 14px;
 }
 .note,
@@ -351,7 +351,7 @@ header > nav button.active {
   top: 4px;
   bottom: 4px;
   width: 4px;
-  background: #627486;
+  background: #666464;
   border-radius: 5px;
 }
 .source-note {
@@ -367,14 +367,14 @@ header > nav button.active {
   border-radius: 15px;
   min-height: 88px;
   background: white;
-  box-shadow: 0 3px 14px #153f6303;
+  box-shadow: 0 3px 14px #29292903;
   transition:
     transform 0.18s,
     border-color 0.18s,
     box-shadow 0.18s;
 }
 .directory .place-index {
-  background: #e9f1f7;
+  background: #f3f0ee;
   border-radius: 12px;
   color: var(--green);
   width: 40px;
@@ -382,7 +382,7 @@ header > nav button.active {
   font-size: 14px;
 }
 .directory button[aria-pressed="true"] {
-  background: #e9f1f7;
+  background: #f3f0ee;
   color: var(--ink);
   border-color: #aaa4a4;
 }
@@ -395,7 +395,7 @@ header > nav button.active {
   font-size: 12px;
 }
 .directory button[aria-pressed="true"] small {
-  color: #627486;
+  color: #666464;
 }
 .resourcebar {
   gap: 14px;
@@ -406,7 +406,7 @@ header > nav button.active {
   border: 1px solid var(--line);
   border-radius: 16px;
   background: white;
-  box-shadow: 0 4px 18px #153f6304;
+  box-shadow: 0 4px 18px #29292904;
   font-size: 17px;
   color: var(--ink);
 }
@@ -427,7 +427,7 @@ header > nav button.active {
 .article,
 .outing-area,
 .outing-feature {
-  box-shadow: 0 5px 24px #153f6305;
+  box-shadow: 0 5px 24px #29292905;
   border-color: var(--line);
   border-radius: 19px;
 }
@@ -445,7 +445,7 @@ header > nav button.active {
 }
 .article .hours {
   border-radius: 12px;
-  background: #e9f1f7;
+  background: #f3f0ee;
   padding: 16px;
 }
 .article .hours strong {
@@ -460,15 +460,15 @@ header > nav button.active {
   padding: 4px 8px;
   font-size: 11px;
   font-weight: 600;
-  background: #e9f1f7;
+  background: #f3f0ee;
 }
 .updated-meta {
   font-size: 11px !important;
-  color: #627486 !important;
+  color: #666464 !important;
 }
 .source-key {
   padding: 12px 16px;
-  background: #e9f1f7;
+  background: #f3f0ee;
   border-radius: 12px;
   font-size: 12px;
 }
@@ -484,8 +484,8 @@ header > nav button.active {
 }
 #guide .guide-sidebar {
   padding: 18px;
-  background: #e9f1f7;
-  border: 1px solid #e9f1f7;
+  background: #f3f0ee;
+  border: 1px solid #f3f0ee;
   border-radius: 18px;
   top: 110px;
 }
@@ -502,10 +502,10 @@ header > nav button.active {
 }
 #guide .guide-nav-number {
   font-size: 11px;
-  background: #e9f1f7;
+  background: #f3f0ee;
   border-radius: 6px;
   padding: 3px 6px;
-  color: #627486;
+  color: #666464;
 }
 #guide .guide-contents a:hover {
   background: white;
@@ -515,7 +515,7 @@ header > nav button.active {
   padding: 15px;
   border-radius: 12px;
   border: 0;
-  box-shadow: 0 3px 15px #153f6304;
+  box-shadow: 0 3px 15px #29292904;
 }
 #guide .offline-entry strong {
   font-size: 14px;
@@ -536,8 +536,8 @@ header > nav button.active {
   gap: 12px;
 }
 #guide .guide-chapter-heading > span {
-  background: #e9f1f7;
-  color: #627486;
+  background: #f3f0ee;
+  color: #666464;
   border-radius: 12px;
   height: 42px;
   flex-basis: 42px;
@@ -550,7 +550,7 @@ header > nav button.active {
   padding: 28px 30px;
   border-radius: 18px;
   margin-bottom: 16px;
-  box-shadow: 0 4px 22px #153f6304;
+  box-shadow: 0 4px 22px #29292904;
 }
 #guide .guide-block > h3 {
   font-size: 21px;
@@ -563,8 +563,8 @@ header > nav button.active {
   line-height: 1.9;
 }
 #guide .articles .article {
-  background: #e9f1f7;
-  border-color: #e9f1f7;
+  background: #f3f0ee;
+  border-color: #f3f0ee;
   box-shadow: none;
   border-radius: 14px;
   padding: 20px;
@@ -576,22 +576,22 @@ header > nav button.active {
   font-size: 14px;
 }
 #guide .articles .big {
-  color: #627486;
+  color: #666464;
 }
 #guide #orientation-clothes,
 #guide #club-joining {
-  background: #e9f1f7;
-  border-left: 3px solid #627486;
+  background: #f3f0ee;
+  border-left: 3px solid #666464;
 }
 #guide .check-grid fieldset {
-  background: #f2f5fb;
-  border-color: #e9f1f7;
+  background: #faf9f7;
+  border-color: #f3f0ee;
   padding: 15px 20px;
 }
 #guide .check-grid legend {
   font-size: 14px;
   font-weight: 650;
-  color: #627486;
+  color: #666464;
 }
 #guide .check-item {
   font-size: 15px;
@@ -605,8 +605,8 @@ header > nav button.active {
 }
 #guide #student-systems .hostel-tips article,
 #guide .contact-card {
-  background: #f2f5fb;
-  border-color: #e9f1f7;
+  background: #faf9f7;
+  border-color: #f3f0ee;
   border-radius: 14px;
 }
 #guide .contact-card h3 {
@@ -616,7 +616,7 @@ header > nav button.active {
   padding: 24px;
   border-radius: 17px;
   border-top: 3px solid #aaa4a4;
-  box-shadow: 0 5px 20px #153f6304;
+  box-shadow: 0 5px 20px #29292904;
 }
 #guide .club-card-top h4 {
   font-size: 23px;
@@ -627,7 +627,7 @@ header > nav button.active {
 }
 #guide .club-badge {
   font-size: 11px;
-  background: #e9f1f7;
+  background: #f3f0ee;
 }
 #guide .club-experience {
   margin-top: auto;
@@ -638,7 +638,7 @@ header > nav button.active {
 }
 #guide .club-category > h3 {
   font-size: 16px;
-  color: #627486;
+  color: #666464;
   letter-spacing: 0.3px;
   margin-bottom: 15px;
 }
@@ -650,7 +650,7 @@ header > nav button.active {
   font-size: 15px;
 }
 #guide .updated-meta {
-  border-top-color: #e9f1f7;
+  border-top-color: #f3f0ee;
 }
 .timetable-table-wrap {
   scrollbar-width: thin;
@@ -670,9 +670,9 @@ header > nav button.active {
   position: relative;
   padding: 19px 52px 19px 23px;
   border-radius: 16px;
-  background: #153f63;
+  background: #292929;
   font-size: 16px;
-  box-shadow: 0 6px 22px #153f6310;
+  box-shadow: 0 6px 22px #29292910;
 }
 .outing-entry a:after {
   content: "↗";
@@ -692,7 +692,7 @@ header > nav button.active {
   border-radius: 15px;
   padding: 21px 20px 18px;
   background: white;
-  box-shadow: 0 3px 16px #153f6303;
+  box-shadow: 0 3px 16px #29292903;
 }
 .opening-card:before {
   content: "";
@@ -705,8 +705,8 @@ header > nav button.active {
   background: #aaa4a4;
 }
 .opening-card.open:before {
-  background: #627486;
-  box-shadow: 0 0 0 4px #e9f1f7;
+  background: #666464;
+  box-shadow: 0 0 0 4px #f3f0ee;
 }
 .opening-card.closed:before {
   background: #b28b53;
@@ -733,7 +733,7 @@ header > nav button.active {
 }
 .outing-guide {
   padding-top: 28px;
-  border-top: 1px solid #dbe3ed;
+  border-top: 1px solid #e3dddd;
 }
 .outing-heading h2 {
   font-size: 34px;
@@ -758,12 +758,12 @@ header > nav button.active {
   font-size: 17px;
 }
 .outing-tip {
-  background: #e9f1f7;
+  background: #f3f0ee;
   border-radius: 13px;
   font-size: 14px;
 }
 .outing-reminders {
-  background: #153f63;
+  background: #292929;
   border-radius: 19px;
   padding: 25px 30px;
 }
@@ -786,7 +786,7 @@ header > nav button.active {
   border-radius: 23px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  background: #153f63;
+  background: #292929;
 }
 .about .about-photo {
   min-height: 360px;
@@ -802,16 +802,16 @@ header > nav button.active {
   letter-spacing: -0.6px;
 }
 .about-copy p {
-  color: #dbe3ed;
+  color: #e3dddd;
   font-size: 15px;
 }
 .about-copy .eyebrow {
   color: #aaa4a4;
 }
 #about > .guide-block {
-  background: #e9f1f7;
+  background: #f3f0ee;
   border-radius: 18px;
-  border-color: #e9f1f7;
+  border-color: #f3f0ee;
 }
 #about .articles .article {
   display: flex;
@@ -830,7 +830,7 @@ header > nav button.active {
   background: white;
   border: 1px solid var(--line);
   border-radius: 18px;
-  box-shadow: 0 4px 20px #153f6306;
+  box-shadow: 0 4px 20px #29292906;
 }
 .scenery-gallery img {
   border-radius: 12px;
@@ -842,32 +842,32 @@ header > nav button.active {
 }
 .gallery-viewer {
   border-radius: 20px;
-  background: #153f63;
+  background: #292929;
 }
 .gallery-caption {
   font-size: 14px;
 }
 .global-search-dialog {
   padding: 28px;
-  border: 1px solid #e9f1f7;
+  border: 1px solid #f3f0ee;
   border-radius: 22px;
-  background: #f2f5fb;
+  background: #faf9f7;
 }
 .global-search-dialog input {
   border-radius: 13px;
   background: white;
-  border-color: #dbe3ed;
+  border-color: #e3dddd;
   min-height: 52px;
 }
 .global-search-result {
   padding: 16px;
   margin-bottom: 8px;
   background: white;
-  border: 1px solid #e9f1f7;
+  border: 1px solid #f3f0ee;
   border-radius: 13px;
 }
 .global-search-result:hover {
-  background: #e9f1f7;
+  background: #f3f0ee;
   border-color: #aaa4a4;
 }
 .global-search-result strong {
@@ -883,7 +883,7 @@ header > nav button.active {
   font-size: 23px;
 }
 .global-search-dialog::backdrop {
-  background: #153f6388;
+  background: #29292988;
   backdrop-filter: blur(5px);
 }
 .back-to-top {
@@ -891,8 +891,8 @@ header > nav button.active {
   font-size: 12px;
   background: white;
   color: var(--blue);
-  border-color: #dbe3ed;
-  box-shadow: 0 5px 24px #153f6320;
+  border-color: #e3dddd;
+  box-shadow: 0 5px 24px #29292920;
 }
 .copy-button {
   border-radius: 8px !important;
@@ -901,27 +901,27 @@ header > nav button.active {
 footer {
   border-top: 1px solid var(--line);
   padding-top: 25px;
-  color: #627486;
+  color: #666464;
   font-size: 12px;
   margin-top: 52px;
 }
 @media (hover: hover) {
   .directory button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 20px #153f630c;
+    box-shadow: 0 7px 20px #2929290c;
     border-color: #aaa4a4;
   }
   .resourcebar a:hover,
   .quick-places button:hover,
   .life-shortcuts a:hover {
-    background: #e9f1f7;
+    background: #f3f0ee;
     border-color: #aaa4a4;
   }
   .global-search-button:hover {
-    background: #e9f1f7;
+    background: #f3f0ee;
   }
   header > nav button:hover:not(.active) {
-    background: #e9f1f7;
+    background: #f3f0ee;
   }
   .scenery-gallery a img {
     transition: filter 0.2s;
@@ -1028,8 +1028,8 @@ footer {
   .global-search-button {
     grid-column: 1/-1;
     grid-row: 2;
-    background: #f2f5fb;
-    border: 1px solid #e9f1f7;
+    background: #faf9f7;
+    border: 1px solid #f3f0ee;
     border-radius: 10px;
     min-height: 34px;
     font-size: 12px;
@@ -1042,7 +1042,7 @@ footer {
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
-    color: #627486;
+    color: #666464;
   }
   header > nav {
     position: fixed;
@@ -1056,9 +1056,9 @@ footer {
     padding: 5px;
     gap: 3px;
     background: #fffffff5;
-    border: 1px solid #e9f1f7;
+    border: 1px solid #f3f0ee;
     border-radius: 20px;
-    box-shadow: 0 8px 30px #153f6326;
+    box-shadow: 0 8px 30px #29292926;
     backdrop-filter: blur(16px);
   }
   header > nav button {
@@ -1075,8 +1075,8 @@ footer {
     white-space: normal;
   }
   header > nav button.active {
-    background: #e9f1f7;
-    color: #153f63;
+    background: #f3f0ee;
+    color: #292929;
     box-shadow: none;
   }
   header > nav .nav-icon {
@@ -1123,7 +1123,7 @@ footer {
     inset: 0;
     opacity: 0.7;
     background-image:
-      linear-gradient(90deg, #153f63f5, #153f6388),
+      linear-gradient(90deg, #292929f5, #29292988),
       url("photos/campus-lake-day.jpeg");
   }
   #explore > .intro h1 {
@@ -1632,7 +1632,7 @@ footer {
   display: block;
 }
 .opening-card.open > strong {
-  color: #153f63;
+  color: #292929;
 }
 .opening-card.closed > strong {
   color: #856329;
@@ -1640,19 +1640,19 @@ footer {
 
 /* Politeknik-inspired red, charcoal and warm-white palette. */
 :root {
-  --ink: #17344e;
-  --blue: #153f63;
-  --green: #087e83;
-  --mint: #edf3f8;
+  --ink: #242424;
+  --blue: #292929;
+  --green: #79565b;
+  --mint: #f1ece7;
   --muted: #686363;
   --line: #e6e1de;
-  --orange: #087e83;
-  --shadow: 0 8px 30px #17344e0c;
-  --brand: #087e83;
-  --brand-soft: #edf3f8;
+  --orange: #80565b;
+  --shadow: 0 8px 30px #2424240c;
+  --brand: #80565b;
+  --brand-soft: #f1ece7;
 }
 body {
-  background: #f2f5fb;
+  background: #faf9f7;
 }
 header {
   background: #fffffff5;
@@ -1663,60 +1663,60 @@ header {
   color: white;
 }
 .brand b {
-  color: #17344e;
+  color: #242424;
 }
 .language-control select {
-  background: #f3f7fb;
+  background: #f5f3f1;
 }
 header > nav {
-  background: #f3f7fb;
+  background: #f5f3f1;
   border-color: #eae5e2;
 }
 header > nav button.active {
   background: var(--brand);
   color: white;
-  box-shadow: 0 3px 10px #087e8320;
+  box-shadow: 0 3px 10px #80565b20;
 }
 .global-search-button {
   background: white;
   color: #454141;
 }
 .global-search-button:hover {
-  background: #edf3f8;
-  border-color: #ccdbe7;
+  background: #f1ece7;
+  border-color: #d8cfc5;
 }
 .page > .intro {
-  background: #e9f1f7;
+  background: #f3f0ee;
   border-color: #e7e0dc;
 }
 .page > .intro:after {
   opacity: 0.85;
 }
 .page > .intro .eyebrow {
-  color: #087e83;
+  color: #79565b;
 }
 .intro p {
-  color: #627486;
+  color: #625c59;
 }
 #explore > .intro {
-  background: #153f63;
-  border-color: #153f63;
+  background: #292929;
+  border-color: #292929;
 }
 #explore > .intro:after {
   opacity: 1;
   background-image:
-    linear-gradient(90deg, #153f63 0%, #153f63a6 45%, #153f6308 85%),
+    linear-gradient(90deg, #292929 0%, #292929a6 45%, #29292908 85%),
     url("photos/campus-lake-day.jpeg");
 }
 #explore > .intro .eyebrow {
-  color: #dbe3ed;
+  color: #e8ddd0;
 }
 #explore > .intro p {
-  color: #f3f7fb;
+  color: #f5f1ee;
 }
 .selectrow button {
-  background: #f3f7fb;
-  color: #627486;
+  background: #f5f3f1;
+  color: #625c59;
 }
 .selectrow button.active {
   background: var(--brand);
@@ -1724,18 +1724,18 @@ header > nav button.active {
   color: white;
 }
 .quick-places button {
-  background: #f2f5fb;
+  background: #faf9f7;
   border-color: #e8e1dd;
 }
 .tag {
-  color: #087e83;
-  background: #edf3f8;
+  color: #79565b;
+  background: #f1ece7;
 }
 .sectiontitle:before {
   background: var(--brand);
 }
 .pin {
-  background: #153f63;
+  background: #292929;
   color: white;
 }
 .pin.selected {
@@ -1743,23 +1743,23 @@ header > nav button.active {
   color: white;
   border-color: white;
   box-shadow:
-    0 0 0 5px #087e8338,
-    0 3px 15px #17344e40;
+    0 0 0 5px #80565b38,
+    0 3px 15px #24242440;
 }
 .pin.selected:after {
   border-top-color: var(--brand);
 }
 .pin-guides circle {
-  fill: #153f63;
+  fill: #292929;
 }
 .directory .place-index {
-  background: #e9f1f7;
+  background: #f3f0ee;
   color: #57504e;
 }
 .directory button[aria-pressed="true"] {
-  background: #edf3f8;
-  border-color: #ccdbe7;
-  color: #17344e;
+  background: #f1ece7;
+  border-color: #c8b9af;
+  color: #242424;
 }
 .directory button[aria-pressed="true"] .place-index {
   background: var(--brand);
@@ -1775,12 +1775,12 @@ header > nav button.active {
 .soft-button,
 .searchbar button,
 .report-actions button {
-  background: #edf3f8;
-  border-color: #ccdbe7;
-  color: #087e83;
+  background: #f1ece7;
+  border-color: #d8cfc5;
+  color: #79565b;
 }
 .today-panel {
-  background: #f3f7fb;
+  background: #f7f5f2;
   border-color: #e8e1da;
 }
 .today-panel strong {
@@ -1792,22 +1792,22 @@ header > nav button.active {
 }
 #guide .guide-nav-number,
 #guide .guide-chapter-heading > span {
-  background: #edf3f8;
-  color: #087e83;
+  background: #f1ece7;
+  color: #79565b;
 }
 #guide .guide-block {
   background: white;
 }
 #guide .articles .article {
-  background: #f3f7fb;
+  background: #f7f5f2;
   border-color: #e8e2dc;
 }
 #guide .articles .big {
-  color: #087e83;
+  color: #79565b;
 }
 #guide #orientation-clothes,
 #guide #club-joining {
-  background: #f3f7fb;
+  background: #f8f5f0;
   border-left-color: var(--brand);
 }
 #guide #student-systems a,
@@ -1819,11 +1819,11 @@ header > nav button.active {
   border-top-color: #bfb1a2;
 }
 #guide .club-badge {
-  background: #edf3f8;
-  color: #087e83;
+  background: #f1ece7;
+  color: #79565b;
 }
 #guide .club-experience > span {
-  color: #087e83;
+  color: #79565b;
 }
 #guide .club-category > h3 {
   color: #6a6060;
@@ -1835,19 +1835,19 @@ header > nav button.active {
   accent-color: var(--brand);
 }
 #guide #check-progress {
-  color: #087e83;
-  background: #edf3f8;
+  color: #79565b;
+  background: #f1ece7;
 }
 #guide .timetable-key thead {
   background: #f7f2f0;
 }
 .source-badge {
-  background: #f3f7fb;
+  background: #f5f1ee;
   color: #71615a;
 }
 .source-badge.official {
-  background: #edf3f8;
-  color: #087e83;
+  background: #f1ece7;
+  color: #79565b;
 }
 .source-badge.notice {
   background: #fff3dc;
@@ -1856,21 +1856,21 @@ header > nav button.active {
 .outing-entry a {
   background: var(--brand);
   color: white;
-  box-shadow: 0 5px 20px #087e8314;
+  box-shadow: 0 5px 20px #80565b14;
 }
 .outing-reminders {
-  background: #153f63;
+  background: #292929;
   color: white;
 }
 .outing-tip {
   background: #f7f3ee;
 }
 .outing-jumps a {
-  background: #edf3f8;
-  color: #087e83;
+  background: #f1ece7;
+  color: #79565b;
 }
 .outing-prices dd {
-  color: #087e83;
+  color: #79565b;
 }
 .life-shortcuts a {
   color: #5f5656;
@@ -1899,29 +1899,29 @@ header > nav button.active {
   background: #a7844c;
 }
 .about {
-  background: #153f63;
+  background: #292929;
 }
 .about-copy .eyebrow {
-  color: #dbe3ed;
+  color: #e8ddd0;
 }
 .about-copy p {
   color: #e5dfda;
 }
 .gallery-viewer {
-  background: #17344e;
+  background: #242424;
 }
 .global-search-result small {
-  color: #087e83;
+  color: #79565b;
 }
 .global-search-result:hover {
-  background: #f3f7fb;
-  border-color: #ccdbe7;
+  background: #f8f5f0;
+  border-color: #c8b9af;
 }
 .global-search-dialog::backdrop {
-  background: #17344e88;
+  background: #24242488;
 }
 .global-search-dialog {
-  background: #f2f5fb;
+  background: #faf9f7;
 }
 .gallery-viewer::backdrop {
   background: #161414eb;
@@ -1931,25 +1931,25 @@ header > nav button.active {
   border-color: #e7dedd;
 }
 .copy-toast:not(:empty) {
-  background: #153f63;
+  background: #292929;
 }
 footer {
   color: #756c67;
 }
 @media (hover: hover) {
   .directory button:hover {
-    border-color: #ccdbe7;
+    border-color: #c8b9af;
     box-shadow: 0 7px 20px #5e232309;
   }
   .resourcebar a:hover,
   .quick-places button:hover,
   .life-shortcuts a:hover {
-    background: #f3f7fb;
-    border-color: #ccdbe7;
+    background: #f8f5f0;
+    border-color: #d8cfc5;
   }
   header > nav button:hover:not(.active) {
-    background: #edf3f8;
-    color: #087e83;
+    background: #f1ece7;
+    color: #79565b;
   }
 }
 @media (max-width: 850px) {
@@ -1974,7 +1974,7 @@ footer {
   #explore > .intro:after {
     opacity: 1;
     background-image:
-      linear-gradient(90deg, #153f63eb, #153f6385),
+      linear-gradient(90deg, #292929eb, #29292985),
       url("photos/campus-lake-day.jpeg");
   }
   #guide .guide-sidebar {
@@ -1987,29 +1987,29 @@ footer {
 
 /* Quiet campus palette: warm stone, charcoal, restrained mulberry accents. */
 :root {
-  --ink: #17344e;
-  --blue: #153f63;
+  --ink: #303837;
+  --blue: #35413f;
   --green: #6f555b;
-  --mint: #edf3f8;
-  --muted: #627486;
+  --mint: #f1ece5;
+  --muted: #746f68;
   --line: #e4dfd7;
-  --brand: #087e83;
-  --brand-soft: #edf3f8;
-  --orange: #087e83;
+  --brand: #80565b;
+  --brand-soft: #f1ece5;
+  --orange: #80565b;
 }
 body {
-  background: #f2f5fb;
+  background: #f8f6f1;
 }
 header {
   background: #fffffff5;
   border-bottom-color: #e9e4dc;
 }
 .logo {
-  background: #153f63;
+  background: #35413f;
   color: #fff;
 }
 .brand b {
-  color: #17344e;
+  color: #303837;
 }
 .brand small {
   color: #7c7870;
@@ -2019,30 +2019,30 @@ header > nav {
   border-color: #e8e3db;
 }
 header > nav button.active {
-  background: #153f63;
+  background: #35413f;
   color: #fff;
-  box-shadow: 0 3px 10px #153f6312;
+  box-shadow: 0 3px 10px #35413f12;
 }
 .language-control select {
-  background: #f3f7fb;
+  background: #f4f1ec;
 }
 .global-search-button {
-  background: #f2f5fb;
+  background: #f8f6f1;
   color: #625e56;
 }
 .global-search-button:hover {
-  background: #edf3f8;
+  background: #eee9e1;
   border-color: #d5ccbf;
 }
 .page > .intro,
 #explore > .intro {
-  background: #edf3f8;
+  background: #eee9e1;
   border-color: #e2dbd0;
-  color: #17344e;
+  color: #303837;
 }
 .page > .intro .eyebrow,
 #explore > .intro .eyebrow {
-  color: #087e83;
+  color: #80565b;
 }
 .page > .intro p,
 #explore > .intro p {
@@ -2052,7 +2052,7 @@ header > nav button.active {
   opacity: 1;
   inset: 0 0 0 25%;
   background-image:
-    linear-gradient(90deg, #edf3f8 0%, #edf3f8ba 35%, #edf3f808 85%),
+    linear-gradient(90deg, #eee9e1 0%, #eee9e1ba 35%, #eee9e108 85%),
     url("photos/campus-lake-day.jpeg");
 }
 .page > .intro:after {
@@ -2060,34 +2060,34 @@ header > nav button.active {
 }
 #guide > .intro:after {
   background-image:
-    linear-gradient(90deg, #edf3f8, transparent 80%),
+    linear-gradient(90deg, #eee9e1, transparent 80%),
     url("photos/campus-evening-lane.jpeg");
 }
 #life > .intro:after {
   background-image:
-    linear-gradient(90deg, #edf3f8, transparent 80%),
+    linear-gradient(90deg, #eee9e1, transparent 80%),
     url("photos/campus-blossoms.jpeg");
 }
 #about > .intro:after {
   background-image:
-    linear-gradient(90deg, #edf3f8, transparent 80%),
+    linear-gradient(90deg, #eee9e1, transparent 80%),
     url("photos/campus-reflections.jpeg");
 }
 .selectrow button {
-  background: #f3f7fb;
+  background: #f4f1ec;
   color: #6b645b;
 }
 .selectrow button.active {
-  background: #153f63;
-  border-color: #153f63;
+  background: #35413f;
+  border-color: #35413f;
   color: #fff;
 }
 .quick-places button {
-  background: #f3f7fb;
+  background: #faf8f4;
   border-color: #e6dfd5;
 }
 .tag {
-  background: #edf3f8;
+  background: #eee9e1;
   color: #6b6259;
 }
 .sectiontitle:before {
@@ -2098,30 +2098,30 @@ header > nav button.active {
   color: #75685c;
 }
 .directory button[aria-pressed="true"] {
-  background: #edf3f8;
+  background: #f1ece5;
   border-color: #bba992;
 }
 .directory button[aria-pressed="true"] .place-index {
-  background: #153f63;
+  background: #35413f;
   color: white;
 }
 .directory button[aria-pressed="true"] small {
   color: #75685c;
 }
 .pin {
-  background: #153f63;
+  background: #35413f;
 }
 .pin.selected {
-  background: #087e83;
+  background: #80565b;
   box-shadow:
-    0 0 0 5px #087e8330,
-    0 3px 15px #17344e35;
+    0 0 0 5px #80565b30,
+    0 3px 15px #30383735;
 }
 .side a.external,
 .soft-button,
 .searchbar button,
 .report-actions button {
-  background: #edf3f8;
+  background: #f1ece5;
   border-color: #d9cfc1;
   color: #625349;
 }
@@ -2134,7 +2134,7 @@ header > nav button.active {
 }
 #guide .guide-nav-number,
 #guide .guide-chapter-heading > span {
-  background: #dbe3ed;
+  background: #e9e1d5;
   color: #78634e;
 }
 #guide .guide-contents a:hover {
@@ -2147,25 +2147,25 @@ header > nav button.active {
 }
 #guide #student-systems a,
 #guide .guide-action {
-  background: #153f63;
+  background: #35413f;
   color: #fff;
 }
 #guide .club-card {
   border-top-color: #c6b8a5;
 }
 #guide .club-badge {
-  background: #e5f1f2;
+  background: #f0e9df;
   color: #776048;
 }
 #guide .club-experience > span {
-  color: #087e83;
+  color: #80565b;
 }
 #guide #check-progress {
-  background: #e5f1f2;
+  background: #f0e9df;
   color: #776048;
 }
 #guide .check-item input {
-  accent-color: #153f63;
+  accent-color: #35413f;
 }
 .source-badge.official {
   background: #eaece8;
@@ -2178,20 +2178,20 @@ header > nav button.active {
   box-shadow: none;
 }
 .outing-entry a:after {
-  color: #087e83;
+  color: #80565b;
 }
 .outing-reminders {
-  background: #153f63;
+  background: #35413f;
 }
 .outing-jumps a {
-  background: #edf3f8;
+  background: #f1ece5;
   color: #6d5e51;
 }
 .outing-prices dd {
-  color: #087e83;
+  color: #80565b;
 }
 .about {
-  background: #153f63;
+  background: #35413f;
 }
 .about-copy .eyebrow {
   color: #dfcfb9;
@@ -2200,14 +2200,14 @@ header > nav button.active {
   color: #e3e7df;
 }
 .global-search-result small {
-  color: #087e83;
+  color: #80565b;
 }
 .global-search-result:hover {
   background: #f7f3ec;
   border-color: #cfbfae;
 }
 .global-search-dialog {
-  background: #f2f5fb;
+  background: #faf8f3;
 }
 .back-to-top {
   background: #fff;
@@ -2231,12 +2231,12 @@ header > nav button.active {
 }
 @media (max-width: 850px) {
   header > nav button.active {
-    background: #153f63;
+    background: #35413f;
     color: white;
   }
   .global-search-button {
-    background: #edf3f8;
-    border-color: #dbe3ed;
+    background: #f5f1eb;
+    border-color: #e5ddd1;
   }
   #guide .guide-sidebar {
     background: transparent;
@@ -2245,7 +2245,7 @@ header > nav button.active {
     inset: 0;
     opacity: 1;
     background-image:
-      linear-gradient(90deg, #edf3f8f2, #edf3f8c7 60%, #edf3f873),
+      linear-gradient(90deg, #eee9e1f2, #eee9e1c7 60%, #eee9e173),
       url("photos/campus-lake-day.jpeg");
   }
 }
@@ -2253,13 +2253,13 @@ header > nav button.active {
 .community-entry {
   margin: 0 4% 22px;
   padding: 26px 28px;
-  background: #e3edf5;
+  background: #eee8de;
   border: 1px solid #ded3c3;
   border-radius: 18px;
 }
 .community-entry > span {
   font-size: 12px;
-  color: #087e83;
+  color: #80565b;
   letter-spacing: 1px;
 }
 .community-entry h2 {
@@ -2274,7 +2274,7 @@ header > nav button.active {
   margin-top: 10px;
   padding: 10px 18px;
   border-radius: 10px;
-  background: #153f63;
+  background: #35413f;
   color: white;
   text-decoration: none;
   font-weight: 650;
@@ -2339,11 +2339,11 @@ header > nav button.active {
 }
 
 /* v1.11: local transport, repair and food cards */
-.local-life-card { min-width:0; padding:20px; background:var(--surface,#fff); border:1px solid var(--line,#dbe3ed); border-radius:18px; }
+.local-life-card { min-width:0; padding:20px; background:var(--surface,#fff); border:1px solid var(--line,#e2ddd3); border-radius:18px; }
 .local-life-card h4 { margin:0 0 12px; line-height:1.45; }
 .local-life-card p { margin:10px 0; line-height:1.65; overflow-wrap:anywhere; }
 .local-life-card p:last-of-type { font-size:12px; color:var(--muted,#706c64); }
 .local-life-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
-.local-life-actions a { display:inline-flex; align-items:center; min-height:44px; padding:10px 12px; border:1px solid var(--line,#dbe3ed); border-radius:11px; background:#f5f2eb; color:#35433f; text-decoration:none; font-size:13px; overflow-wrap:anywhere; }
+.local-life-actions a { display:inline-flex; align-items:center; min-height:44px; padding:10px 12px; border:1px solid var(--line,#e2ddd3); border-radius:11px; background:#f5f2eb; color:#35433f; text-decoration:none; font-size:13px; overflow-wrap:anywhere; }
 .local-life-actions a:focus-visible { outline:3px solid #2d7b80; outline-offset:3px; }
 @media(max-width:600px) { .local-life-actions a { flex:1 1 140px; justify-content:center; } }

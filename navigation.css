@@ -12,10 +12,10 @@
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  border: 1px solid #dbe3ed;
+  border: 1px solid #ded7cc;
   border-radius: 12px;
-  background: #edf3f8;
-  color: #153f63;
+  background: #f5f1eb;
+  color: #35413f;
   cursor: pointer;
   font: inherit;
   text-decoration: none;
@@ -34,7 +34,7 @@
 }
 .pms-navigation-actions :focus-visible,
 #pms-navigation-menu :focus-visible {
-  outline: 3px solid #087e83;
+  outline: 3px solid #80565b;
   outline-offset: 3px;
 }
 #pms-navigation-menu {
@@ -49,10 +49,10 @@
   max-height: none;
   padding: 24px 22px calc(24px + env(safe-area-inset-bottom));
   border: 0;
-  border-left: 1px solid #dbe3ed;
+  border-left: 1px solid #e5ddd1;
   border-radius: 24px 0 0 24px;
-  background: #f2f5fb;
-  color: #153f63;
+  background: #faf8f3;
+  color: #35413f;
   box-shadow: -16px 0 60px #24312d26;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -70,12 +70,12 @@
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #dbe3ed;
+  border-bottom: 1px solid #e5ddd1;
 }
 .pms-menu-heading small {
   font-size: 11px;
   letter-spacing: 2px;
-  color: #087e83;
+  color: #80565b;
 }
 .pms-menu-heading h2 {
   margin: 7px 0 0;
@@ -99,7 +99,7 @@
 .pms-menu-links h3 {
   font-size: 11px;
   letter-spacing: 1px;
-  color: #627486;
+  color: #827a6f;
   text-transform: uppercase;
   margin: 25px 10px 6px;
 }
@@ -110,14 +110,14 @@
   box-sizing: border-box;
   border-radius: 12px;
   text-decoration: none;
-  color: #153f63;
+  color: #35413f;
   font-size: 15px;
   background: #fff;
-  border: 1px solid #dbe3ed;
+  border: 1px solid #eee7dd;
 }
 .pms-menu-links a:hover {
-  background: #e2edf5;
-  border-color: #ccdbe7;
+  background: #ece7de;
+  border-color: #d8cfc0;
 }
 #pms-navigation-menu [hidden] {
   display: none !important;
@@ -129,17 +129,17 @@
   gap: 12px;
   margin-top: 24px;
   padding-top: 20px;
-  border-top: 1px solid #dbe3ed;
+  border-top: 1px solid #e5ddd1;
   font-size: 14px;
 }
 .pms-menu-language select {
   max-width: 170px;
   min-height: 44px;
-  border: 1px solid #dbe3ed;
+  border: 1px solid #ded7cc;
   border-radius: 10px;
   background: white;
   padding: 8px;
-  color: #153f63;
+  color: #35413f;
   font: inherit;
 }
 .pms-menu-open {
