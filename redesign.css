@@ -2337,3 +2337,13 @@ header > nav button.active {
 .cms-content-block img {
   max-width: 100%;
 }
+
+/* v1.11: local transport, repair and food cards */
+.local-life-card { min-width:0; padding:20px; background:var(--surface,#fff); border:1px solid var(--line,#e2ddd3); border-radius:18px; }
+.local-life-card h4 { margin:0 0 12px; line-height:1.45; }
+.local-life-card p { margin:10px 0; line-height:1.65; overflow-wrap:anywhere; }
+.local-life-card p:last-of-type { font-size:12px; color:var(--muted,#706c64); }
+.local-life-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+.local-life-actions a { display:inline-flex; align-items:center; min-height:44px; padding:10px 12px; border:1px solid var(--line,#e2ddd3); border-radius:11px; background:#f5f2eb; color:#35433f; text-decoration:none; font-size:13px; overflow-wrap:anywhere; }
+.local-life-actions a:focus-visible { outline:3px solid #2d7b80; outline-offset:3px; }
+@media(max-width:600px) { .local-life-actions a { flex:1 1 140px; justify-content:center; } }

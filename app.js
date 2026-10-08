@@ -311,6 +311,16 @@ function poolPhotoMarkup() {
     .join("");
 }
 function photoMarkup(name) {
+  const additions = {
+    "学术区食堂": ["photos/cafe-akademik-current.jpeg", ["Cafe Akademik · counter and menu", "Cafe Akademik · kaunter dan menu", "Cafe Akademik · 柜台与菜单"]],
+    "JRKV 教学区域": ["photos/jrkv-building.jpeg", ["JRKV building · courtyard", "Bangunan JRKV · ruang tengah", "JRKV 大楼 · 中庭"]],
+    "学生宿舍区": ["photos/kamsis-office-current.jpeg", ["Pejabat Penyelia Kolej Kediaman Pelajar · beside Coop Mart (location supplied by a student)", "Pejabat Penyelia Kolej Kediaman Pelajar · sebelah Coop Mart (lokasi daripada pelajar)", "宿舍管理办公室 · Coop Mart 旁（位置由学生提供）"]]
+  };
+  if (additions[name]) {
+    const [src, captions] = additions[name];
+    const caption = captions[window.PMS_UI?.language === "ms" ? 1 : window.PMS_UI?.language === "zh" ? 2 : 0];
+    return `<figure class="location-photo" data-no-translate><a href="${src}" target="_blank" rel="noopener noreferrer"><img src="${src}" alt="${caption}" loading="lazy" decoding="async"></a><figcaption>${caption}</figcaption></figure>`;
+  }
   const photo = locationPhotos[name];
   return photo
     ? `<figure class="location-photo"><a href="${photo[0]}" target="_blank" rel="noopener noreferrer" aria-label="查看${name}完整照片（新窗口）"><img src="${photo[0]}" alt="${photo[1]}" loading="lazy" decoding="async"></a><figcaption>${photo[1]} · 点击查看原图${locationHints[name] ? `<span class="photo-location-hint">${locationHints[name]}</span>` : ""}</figcaption></figure>`

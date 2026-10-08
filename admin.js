@@ -119,7 +119,8 @@
     return u.href;
   }
   function localized(v) {
-    return v?.en || v?.ms || v?.zh || "";
+    const l=window.PMS_UI?.language||'en';
+    return v?.[l] || v?.en || (l==='zh'?v?.ms:'') || "";
   }
   async function catalog() {
     const r = await api("admin_cms");
@@ -143,10 +144,10 @@
         rows
           .map(
             (r) =>
-              `<article class="record"><h3>${esc(localized(r.payload.title))}</h3><span class="badge">${esc(r.status)}</span>${kind === "place" && (!r.payload.verification?.date || (Date.now() - new Date(r.payload.verification.date)) / 86400000 > 90) ? '<span class="badge">Needs verification</span>' : ""}<small>${esc(r.record_key)} · revision ${Number(r.revision)}</small><p>${esc(localized(r.payload.body).slice(0, 180))}</p><button data-edit-content="${Number(r.id)}">Edit</button></article>`,
+              `<article class="record"><h3>${esc(localized(r.payload.title))}</h3><span class="badge">${esc(r.status)}</span>${kind === "place" && (!r.payload.verification?.date || (Date.now() - new Date(r.payload.verification.date)) / 86400000 > 90) ? '<span class="badge">Needs verification</span>' : ""}<small>Revision ${Number(r.revision)}</small><p>${esc(localized(r.payload.body).slice(0, 180))}</p><button data-edit-content="${Number(r.id)}">Edit</button></article>`,
           )
           .join("") ||
-        "<p>No entries yet. Import existing places or create a new entry.</p>";
+        '<p>No entries yet.</p><button type="button" data-import-existing>Import existing website content</button>';
     }
   }
   async function load() {
@@ -189,6 +190,7 @@
     }
     if (["places", "pages"].includes(tab)) await catalog();
     if (tab === "media") {
+      await catalog();
       media = (await api("admin_media")).media;
       $("#media-list").innerHTML =
         media
@@ -197,6 +199,11 @@
               `<article class="record">${m.status === "published" ? `<img src="${esc(imageURL(m.id))}" alt="${esc(m.caption)}" loading="lazy">` : "<p>Hidden photo</p>"}<small>#${Number(m.id)} · ${Math.round(m.size_bytes / 1024)} KB</small><input data-caption="${Number(m.id)}" value="${esc(m.caption)}" maxlength="200" aria-label="Photo caption"><div class="actions"><button data-save-photo="${Number(m.id)}">Save caption</button><button class="secondary" data-toggle-photo="${Number(m.id)}">${m.status === "published" ? "Hide" : "Publish"}</button></div></article>`,
           )
           .join("") || "<p>No uploaded photos yet.</p>";
+      const bundled = await getSeed();
+      $("#media-list").insertAdjacentHTML("beforeend", '<h2 class="bundled-heading">Existing website photos</h2><p>These photos are hosted with the frontend. Link one to a place below; the association is saved in the database when you save the place.</p>' + bundled.photos.map(src => {
+        const linked = records.filter(r => r.kind === 'place' && r.payload.photo_path === src);
+        return `<article class="record"><img src="${esc(src)}" alt="${esc(src.split('/').pop())}" loading="lazy"><small>${esc(src)}</small><p>${linked.length ? linked.map(r=>esc(localized(r.payload.title))).join(' · ') : 'Not assigned to a place'}</p><button type="button" data-link-bundled="${esc(src)}">Link to a place</button></article>`;
+      }).join(''));
     }
     if (tab === "forum") {
       const r = await api("admin_forum", undefined, {
@@ -362,16 +369,16 @@
     }
     return seed;
   }
-  $("#import-guide").onclick = (e) =>
-    run(e.target, async () => {
-      if (!confirm("Import original guide places? Existing entries are kept."))
+  async function importExisting() {
+      if (!confirm("Import existing places and page drafts? Existing database entries are kept."))
         return;
       const r = await api("admin_import_cms", {
         records: (await getSeed()).records,
       });
       await load();
-      say(r.inserted + " places imported.");
-    });
+      say(r.inserted + " guide entries imported. Page copies are drafts until published.");
+  }
+  $("#import-guide").onclick = (e) => run(e.target, importExisting);
   const slots = [
     "guide-preparation",
     "arrival-route",
@@ -545,6 +552,15 @@
   document.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
+    if (b.hasAttribute('data-import-existing')) run(b, importExisting);
+    if (b.dataset.linkBundled) run(b, async () => {
+      await catalog();
+      const choices=records.filter(r=>r.kind==='place' && r.status!=='archived');
+      if(!choices.length)throw Error('Import existing website content first.');
+      const dialog=document.getElementById('bundled-link-dialog');
+      dialog.querySelector('select').innerHTML=choices.map(r=>`<option value="${Number(r.id)}">${esc(localized(r.payload.title))}</option>`).join('');
+      dialog.dataset.photo=b.dataset.linkBundled;dialog.showModal();
+    });
     if (b.dataset.editUser)
       userEditor(
         users.find((u) => Number(u.id) === Number(b.dataset.editUser)),
@@ -618,6 +634,22 @@
     records: () => records,
     user: () => user,
   };
+  const photoDialog=document.createElement('dialog');
+  photoDialog.id='bundled-link-dialog';
+  photoDialog.innerHTML='<form method="dialog"><h2>Link existing photo</h2><label>Place<select name="place" required></select></label><div class="actions"><button value="cancel" class="secondary">Cancel</button><button value="link">Continue to place editor</button></div></form>';
+  document.body.append(photoDialog);
+  photoDialog.addEventListener('close',()=>{
+    if(photoDialog.returnValue!=='link')return;
+    run(null,async()=>{
+      const r=records.find(r=>Number(r.id)===Number(photoDialog.querySelector('select').value));
+      if(!r)return;
+      await editor('place',r);
+      const f=document.getElementById('content-form');
+      f.elements.photo_path.value=photoDialog.dataset.photo;
+      f.elements.media_id.value='';
+      say('Photo selected. Save content to apply this association.');
+    });
+  });
   userEditor();
   (async () => {
     if (!token) return;

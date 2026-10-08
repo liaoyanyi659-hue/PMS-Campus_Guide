@@ -10,8 +10,8 @@
         },
         "body": {
           "zh": "根据设施参考图的 PEJABAT ADMIN 标注，对照原校园底图定位。具体办公入口请以现场标示为准。",
-          "en": "",
-          "ms": ""
+          "en": "Located using the PEJABAT ADMIN label on the reference map. Follow on-site signs for the office entrance.",
+          "ms": "Lokasi berdasarkan label PEJABAT ADMIN pada peta rujukan. Ikuti papan tanda untuk pintu masuk pejabat."
         },
         "category": "校园设施",
         "x": 63.3,
@@ -25,7 +25,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "旅游与酒店管理系",
@@ -37,8 +39,8 @@
         },
         "body": {
           "zh": "根据设施参考图的 JPH 标注，对照原校园底图定位。具体办公室或课室入口仍需确认。",
-          "en": "",
-          "ms": ""
+          "en": "Located using the JPH label on the reference map. Office and classroom entrances need confirmation.",
+          "ms": "Lokasi berdasarkan label JPH pada peta rujukan. Pintu masuk pejabat dan kelas perlu disahkan."
         },
         "category": "教学区域",
         "x": 58,
@@ -52,7 +54,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "伊斯兰中心",
@@ -64,8 +68,8 @@
         },
         "body": {
           "zh": "根据原图 Pusat Islam Politeknik Muadzam Shah 标记定位。",
-          "en": "",
-          "ms": ""
+          "en": "Located using the Pusat Islam marker on the original map.",
+          "ms": "Lokasi berdasarkan penanda Pusat Islam pada peta asal."
         },
         "category": "校园设施",
         "x": 60,
@@ -79,7 +83,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "体育综合设施",
@@ -91,8 +97,8 @@
         },
         "body": {
           "zh": "根据原图左下方体育设施图钉定位，附近可见运动场。",
-          "en": "",
-          "ms": ""
+          "en": "Located using the sports marker at the lower left of the original map, near the field.",
+          "ms": "Lokasi berdasarkan penanda sukan di kiri bawah peta asal, berhampiran padang."
         },
         "category": "校园生活",
         "x": 25,
@@ -100,13 +106,65 @@
         "media_id": null,
         "photo_path": "photos/sports-complex.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ]
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "发展与维修单位",
@@ -118,8 +176,8 @@
         },
         "body": {
           "zh": "根据原图顶部文字与图钉标注；该区域靠近图片上边缘。",
-          "en": "",
-          "ms": ""
+          "en": "Located using the label and marker near the top edge of the original map.",
+          "ms": "Lokasi berdasarkan label dan penanda berhampiran bahagian atas peta asal."
         },
         "category": "校园设施",
         "x": 85,
@@ -133,7 +191,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "田径场",
@@ -145,8 +205,8 @@
         },
         "body": {
           "zh": "根据原图中可见的椭圆形跑道标注，正式场地名称与入口待确认。",
-          "en": "",
-          "ms": ""
+          "en": "Marked at the oval track visible on the original map. The official venue name and entrance need confirmation.",
+          "ms": "Ditanda pada trek bujur dalam peta asal. Nama rasmi tempat dan pintu masuk perlu disahkan."
         },
         "category": "校园生活",
         "x": 37,
@@ -154,13 +214,65 @@
         "media_id": null,
         "photo_path": "photos/athletics-track.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "19:00",
+              "label": ""
+            }
+          ]
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "图书馆",
@@ -172,8 +284,8 @@
         },
         "body": {
           "zh": "Mini Library 位于 Aras 1（1 楼）的 Bilik Studio UIDM；请从楼内前往。",
-          "en": "",
-          "ms": ""
+          "en": "Mini Library is on Level 1 (Aras 1), in Bilik Studio UIDM. Access it from inside the building.",
+          "ms": "Mini Library terletak di Aras 1, Bilik Studio UIDM. Masuk melalui bahagian dalam bangunan."
         },
         "category": "教学区域",
         "x": 70.7,
@@ -181,13 +293,78 @@
         "media_id": null,
         "photo_path": "photos/mini-library-notice.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [],
+          [
+            {
+              "a": "09:00",
+              "b": "12:30",
+              "label": ""
+            },
+            {
+              "a": "14:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:00",
+              "b": "12:30",
+              "label": ""
+            },
+            {
+              "a": "14:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:00",
+              "b": "12:30",
+              "label": ""
+            },
+            {
+              "a": "14:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:00",
+              "b": "12:30",
+              "label": ""
+            },
+            {
+              "a": "14:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:00",
+              "b": "12:15",
+              "label": ""
+            },
+            {
+              "a": "14:45",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          []
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "Coop Mart",
@@ -199,8 +376,8 @@
         },
         "body": {
           "zh": "位于男女生宿舍附近，从标有 “Love Kamsis” 的入口直走即可到达。",
-          "en": "",
-          "ms": ""
+          "en": "Near the male and female hostels; walk straight from the entrance marked “Love Kamsis”.",
+          "ms": "Berhampiran asrama lelaki dan perempuan; berjalan terus dari pintu masuk bertanda “Love Kamsis”."
         },
         "category": "校园生活",
         "x": 79.6,
@@ -208,13 +385,130 @@
         "media_id": null,
         "photo_path": "photos/coop-mart-current.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            },
+            {
+              "a": "20:30",
+              "b": "22:40",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            },
+            {
+              "a": "17:00",
+              "b": "19:00",
+              "label": ""
+            },
+            {
+              "a": "20:30",
+              "b": "22:40",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            },
+            {
+              "a": "17:00",
+              "b": "19:00",
+              "label": ""
+            },
+            {
+              "a": "20:30",
+              "b": "22:40",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            },
+            {
+              "a": "17:00",
+              "b": "19:00",
+              "label": ""
+            },
+            {
+              "a": "20:30",
+              "b": "22:40",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            },
+            {
+              "a": "17:00",
+              "b": "19:00",
+              "label": ""
+            },
+            {
+              "a": "20:30",
+              "b": "22:40",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "12:20",
+              "label": ""
+            },
+            {
+              "a": "14:40",
+              "b": "16:30",
+              "label": ""
+            },
+            {
+              "a": "17:00",
+              "b": "19:00",
+              "label": ""
+            },
+            {
+              "a": "20:30",
+              "b": "22:40",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "10:00",
+              "b": "16:30",
+              "label": ""
+            },
+            {
+              "a": "20:30",
+              "b": "22:40",
+              "label": ""
+            }
+          ]
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "Cafe Koi",
@@ -226,8 +520,8 @@
         },
         "body": {
           "zh": "周一至周五营业，07:00–16:30；周末非营业。",
-          "en": "",
-          "ms": ""
+          "en": "Open Monday–Friday, 07:00–16:30; closed on weekends.",
+          "ms": "Buka Isnin–Jumaat, 07:00–16:30; tutup pada hujung minggu."
         },
         "category": "校园生活",
         "x": 64.7,
@@ -235,13 +529,53 @@
         "media_id": null,
         "photo_path": "photos/cafe-koi.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [],
+          [
+            {
+              "a": "07:00",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "07:00",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "07:00",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "07:00",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "07:00",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          []
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "包裹中心",
@@ -253,8 +587,8 @@
         },
         "body": {
           "zh": "位于 Bizz Mall。",
-          "en": "",
-          "ms": ""
+          "en": "Located at Bizz Mall.",
+          "ms": "Terletak di Bizz Mall."
         },
         "category": "校园设施",
         "x": 91.7,
@@ -262,13 +596,64 @@
         "media_id": null,
         "photo_path": "photos/pusat-parcel.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [
+            {
+              "a": "09:30",
+              "b": "18:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:30",
+              "b": "18:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:30",
+              "b": "18:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:30",
+              "b": "18:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:30",
+              "b": "18:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "09:30",
+              "b": "12:20",
+              "label": ""
+            },
+            {
+              "a": "14:40",
+              "b": "18:00",
+              "label": ""
+            }
+          ],
+          []
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "食堂",
@@ -280,8 +665,8 @@
         },
         "body": {
           "zh": "校园内的日常用餐地点。各店铺营业安排可能不同。",
-          "en": "",
-          "ms": ""
+          "en": "A place for everyday meals on campus. Individual stalls may have different hours.",
+          "ms": "Tempat makan harian di kampus. Waktu setiap gerai mungkin berbeza."
         },
         "category": "校园生活",
         "x": 74.4,
@@ -289,26 +674,66 @@
         "media_id": null,
         "photo_path": "photos/cafeteria.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [],
+          [
+            {
+              "a": "08:00",
+              "b": "21:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "21:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "21:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "21:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "21:30",
+              "label": ""
+            }
+          ],
+          []
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "Café Siber",
       "payload": {
         "title": {
           "zh": "Café Siber",
-          "en": "Café Siber / Cyber Café · HEP 楼下",
-          "ms": "Café Siber / Cyber Café · HEP 楼下"
+          "en": "Cyber Café",
+          "ms": "Café Siber"
         },
         "body": {
           "zh": "位于学生事务处（HEP）楼下，可购买文具和日常小食，也可复印文件。",
-          "en": "",
-          "ms": ""
+          "en": "Downstairs at HEP, selling stationery and snacks and offering photocopying.",
+          "ms": "Di tingkat bawah HEP, menjual alat tulis dan makanan ringan serta menyediakan fotokopi."
         },
         "category": "校园生活",
         "x": 66.6,
@@ -316,13 +741,53 @@
         "media_id": null,
         "photo_path": "photos/cyber-cafe.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:30",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "12:40",
+              "b": "16:30",
+              "label": ""
+            }
+          ],
+          []
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "宿舍洗衣服务",
@@ -334,8 +799,8 @@
         },
         "body": {
           "zh": "洗衣服务位于学生宿舍内。不同宿舍的设备及支付方式可能不同，请到所在宿舍查看。",
-          "en": "",
-          "ms": ""
+          "en": "Laundry is inside the hostels. Machines and payment methods vary; check your own hostel.",
+          "ms": "Dobi berada dalam asrama. Mesin dan kaedah bayaran berbeza; semak di asrama anda."
         },
         "category": "校园生活",
         "x": 83.2,
@@ -349,7 +814,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "Bizz Mall 旁洗衣服务",
@@ -361,8 +828,8 @@
         },
         "body": {
           "zh": "位于 Bizz Mall 旁边、女生宿舍后方。地图关联 Bizz Mall 区域，抵达后请到旁边的洗衣设施。",
-          "en": "",
-          "ms": ""
+          "en": "Beside Bizz Mall, behind female hostel . The map points to Bizz Mall; find the laundry beside it.",
+          "ms": "Di sebelah Bizz Mall, belakang asrama perempuan . Peta merujuk kawasan Bizz Mall; cari dobi di sebelahnya."
         },
         "category": "校园生活",
         "x": 91.7,
@@ -376,7 +843,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "Bizz Mall",
@@ -388,8 +857,8 @@
         },
         "body": {
           "zh": "校园小型购物区域之一，Pusat Parcel 包裹中心位于这里。",
-          "en": "",
-          "ms": ""
+          "en": "A small campus shopping area containing Pusat Parcel.",
+          "ms": "Kawasan kedai kecil kampus yang menempatkan Pusat Parcel."
         },
         "category": "校园生活",
         "x": 91.7,
@@ -403,7 +872,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "机械工程系",
@@ -415,8 +886,8 @@
         },
         "body": {
           "zh": "根据设施参考图中的 JKM 区域标注。",
-          "en": "",
-          "ms": ""
+          "en": "Marked using the JKM area on the facility reference map.",
+          "ms": "Ditanda berdasarkan kawasan JKM pada peta kemudahan."
         },
         "category": "教学区域",
         "x": 77.4,
@@ -430,7 +901,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "JRKV 教学区域",
@@ -442,14 +915,14 @@
         },
         "body": {
           "zh": "根据设施参考图中的 JRKV 标注；具体办公室及课室资料待补充。",
-          "en": "",
-          "ms": ""
+          "en": "Marked using the JRKV label; office and classroom details are pending.",
+          "ms": "Ditanda berdasarkan label JRKV; butiran pejabat dan kelas belum diberikan."
         },
         "category": "教学区域",
         "x": 84.6,
         "y": 27.8,
         "media_id": null,
-        "photo_path": "",
+        "photo_path": "photos/jrkv-building.jpeg",
         "closure": "normal",
         "schedule": null,
         "note": {
@@ -457,7 +930,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "资讯与通讯科技系",
@@ -469,8 +944,8 @@
         },
         "body": {
           "zh": "根据设施参考图中的 JTMK 区域标注。",
-          "en": "",
-          "ms": ""
+          "en": "Marked using the JTMK area on the facility reference map.",
+          "ms": "Ditanda berdasarkan kawasan JTMK pada peta kemudahan."
         },
         "category": "教学区域",
         "x": 78.4,
@@ -484,7 +959,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "学生事务处",
@@ -496,8 +973,8 @@
         },
         "body": {
           "zh": "根据设施参考图中校园中心的 HEP 标注。与行政办公室分开标示。",
-          "en": "",
-          "ms": ""
+          "en": "Marked using the central HEP label, separately from the administration office.",
+          "ms": "Ditanda berdasarkan label HEP di pusat kampus, berasingan daripada pejabat pentadbiran."
         },
         "category": "校园设施",
         "x": 66.6,
@@ -511,7 +988,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "JP / JPA / JMSK 教学区域",
@@ -523,8 +1002,8 @@
         },
         "body": {
           "zh": "参考图将这一区域标为 JP / JPA / JMSK，具体部门入口待补充。",
-          "en": "",
-          "ms": ""
+          "en": "The reference map labels this area JP / JPA / JMSK. Department entrances are pending.",
+          "ms": "Peta rujukan melabel kawasan ini JP / JPA / JMSK. Pintu masuk jabatan belum disahkan."
         },
         "category": "教学区域",
         "x": 57.5,
@@ -538,7 +1017,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "学术区食堂",
@@ -550,22 +1031,62 @@
         },
         "body": {
           "zh": "星期一至五营业，早上 8 点到下午 5 点。",
-          "en": "",
-          "ms": ""
+          "en": "Open Monday to Friday, 8 am to 5 pm.",
+          "ms": "Dibuka Isnin hingga Jumaat, 8 pagi hingga 5 petang."
         },
         "category": "校园生活",
         "x": 75,
         "y": 21.6,
         "media_id": null,
-        "photo_path": "",
+        "photo_path": "photos/cafe-akademik-current.jpeg",
         "closure": "normal",
-        "schedule": null,
+        "schedule": [
+          [],
+          [
+            {
+              "a": "08:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          []
+        ],
         "note": {
           "en": "",
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "学生宿舍区",
@@ -577,14 +1098,14 @@
         },
         "body": {
           "zh": "男生宿舍：Block 1–5。女生宿舍：Block A–E。报到时先确认自己的 Block 和房号，再跟着现场标示找宿舍。地图目前标示宿舍区域，尚未逐栋定位。",
-          "en": "",
-          "ms": ""
+          "en": "Male hostels: Blocks 1–5. Female hostels: Blocks A–E.Confirm your block and room number at registration, then follow the signs. The map currently marks the hostel area, not individual blocks.",
+          "ms": "Asrama lelaki: Blok 1–5. Asrama perempuan: Blok A–E.Sahkan blok dan nombor bilik semasa pendaftaran, kemudian ikut papan tanda. Peta kini menandakan kawasan asrama, bukan setiap blok."
         },
         "category": "校园生活",
         "x": 83.2,
         "y": 47.8,
         "media_id": null,
-        "photo_path": "",
+        "photo_path": "photos/kamsis-office-current.jpeg",
         "closure": "normal",
         "schedule": null,
         "note": {
@@ -592,7 +1113,9 @@
           "ms": "",
           "zh": ""
         }
-      }
+      },
+      "kind": "place",
+      "status": "published"
     },
     {
       "record_key": "游泳池",
@@ -604,8 +1127,8 @@
         },
         "body": {
           "zh": "位于旅游与酒店管理系（JPH）旁，地图位置依据你提供的圈选区域标注。",
-          "en": "",
-          "ms": ""
+          "en": "Beside the Tourism & Hospitality Department (JPH). Map position follows the supplied reference.",
+          "ms": "Bersebelahan Jabatan Pelancongan dan Hospitaliti (JPH). Kedudukan peta berdasarkan rujukan yang diberikan."
         },
         "category": "校园生活",
         "x": 50.4,
@@ -619,6 +1142,421 @@
           "ms": "",
           "zh": ""
         }
+      },
+      "kind": "place",
+      "status": "published"
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-arrival-route",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Where to go on registration day",
+          "ms": "Ke mana pada hari pendaftaran?",
+          "zh": "报到当天，先去哪里？"
+        },
+        "body": {
+          "en": "Where to go on registration daySenior student’s experienceEnter the campus through the main gate.Go to Bizz Mall to register, submit documents and collect your hostel key.Confirm your block and room number, then head to your hostel. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "ms": "Where to go on registration daySenior student’s experienceEnter the campus through the main gate.Go to Bizz Mall to register, submit documents and collect your hostel key.Confirm your block and room number, then head to your hostel. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "zh": "Where to go on registration daySenior student’s experienceEnter the campus through the main gate.Go to Bizz Mall to register, submit documents and collect your hostel key.Confirm your block and room number, then head to your hostel. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "arrival-route",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-orientation-clothes",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Prepare your orientation clothing",
+          "ms": "Sediakan pakaian orientasi lebih awal",
+          "zh": "迎新服装，记得提前准备"
+        },
+        "body": {
+          "en": "Prepare your orientation clothingSenior student’s experienceBring at least two white shirts to wear during orientation activities.Information updated: 2026-10-03",
+          "ms": "Prepare your orientation clothingSenior student’s experienceBring at least two white shirts to wear during orientation activities.Information updated: 2026-10-03",
+          "zh": "Prepare your orientation clothingSenior student’s experienceBring at least two white shirts to wear during orientation activities.Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "orientation-clothes",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-checklist",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "My new-student checklist",
+          "ms": "Senarai semak pelajar baharu saya",
+          "zh": "我的新生报到清单"
+        },
+        "body": {
+          "en": "My new-student checklist General preparation tips; follow your intake's notice for document and hostel requirements. Ticks are saved only in this browser on this device. Completed 0 / 16 itemsRegistration documentsCheck your offer letter, registration date and venuePrepare identification, originals and copies required for your intakePrepare forms, photos and payment receipts required by the noticeSave the official registration notice and contact detailsHostel essentialsConfirm hostel arrangements and permitted itemsPack bedding, towels and toiletriesPack hangers, laundry supplies and the required payment methodPack collared clothing, long trousers and closed shoesPack a broom, bin, bin bags and cleaning suppliesPack your preferred pillowBring at least two white shirts to wear during orientation activities.Registration and your first weekArrange transport and confirm the registration venueComplete registration and hostel procedures as instructedCheck your timetable, briefings and department arrangementsRead the official campus and hostel rulesLocate HEP, the library, cafeteria and support servicesSaved in this browser.Information updated: 2026-10-03",
+          "ms": "My new-student checklist General preparation tips; follow your intake's notice for document and hostel requirements. Ticks are saved only in this browser on this device. Completed 0 / 16 itemsRegistration documentsCheck your offer letter, registration date and venuePrepare identification, originals and copies required for your intakePrepare forms, photos and payment receipts required by the noticeSave the official registration notice and contact detailsHostel essentialsConfirm hostel arrangements and permitted itemsPack bedding, towels and toiletriesPack hangers, laundry supplies and the required payment methodPack collared clothing, long trousers and closed shoesPack a broom, bin, bin bags and cleaning suppliesPack your preferred pillowBring at least two white shirts to wear during orientation activities.Registration and your first weekArrange transport and confirm the registration venueComplete registration and hostel procedures as instructedCheck your timetable, briefings and department arrangementsRead the official campus and hostel rulesLocate HEP, the library, cafeteria and support servicesSaved in this browser.Information updated: 2026-10-03",
+          "zh": "My new-student checklist General preparation tips; follow your intake's notice for document and hostel requirements. Ticks are saved only in this browser on this device. Completed 0 / 16 itemsRegistration documentsCheck your offer letter, registration date and venuePrepare identification, originals and copies required for your intakePrepare forms, photos and payment receipts required by the noticeSave the official registration notice and contact detailsHostel essentialsConfirm hostel arrangements and permitted itemsPack bedding, towels and toiletriesPack hangers, laundry supplies and the required payment methodPack collared clothing, long trousers and closed shoesPack a broom, bin, bin bags and cleaning suppliesPack your preferred pillowBring at least two white shirts to wear during orientation activities.Registration and your first weekArrange transport and confirm the registration venueComplete registration and hostel procedures as instructedCheck your timetable, briefings and department arrangementsRead the official campus and hostel rulesLocate HEP, the library, cafeteria and support servicesSaved in this browser.Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "checklist",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-hostel-blocks",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Hostel blocks · Kamsis",
+          "ms": "Blok asrama · Kamsis",
+          "zh": "宿舍分区 · Kamsis"
+        },
+        "body": {
+          "en": "Hostel blocks · KamsisSenior student’s experienceMale hostels: Blocks 1–5. Female hostels: Blocks A–E.Expand details Confirm your block and room number at registration, then follow the signs. The map currently marks the hostel area, not individual blocks. Bringing a motorcycle or car? Apply through SPMP or at HEP: motorcycles from Semester 2 and cars from Semester 3. Complete the application and confirm approval before parking according to campus requirements. Off-campus parking Students of any semester may choose off-campus parking. It is unsupervised, so you are responsible for your vehicle and belongings. This does not grant permission to bring a vehicle onto campus. Information shared by a student on 3 October 2026; vehicle eligibility and approval follow the latest HEP notices. Information updated: 2026-10-03",
+          "ms": "Hostel blocks · KamsisSenior student’s experienceMale hostels: Blocks 1–5. Female hostels: Blocks A–E.Expand details Confirm your block and room number at registration, then follow the signs. The map currently marks the hostel area, not individual blocks. Bringing a motorcycle or car? Apply through SPMP or at HEP: motorcycles from Semester 2 and cars from Semester 3. Complete the application and confirm approval before parking according to campus requirements. Off-campus parking Students of any semester may choose off-campus parking. It is unsupervised, so you are responsible for your vehicle and belongings. This does not grant permission to bring a vehicle onto campus. Information shared by a student on 3 October 2026; vehicle eligibility and approval follow the latest HEP notices. Information updated: 2026-10-03",
+          "zh": "Hostel blocks · KamsisSenior student’s experienceMale hostels: Blocks 1–5. Female hostels: Blocks A–E.Expand details Confirm your block and room number at registration, then follow the signs. The map currently marks the hostel area, not individual blocks. Bringing a motorcycle or car? Apply through SPMP or at HEP: motorcycles from Semester 2 and cars from Semester 3. Complete the application and confirm approval before parking according to campus requirements. Off-campus parking Students of any semester may choose off-campus parking. It is unsupervised, so you are responsible for your vehicle and belongings. This does not grant permission to bring a vehicle onto campus. Information shared by a student on 3 October 2026; vehicle eligibility and approval follow the latest HEP notices. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "hostel-blocks",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-hostel-facilities",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Hostel facilities & living space",
+          "ms": "Kemudahan & ruang asrama",
+          "zh": "宿舍设施与生活空间"
+        },
+        "body": {
+          "en": "Hostel facilities & living spaceSenior student’s experienceExpand detailsSockets & storageEach socket point has one outlet; rooms have a large double-door wardrobe.Water dispensers in the male hostels There is one water dispenser in the Block 1 / Block 2 area and one in the Block 3 / Block 4 area. Floors & drying areas Hostel floors run from G to 4. On G, drying areas are midway along the left and right sides; on floors 1–4, they are visible from the entrance. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "ms": "Hostel facilities & living spaceSenior student’s experienceExpand detailsSockets & storageEach socket point has one outlet; rooms have a large double-door wardrobe.Water dispensers in the male hostels There is one water dispenser in the Block 1 / Block 2 area and one in the Block 3 / Block 4 area. Floors & drying areas Hostel floors run from G to 4. On G, drying areas are midway along the left and right sides; on floors 1–4, they are visible from the entrance. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "zh": "Hostel facilities & living spaceSenior student’s experienceExpand detailsSockets & storageEach socket point has one outlet; rooms have a large double-door wardrobe.Water dispensers in the male hostels There is one water dispenser in the Block 1 / Block 2 area and one in the Block 3 / Block 4 area. Floors & drying areas Hostel floors run from G to 4. On G, drying areas are midway along the left and right sides; on floors 1–4, they are visible from the entrance. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "hostel-facilities",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-hostel-living",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Student tips before moving in",
+          "ms": "Pesanan senior sebelum masuk asrama",
+          "zh": "入住前，学长姐的小提醒"
+        },
+        "body": {
+          "en": "Student tips before moving inSenior student’s experienceCheck your room when moving in When moving in, check the lights, fan, door lock, plumbing and wardrobe. Photograph any damage, then contact a Felo or the assigned senior student with your block, room number and details of the damage. What if something in the room is broken? During orientation, ask a Felo or the assigned senior students for help with broken lights, fans, plumbing, door locks or other room equipment. Give your block, room number and a description of the problem. Rooms and bathrooms Hostels have two-person and four-person rooms. Each floor has two shared bathroom areas, each with at least three toilet cubicles and three shower cubicles. Bring your own cleaning supplies Bring a broom, bin, bin bags and other cleaning supplies; these are usually not provided. Coordinate shared supplies with your roommates. Feeling unwell? Contact Felo-on-call If you are ill, call the duty Felo-on-call and state your block, room number and situation. Check the latest hostel duty roster for the number. You can bring a printer According to student-shared information, printers are allowed and students can offer paid printing or photocopying in the hostel; arrangements remain subject to hostel management requirements. Return on time after outings Students report that returning after the permitted outing time results in a fine and confiscation of the student card. Confirm your return deadline and allow time for transport; actual disciplinary action is determined by the institution. For a more comfortable sleepConsider bringing a pillow you are comfortable with. The above accommodation tips were shared by a student on 3 October 2026; they are not an official rulebook. Information updated: 2026-10-03",
+          "ms": "Student tips before moving inSenior student’s experienceCheck your room when moving in When moving in, check the lights, fan, door lock, plumbing and wardrobe. Photograph any damage, then contact a Felo or the assigned senior student with your block, room number and details of the damage. What if something in the room is broken? During orientation, ask a Felo or the assigned senior students for help with broken lights, fans, plumbing, door locks or other room equipment. Give your block, room number and a description of the problem. Rooms and bathrooms Hostels have two-person and four-person rooms. Each floor has two shared bathroom areas, each with at least three toilet cubicles and three shower cubicles. Bring your own cleaning supplies Bring a broom, bin, bin bags and other cleaning supplies; these are usually not provided. Coordinate shared supplies with your roommates. Feeling unwell? Contact Felo-on-call If you are ill, call the duty Felo-on-call and state your block, room number and situation. Check the latest hostel duty roster for the number. You can bring a printer According to student-shared information, printers are allowed and students can offer paid printing or photocopying in the hostel; arrangements remain subject to hostel management requirements. Return on time after outings Students report that returning after the permitted outing time results in a fine and confiscation of the student card. Confirm your return deadline and allow time for transport; actual disciplinary action is determined by the institution. For a more comfortable sleepConsider bringing a pillow you are comfortable with. The above accommodation tips were shared by a student on 3 October 2026; they are not an official rulebook. Information updated: 2026-10-03",
+          "zh": "Student tips before moving inSenior student’s experienceCheck your room when moving in When moving in, check the lights, fan, door lock, plumbing and wardrobe. Photograph any damage, then contact a Felo or the assigned senior student with your block, room number and details of the damage. What if something in the room is broken? During orientation, ask a Felo or the assigned senior students for help with broken lights, fans, plumbing, door locks or other room equipment. Give your block, room number and a description of the problem. Rooms and bathrooms Hostels have two-person and four-person rooms. Each floor has two shared bathroom areas, each with at least three toilet cubicles and three shower cubicles. Bring your own cleaning supplies Bring a broom, bin, bin bags and other cleaning supplies; these are usually not provided. Coordinate shared supplies with your roommates. Feeling unwell? Contact Felo-on-call If you are ill, call the duty Felo-on-call and state your block, room number and situation. Check the latest hostel duty roster for the number. You can bring a printer According to student-shared information, printers are allowed and students can offer paid printing or photocopying in the hostel; arrangements remain subject to hostel management requirements. Return on time after outings Students report that returning after the permitted outing time results in a fine and confiscation of the student card. Confirm your return deadline and allow time for transport; actual disciplinary action is determined by the institution. For a more comfortable sleepConsider bringing a pillow you are comfortable with. The above accommodation tips were shared by a student on 3 October 2026; they are not an official rulebook. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "hostel-living",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-holiday-departure",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Apply before leaving for the holidays",
+          "ms": "Mohon sebelum pulang bercuti",
+          "zh": "放假离校前，记得申请"
+        },
+        "body": {
+          "en": "Apply before leaving for the holidaysSenior student’s experience Apply through SPMP before leaving for the holidays. A senior student recommends applying 3–5 days ahead to allow processing time and avoid last-minute issues. Open SPMP PMS Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "ms": "Apply before leaving for the holidaysSenior student’s experience Apply through SPMP before leaving for the holidays. A senior student recommends applying 3–5 days ahead to allow processing time and avoid last-minute issues. Open SPMP PMS Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "zh": "Apply before leaving for the holidaysSenior student’s experience Apply through SPMP before leaving for the holidays. A senior student recommends applying 3–5 days ahead to allow processing time and avoid last-minute issues. Open SPMP PMS Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "holiday-departure",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-campus-network",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Campus Wi-Fi · eduroam",
+          "ms": "Wi-Fi kampus · eduroam",
+          "zh": "校园网络 · eduroam"
+        },
+        "body": {
+          "en": "Campus Wi-Fi · eduroamSenior student’s experience Some websites are restricted on the campus network. For some everyday browsing needs, use your own mobile data or hotspot and keep track of data usage. Expand detailsAfter the semester starts, obtain your school-issued student Microsoft account.Download the eduroam setup app specified by the school.Search for and select Politeknik Muadzam Shah in the app. Sign in with your school-issued Microsoft account, complete the setup prompts, then connect to eduroam Wi-Fi. These setup steps were shared by a student. Follow the school’s current instructions for the app, account format and settings. If the school cannot be found or sign-in fails, contact campus IT. Information updated: 2026-10-03",
+          "ms": "Campus Wi-Fi · eduroamSenior student’s experience Some websites are restricted on the campus network. For some everyday browsing needs, use your own mobile data or hotspot and keep track of data usage. Expand detailsAfter the semester starts, obtain your school-issued student Microsoft account.Download the eduroam setup app specified by the school.Search for and select Politeknik Muadzam Shah in the app. Sign in with your school-issued Microsoft account, complete the setup prompts, then connect to eduroam Wi-Fi. These setup steps were shared by a student. Follow the school’s current instructions for the app, account format and settings. If the school cannot be found or sign-in fails, contact campus IT. Information updated: 2026-10-03",
+          "zh": "Campus Wi-Fi · eduroamSenior student’s experience Some websites are restricted on the campus network. For some everyday browsing needs, use your own mobile data or hotspot and keep track of data usage. Expand detailsAfter the semester starts, obtain your school-issued student Microsoft account.Download the eduroam setup app specified by the school.Search for and select Politeknik Muadzam Shah in the app. Sign in with your school-issued Microsoft account, complete the setup prompts, then connect to eduroam Wi-Fi. These setup steps were shared by a student. Follow the school’s current instructions for the app, account format and settings. If the school cannot be found or sign-in fails, contact campus IT. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "campus-network",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-mobile-signal",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Mobile signal · A senior student’s experience",
+          "ms": "Isyarat mudah alih · Pengalaman senior",
+          "zh": "手机信号 · 学长姐经验"
+        },
+        "body": {
+          "en": "Mobile signal · A senior student’s experienceSenior student’s experienceA senior student recommends Digi and Yes. This is a student’s experience; actual reception can vary by hostel block, room location, phone and time of use. Information shared by a student on 3 October 2026.Information updated: 2026-10-03",
+          "ms": "Mobile signal · A senior student’s experienceSenior student’s experienceA senior student recommends Digi and Yes. This is a student’s experience; actual reception can vary by hostel block, room location, phone and time of use. Information shared by a student on 3 October 2026.Information updated: 2026-10-03",
+          "zh": "Mobile signal · A senior student’s experienceSenior student’s experienceA senior student recommends Digi and Yes. This is a student’s experience; actual reception can vary by hostel block, room location, phone and time of use. Information shared by a student on 3 October 2026.Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "mobile-signal",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-student-systems",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Student portals",
+          "ms": "Portal pelajar",
+          "zh": "常用学生系统入口"
+        },
+        "body": {
+          "en": "Student portalsSPMP Student services including i-Kamsis, course management, personal information and internships (Latihan Industri). Open SPMP PMSCIDOS Course assignments are usually posted here. Follow your lecturer’s instructions to find your course, assignment requirements and deadlines. Open CIDOSUse the course-specific link if your lecturer provides one.Information updated: 2026-10-03",
+          "ms": "Student portalsSPMP Student services including i-Kamsis, course management, personal information and internships (Latihan Industri). Open SPMP PMSCIDOS Course assignments are usually posted here. Follow your lecturer’s instructions to find your course, assignment requirements and deadlines. Open CIDOSUse the course-specific link if your lecturer provides one.Information updated: 2026-10-03",
+          "zh": "Student portalsSPMP Student services including i-Kamsis, course management, personal information and internships (Latihan Industri). Open SPMP PMSCIDOS Course assignments are usually posted here. Follow your lecturer’s instructions to find your course, assignment requirements and deadlines. Open CIDOSUse the course-specific link if your lecturer provides one.Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "student-systems",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-timetable-guide",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "First week: how to read your timetable",
+          "ms": "Minggu pertama: cara membaca jadual waktu",
+          "zh": "第一周上课：怎么看课表？"
+        },
+        "body": {
+          "en": "First week: how to read your timetableSenior student’s experience After enrolment, log in to SPMP to view your own timetable. Check your class, semester and the latest version; the image below is only a reading example. Expand detailsOpen SPMP PMSTimetable entryHow to read itDFK12345 An example course-code format; DFK50083 in the image is the course code for Python Programming. F-MKT1A room-location code showing where the class takes place.DIT5AThe class name in this example; use the timetable for your own class.Where are the rooms usually located?JTMKRooms such as MKT, MSKD1 / MSKD2 and MKR are usually in the JTMK building.JP BK classrooms are usually in the JP area. The map button points to the JP / JPA / JMSK teaching area; check room signs on site. Who is your PA? Your PA (Penasihat Akademik) is your academic adviser, similar to a class teacher, who helps manage class matters. The example includes a PA session; follow your own class timetable and adviser’s arrangements. Timetable example · DIT5A, Sesi 1:2026/2027 · Tap to enlarge The timetable image and room-location notes were provided by a student; follow your latest timetable and school notices for courses, rooms and PA sessions. Information updated: 2026-10-03",
+          "ms": "First week: how to read your timetableSenior student’s experience After enrolment, log in to SPMP to view your own timetable. Check your class, semester and the latest version; the image below is only a reading example. Expand detailsOpen SPMP PMSTimetable entryHow to read itDFK12345 An example course-code format; DFK50083 in the image is the course code for Python Programming. F-MKT1A room-location code showing where the class takes place.DIT5AThe class name in this example; use the timetable for your own class.Where are the rooms usually located?JTMKRooms such as MKT, MSKD1 / MSKD2 and MKR are usually in the JTMK building.JP BK classrooms are usually in the JP area. The map button points to the JP / JPA / JMSK teaching area; check room signs on site. Who is your PA? Your PA (Penasihat Akademik) is your academic adviser, similar to a class teacher, who helps manage class matters. The example includes a PA session; follow your own class timetable and adviser’s arrangements. Timetable example · DIT5A, Sesi 1:2026/2027 · Tap to enlarge The timetable image and room-location notes were provided by a student; follow your latest timetable and school notices for courses, rooms and PA sessions. Information updated: 2026-10-03",
+          "zh": "First week: how to read your timetableSenior student’s experience After enrolment, log in to SPMP to view your own timetable. Check your class, semester and the latest version; the image below is only a reading example. Expand detailsOpen SPMP PMSTimetable entryHow to read itDFK12345 An example course-code format; DFK50083 in the image is the course code for Python Programming. F-MKT1A room-location code showing where the class takes place.DIT5AThe class name in this example; use the timetable for your own class.Where are the rooms usually located?JTMKRooms such as MKT, MSKD1 / MSKD2 and MKR are usually in the JTMK building.JP BK classrooms are usually in the JP area. The map button points to the JP / JPA / JMSK teaching area; check room signs on site. Who is your PA? Your PA (Penasihat Akademik) is your academic adviser, similar to a class teacher, who helps manage class matters. The example includes a PA session; follow your own class timetable and adviser’s arrangements. Timetable example · DIT5A, Sesi 1:2026/2027 · Tap to enlarge The timetable image and room-location notes were provided by a student; follow your latest timetable and school notices for courses, rooms and PA sessions. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "timetable-guide",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-club-joining",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "How to join a club",
+          "ms": "Cara menyertai kelab",
+          "zh": "学会怎么加入？"
+        },
+        "body": {
+          "en": "How to join a clubSenior student’s experience Recruitment dates are usually announced in official groups 3–4 weeks after orientation. Keep an eye on the messages! Most active clubs usually hold interviews; JPP holds elections at designated times. Refer to current notices for application, interview and election dates. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "ms": "How to join a clubSenior student’s experience Recruitment dates are usually announced in official groups 3–4 weeks after orientation. Keep an eye on the messages! Most active clubs usually hold interviews; JPP holds elections at designated times. Refer to current notices for application, interview and election dates. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03",
+          "zh": "How to join a clubSenior student’s experience Recruitment dates are usually announced in official groups 3–4 weeks after orientation. Keep an eye on the messages! Most active clubs usually hold interviews; JPP holds elections at designated times. Refer to current notices for application, interview and election dates. Shared by a senior student · Check the school’s official groups for current arrangements. Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "club-joining",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-contacts",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Useful contacts",
+          "ms": "Maklumat hubungan",
+          "zh": "常用联络方式"
+        },
+        "body": {
+          "en": "Useful contactsPMS main switchboardGeneral enquiries or assistance connecting to the relevant unit.09-450 200509-450 200609-450 2007Source: Official PMS directoryPublic search information checked on 2026-10-02; confirm the unit when calling.Student Affairs Unit · HEPRegistration, student affairs and welfareVisit the HEP office area in the campus centre.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryCampus securityCampus entry, exit and on-site safety assistanceVisit the security post; its direct number is unverified.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryDepartment offices · JKM / JTMK / JPH etc.Timetables, department procedures and academic enquiriesContact your department office or ask the switchboard to connect you.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryNeed help at the hostel? Ask a FeloIf you are ill, call the duty Felo-on-call and state your block, room number and situation. Check the latest hostel duty roster for the number.The Felo office opens daily from 21:00 to 23:00, including weekends; this is separate from the Kamsis administration office’s daytime hours.Emergency support · Felo-on-callMonday–Friday: 17:00 until 08:00 the next day.Saturday and Sunday: 24-hour emergency standby.Head Felo (Ketua Felo): En. Akhwan Hafis bin Akmal Hidzri013-289 9987What can a Felo help with?Requests to leave the hostel at night in an emergency.Going-home requests and i-Kamsis approval: apply through i-Kamsis in SPMP at least 3 days before leaving.Accommodation issues after office hours.Emergencies requiring a hospital visit after office hours or at weekends.Based on the supplied hostel notices; check the latest notices for staff and duty arrangements.View the Felo office notice·View the hostel Felo listInformation updated: 2026-10-03",
+          "ms": "Useful contactsPMS main switchboardGeneral enquiries or assistance connecting to the relevant unit.09-450 200509-450 200609-450 2007Source: Official PMS directoryPublic search information checked on 2026-10-02; confirm the unit when calling.Student Affairs Unit · HEPRegistration, student affairs and welfareVisit the HEP office area in the campus centre.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryCampus securityCampus entry, exit and on-site safety assistanceVisit the security post; its direct number is unverified.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryDepartment offices · JKM / JTMK / JPH etc.Timetables, department procedures and academic enquiriesContact your department office or ask the switchboard to connect you.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryNeed help at the hostel? Ask a FeloIf you are ill, call the duty Felo-on-call and state your block, room number and situation. Check the latest hostel duty roster for the number.The Felo office opens daily from 21:00 to 23:00, including weekends; this is separate from the Kamsis administration office’s daytime hours.Emergency support · Felo-on-callMonday–Friday: 17:00 until 08:00 the next day.Saturday and Sunday: 24-hour emergency standby.Head Felo (Ketua Felo): En. Akhwan Hafis bin Akmal Hidzri013-289 9987What can a Felo help with?Requests to leave the hostel at night in an emergency.Going-home requests and i-Kamsis approval: apply through i-Kamsis in SPMP at least 3 days before leaving.Accommodation issues after office hours.Emergencies requiring a hospital visit after office hours or at weekends.Based on the supplied hostel notices; check the latest notices for staff and duty arrangements.View the Felo office notice·View the hostel Felo listInformation updated: 2026-10-03",
+          "zh": "Useful contactsPMS main switchboardGeneral enquiries or assistance connecting to the relevant unit.09-450 200509-450 200609-450 2007Source: Official PMS directoryPublic search information checked on 2026-10-02; confirm the unit when calling.Student Affairs Unit · HEPRegistration, student affairs and welfareVisit the HEP office area in the campus centre.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryCampus securityCampus entry, exit and on-site safety assistanceVisit the security post; its direct number is unverified.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryDepartment offices · JKM / JTMK / JPH etc.Timetables, department procedures and academic enquiriesContact your department office or ask the switchboard to connect you.Direct number unconfirmed; the number below is the school switchboard.Call switchboard 09-450 2005View official directoryNeed help at the hostel? Ask a FeloIf you are ill, call the duty Felo-on-call and state your block, room number and situation. Check the latest hostel duty roster for the number.The Felo office opens daily from 21:00 to 23:00, including weekends; this is separate from the Kamsis administration office’s daytime hours.Emergency support · Felo-on-callMonday–Friday: 17:00 until 08:00 the next day.Saturday and Sunday: 24-hour emergency standby.Head Felo (Ketua Felo): En. Akhwan Hafis bin Akmal Hidzri013-289 9987What can a Felo help with?Requests to leave the hostel at night in an emergency.Going-home requests and i-Kamsis approval: apply through i-Kamsis in SPMP at least 3 days before leaving.Accommodation issues after office hours.Emergencies requiring a hospital visit after office hours or at weekends.Based on the supplied hostel notices; check the latest notices for staff and duty arrangements.View the Felo office notice·View the hostel Felo listInformation updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "contacts",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-faq",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "New-student FAQs",
+          "ms": "Soalan lazim pelajar baharu",
+          "zh": "新生常见问题"
+        },
+        "body": {
+          "en": "New-student FAQsSenior student’s experienceWhat if something in the room is broken?During orientation, ask a Felo or the assigned senior students for help with broken lights, fans, plumbing, door locks or other room equipment. Give your block, room number and a description of the problem.Is there a bus for local outings?For local outings, use Grab or a taxi; there is currently no bus service. Confirm a ride before leaving and arrange your return in advance.Which semester can I bring a vehicle?Apply through SPMP or at HEP: motorcycles from Semester 2 and cars from Semester 3. Complete the application and confirm approval before parking according to campus requirements.Students of any semester may choose off-campus parking. It is unsupervised, so you are responsible for your vehicle and belongings. This does not grant permission to bring a vehicle onto campus.Which blocks are male and female hostels?Male hostels: Blocks 1–5. Female hostels: Blocks A–E.Where do I collect parcels?Open the parcel lookup report and find your name, order number and Bakul (basket) number. Note them down, then go to Pusat Parcel at Bizz Mall and give the counter the last four digits of your phone number to collect your parcel.Monday–Thursday and Sunday: 09:30–18:00; Friday: 09:30–12:20 and 14:40–18:00; closed Saturday.Where can I print, photocopy or buy stationery?Café Siber (Cyber Café) is downstairs at HEP and offers photocopying and stationery. Cafe Koi's sign also lists printing and photocopying; confirm availability with the shop.Where can I buy a laundry card?Buy at the laundry card machine at the Coop Mart entrance. RM25 includes the RM5 card fee and RM20 credit; follow the price shown on the machine.How does hostel laundry differ from Bizz Mall laundry?Hostel machines are inside the hostels. Bizz Mall laundry is beside the mall, behind female hostel . Fees and payment methods differ.What do I need to go out, and when must I return?Bring your student card and wear collared clothing, long trousers and closed shoes. Gate hours: Monday–Thursday 08:00–19:00; Friday–Sunday 08:00–22:00. Entry and exit pause Friday 12:00–14:00. Follow school notices for changes.Which places may close at weekends?Most cafeteria stalls may close at weekends and holidays. Café Siber's weekend hours are unconfirmed. Coop Mart has weekend sessions; see its details.Where is the library?Mini Library is on Level 1 (Aras 1), in Bilik Studio UIDM. Access it from inside the building.Can I use the pool at any time?No. Sessions are separated by day, gender and student/staff group. Friday is closed, and weekend courses may cause closures. Check your group's session and the day's arrangements.Information updated: 2026-10-03",
+          "ms": "New-student FAQsSenior student’s experienceWhat if something in the room is broken?During orientation, ask a Felo or the assigned senior students for help with broken lights, fans, plumbing, door locks or other room equipment. Give your block, room number and a description of the problem.Is there a bus for local outings?For local outings, use Grab or a taxi; there is currently no bus service. Confirm a ride before leaving and arrange your return in advance.Which semester can I bring a vehicle?Apply through SPMP or at HEP: motorcycles from Semester 2 and cars from Semester 3. Complete the application and confirm approval before parking according to campus requirements.Students of any semester may choose off-campus parking. It is unsupervised, so you are responsible for your vehicle and belongings. This does not grant permission to bring a vehicle onto campus.Which blocks are male and female hostels?Male hostels: Blocks 1–5. Female hostels: Blocks A–E.Where do I collect parcels?Open the parcel lookup report and find your name, order number and Bakul (basket) number. Note them down, then go to Pusat Parcel at Bizz Mall and give the counter the last four digits of your phone number to collect your parcel.Monday–Thursday and Sunday: 09:30–18:00; Friday: 09:30–12:20 and 14:40–18:00; closed Saturday.Where can I print, photocopy or buy stationery?Café Siber (Cyber Café) is downstairs at HEP and offers photocopying and stationery. Cafe Koi's sign also lists printing and photocopying; confirm availability with the shop.Where can I buy a laundry card?Buy at the laundry card machine at the Coop Mart entrance. RM25 includes the RM5 card fee and RM20 credit; follow the price shown on the machine.How does hostel laundry differ from Bizz Mall laundry?Hostel machines are inside the hostels. Bizz Mall laundry is beside the mall, behind female hostel . Fees and payment methods differ.What do I need to go out, and when must I return?Bring your student card and wear collared clothing, long trousers and closed shoes. Gate hours: Monday–Thursday 08:00–19:00; Friday–Sunday 08:00–22:00. Entry and exit pause Friday 12:00–14:00. Follow school notices for changes.Which places may close at weekends?Most cafeteria stalls may close at weekends and holidays. Café Siber's weekend hours are unconfirmed. Coop Mart has weekend sessions; see its details.Where is the library?Mini Library is on Level 1 (Aras 1), in Bilik Studio UIDM. Access it from inside the building.Can I use the pool at any time?No. Sessions are separated by day, gender and student/staff group. Friday is closed, and weekend courses may cause closures. Check your group's session and the day's arrangements.Information updated: 2026-10-03",
+          "zh": "New-student FAQsSenior student’s experienceWhat if something in the room is broken?During orientation, ask a Felo or the assigned senior students for help with broken lights, fans, plumbing, door locks or other room equipment. Give your block, room number and a description of the problem.Is there a bus for local outings?For local outings, use Grab or a taxi; there is currently no bus service. Confirm a ride before leaving and arrange your return in advance.Which semester can I bring a vehicle?Apply through SPMP or at HEP: motorcycles from Semester 2 and cars from Semester 3. Complete the application and confirm approval before parking according to campus requirements.Students of any semester may choose off-campus parking. It is unsupervised, so you are responsible for your vehicle and belongings. This does not grant permission to bring a vehicle onto campus.Which blocks are male and female hostels?Male hostels: Blocks 1–5. Female hostels: Blocks A–E.Where do I collect parcels?Open the parcel lookup report and find your name, order number and Bakul (basket) number. Note them down, then go to Pusat Parcel at Bizz Mall and give the counter the last four digits of your phone number to collect your parcel.Monday–Thursday and Sunday: 09:30–18:00; Friday: 09:30–12:20 and 14:40–18:00; closed Saturday.Where can I print, photocopy or buy stationery?Café Siber (Cyber Café) is downstairs at HEP and offers photocopying and stationery. Cafe Koi's sign also lists printing and photocopying; confirm availability with the shop.Where can I buy a laundry card?Buy at the laundry card machine at the Coop Mart entrance. RM25 includes the RM5 card fee and RM20 credit; follow the price shown on the machine.How does hostel laundry differ from Bizz Mall laundry?Hostel machines are inside the hostels. Bizz Mall laundry is beside the mall, behind female hostel . Fees and payment methods differ.What do I need to go out, and when must I return?Bring your student card and wear collared clothing, long trousers and closed shoes. Gate hours: Monday–Thursday 08:00–19:00; Friday–Sunday 08:00–22:00. Entry and exit pause Friday 12:00–14:00. Follow school notices for changes.Which places may close at weekends?Most cafeteria stalls may close at weekends and holidays. Café Siber's weekend hours are unconfirmed. Coop Mart has weekend sessions; see its details.Where is the library?Mini Library is on Level 1 (Aras 1), in Bilik Studio UIDM. Access it from inside the building.Can I use the pool at any time?No. Sessions are separated by day, gender and student/staff group. Friday is closed, and weekend courses may cause closures. Check your group's session and the day's arrangements.Information updated: 2026-10-03"
+        },
+        "media_id": null,
+        "slot": "faq",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "page",
+      "record_key": "guide-outing-guide",
+      "status": "draft",
+      "payload": {
+        "title": {
+          "en": "Campus gate hours",
+          "ms": "Waktu pintu pagar kampus",
+          "zh": "校园门禁时间"
+        },
+        "body": {
+          "en": "Going outCampus gate hoursMonday–Thursday08:00–19:00Friday to Sunday08:00–22:00 Friday 12:00–14:00: the supplied guide states that entry and exit pause for Friday prayers. What to bring and wearCollared clothing and long trousers.Closed shoes or footwear covering the feet.Student card: present it to security for scanning when entering or leaving.An ATM is located at the campus entrance.Off campusGoing out · A student guide Fancy a different meal, a supply run or a haircut? Pick an area and plan your stops together. Satelit · Food & haircutsBandar · Shopping & marketLooking for Chinese food?01 / SATELITMeet friends for food and a haircutStart here for fast food, a drink or everyday supplies.MIXUEIce cream and drinks; a possible stop after your meal.Open place mapMarrybrownFast food · No. 3 & 5, Jalan Makmur 9.Open place mapFamilyMart / ZUS CoffeeSnacks and coffee · Jalan PMS 3 1/1, at No. 27 and 25-G respectively.Open place mapWatsonsPersonal care supplies · No. 6 & 7, Jalan Makmur 1.Open place mapStudent tip Combine food, shopping and a haircut in one trip. Check menu prices and include transport in your budget. Information updated: 2026-10-0302 / BANDARStock up and visit the Saturday marketPlan a Bandar trip for supplies, banking or the market.Eco-Shop · BandarEveryday supplies · MM164–MM167, Jalan Medan Mewah 11.Open place mapWatsons · BandarPersonal care · Lot 111, Medan Mewah.Open place mapSaturday marketSaturday market in Bandar Every Saturday, along the same row as Bandar Eco-Shop. Ask a local student about opening and closing times. Open place mapMarket reminder Bring small change and a shopping bag, and ask the price before buying. The map points to the Eco-Shop row; look for the stalls when you arrive. Information updated: 2026-10-03SATELITSP Hair SalonSenior student’s experience A Chinese-run hair salon above Eco-Shop in Satelit. Closed on Sundays—plan your visit for another day. Men’s haircutRM15 and upWomen’s haircutRM20+ · by lengthClosedSunday These are student-reported guide prices. The photographed list shows RM15–28 for men and RM25–40 for women. Specify cut only or wash and cut, and confirm the total first. Call salon · 016-929 6515Inside the salonView the full price listInformation updated: 2026-10-03Chinese food · Cooked-to-order dishesPlan ahead for a cooked mealSenior student’s experience Cooking hours shared by a student: 3:00–10:00 pm. Use the location and contacts below to ask about availability, the menu and prices before going. 33G9+8J, 26700 Muadzam Shah, PahangOpen place map016-338 7093019-232 3266 The map listing is named “Restoran muadzam shah”. Both phone numbers were shared by a student; their shop assignments are not yet confirmed. The second restaurant’s name and location are still needed. Avoid a wasted trip or a price surprise Cooking hours may differ from the shop’s overall hours. Ask about portions, the total price and waiting time before ordering shared dishes, and explain any dietary needs. Information updated: 2026-10-03Grab / TaxiGetting around nowSenior student’s experience For local outings, use Grab or a taxi; there is currently no bus service. Confirm a ride before leaving and arrange your return in advance. Information shared by a student on 3 October 2026; vehicle eligibility and approval follow the latest HEP notices. Information updated: 2026-10-03Before you goConfirm one-way or return fares, per-person or per-car pricing, and the return pickup. Bring your student card and follow campus dress requirements. Allow time to return before the campus deadline. Do not plan SP Hair Salon for Sunday. Check that the Saturday market is running before going. Sources and updates Updated 3 October 2026. Market details, salon location/closure, guide prices and cooking contacts were supplied by a student. Names and selected addresses use the sources below. Open the online maps for clearer streets and directions. MarrybrownFamilyMartZUS CoffeeEco-ShopWatsons · SatelitWatsons · BandarWaze · Restaurant",
+          "ms": "Going outCampus gate hoursMonday–Thursday08:00–19:00Friday to Sunday08:00–22:00 Friday 12:00–14:00: the supplied guide states that entry and exit pause for Friday prayers. What to bring and wearCollared clothing and long trousers.Closed shoes or footwear covering the feet.Student card: present it to security for scanning when entering or leaving.An ATM is located at the campus entrance.Off campusGoing out · A student guide Fancy a different meal, a supply run or a haircut? Pick an area and plan your stops together. Satelit · Food & haircutsBandar · Shopping & marketLooking for Chinese food?01 / SATELITMeet friends for food and a haircutStart here for fast food, a drink or everyday supplies.MIXUEIce cream and drinks; a possible stop after your meal.Open place mapMarrybrownFast food · No. 3 & 5, Jalan Makmur 9.Open place mapFamilyMart / ZUS CoffeeSnacks and coffee · Jalan PMS 3 1/1, at No. 27 and 25-G respectively.Open place mapWatsonsPersonal care supplies · No. 6 & 7, Jalan Makmur 1.Open place mapStudent tip Combine food, shopping and a haircut in one trip. Check menu prices and include transport in your budget. Information updated: 2026-10-0302 / BANDARStock up and visit the Saturday marketPlan a Bandar trip for supplies, banking or the market.Eco-Shop · BandarEveryday supplies · MM164–MM167, Jalan Medan Mewah 11.Open place mapWatsons · BandarPersonal care · Lot 111, Medan Mewah.Open place mapSaturday marketSaturday market in Bandar Every Saturday, along the same row as Bandar Eco-Shop. Ask a local student about opening and closing times. Open place mapMarket reminder Bring small change and a shopping bag, and ask the price before buying. The map points to the Eco-Shop row; look for the stalls when you arrive. Information updated: 2026-10-03SATELITSP Hair SalonSenior student’s experience A Chinese-run hair salon above Eco-Shop in Satelit. Closed on Sundays—plan your visit for another day. Men’s haircutRM15 and upWomen’s haircutRM20+ · by lengthClosedSunday These are student-reported guide prices. The photographed list shows RM15–28 for men and RM25–40 for women. Specify cut only or wash and cut, and confirm the total first. Call salon · 016-929 6515Inside the salonView the full price listInformation updated: 2026-10-03Chinese food · Cooked-to-order dishesPlan ahead for a cooked mealSenior student’s experience Cooking hours shared by a student: 3:00–10:00 pm. Use the location and contacts below to ask about availability, the menu and prices before going. 33G9+8J, 26700 Muadzam Shah, PahangOpen place map016-338 7093019-232 3266 The map listing is named “Restoran muadzam shah”. Both phone numbers were shared by a student; their shop assignments are not yet confirmed. The second restaurant’s name and location are still needed. Avoid a wasted trip or a price surprise Cooking hours may differ from the shop’s overall hours. Ask about portions, the total price and waiting time before ordering shared dishes, and explain any dietary needs. Information updated: 2026-10-03Grab / TaxiGetting around nowSenior student’s experience For local outings, use Grab or a taxi; there is currently no bus service. Confirm a ride before leaving and arrange your return in advance. Information shared by a student on 3 October 2026; vehicle eligibility and approval follow the latest HEP notices. Information updated: 2026-10-03Before you goConfirm one-way or return fares, per-person or per-car pricing, and the return pickup. Bring your student card and follow campus dress requirements. Allow time to return before the campus deadline. Do not plan SP Hair Salon for Sunday. Check that the Saturday market is running before going. Sources and updates Updated 3 October 2026. Market details, salon location/closure, guide prices and cooking contacts were supplied by a student. Names and selected addresses use the sources below. Open the online maps for clearer streets and directions. MarrybrownFamilyMartZUS CoffeeEco-ShopWatsons · SatelitWatsons · BandarWaze · Restaurant",
+          "zh": "Going outCampus gate hoursMonday–Thursday08:00–19:00Friday to Sunday08:00–22:00 Friday 12:00–14:00: the supplied guide states that entry and exit pause for Friday prayers. What to bring and wearCollared clothing and long trousers.Closed shoes or footwear covering the feet.Student card: present it to security for scanning when entering or leaving.An ATM is located at the campus entrance.Off campusGoing out · A student guide Fancy a different meal, a supply run or a haircut? Pick an area and plan your stops together. Satelit · Food & haircutsBandar · Shopping & marketLooking for Chinese food?01 / SATELITMeet friends for food and a haircutStart here for fast food, a drink or everyday supplies.MIXUEIce cream and drinks; a possible stop after your meal.Open place mapMarrybrownFast food · No. 3 & 5, Jalan Makmur 9.Open place mapFamilyMart / ZUS CoffeeSnacks and coffee · Jalan PMS 3 1/1, at No. 27 and 25-G respectively.Open place mapWatsonsPersonal care supplies · No. 6 & 7, Jalan Makmur 1.Open place mapStudent tip Combine food, shopping and a haircut in one trip. Check menu prices and include transport in your budget. Information updated: 2026-10-0302 / BANDARStock up and visit the Saturday marketPlan a Bandar trip for supplies, banking or the market.Eco-Shop · BandarEveryday supplies · MM164–MM167, Jalan Medan Mewah 11.Open place mapWatsons · BandarPersonal care · Lot 111, Medan Mewah.Open place mapSaturday marketSaturday market in Bandar Every Saturday, along the same row as Bandar Eco-Shop. Ask a local student about opening and closing times. Open place mapMarket reminder Bring small change and a shopping bag, and ask the price before buying. The map points to the Eco-Shop row; look for the stalls when you arrive. Information updated: 2026-10-03SATELITSP Hair SalonSenior student’s experience A Chinese-run hair salon above Eco-Shop in Satelit. Closed on Sundays—plan your visit for another day. Men’s haircutRM15 and upWomen’s haircutRM20+ · by lengthClosedSunday These are student-reported guide prices. The photographed list shows RM15–28 for men and RM25–40 for women. Specify cut only or wash and cut, and confirm the total first. Call salon · 016-929 6515Inside the salonView the full price listInformation updated: 2026-10-03Chinese food · Cooked-to-order dishesPlan ahead for a cooked mealSenior student’s experience Cooking hours shared by a student: 3:00–10:00 pm. Use the location and contacts below to ask about availability, the menu and prices before going. 33G9+8J, 26700 Muadzam Shah, PahangOpen place map016-338 7093019-232 3266 The map listing is named “Restoran muadzam shah”. Both phone numbers were shared by a student; their shop assignments are not yet confirmed. The second restaurant’s name and location are still needed. Avoid a wasted trip or a price surprise Cooking hours may differ from the shop’s overall hours. Ask about portions, the total price and waiting time before ordering shared dishes, and explain any dietary needs. Information updated: 2026-10-03Grab / TaxiGetting around nowSenior student’s experience For local outings, use Grab or a taxi; there is currently no bus service. Confirm a ride before leaving and arrange your return in advance. Information shared by a student on 3 October 2026; vehicle eligibility and approval follow the latest HEP notices. Information updated: 2026-10-03Before you goConfirm one-way or return fares, per-person or per-car pricing, and the return pickup. Bring your student card and follow campus dress requirements. Allow time to return before the campus deadline. Do not plan SP Hair Salon for Sunday. Check that the Saturday market is running before going. Sources and updates Updated 3 October 2026. Market details, salon location/closure, guide prices and cooking contacts were supplied by a student. Names and selected addresses use the sources below. Open the online maps for clearer streets and directions. MarrybrownFamilyMartZUS CoffeeEco-ShopWatsons · SatelitWatsons · BandarWaze · Restaurant"
+        },
+        "media_id": null,
+        "slot": "outing-guide",
+        "replace": true,
+        "order": 0
+      }
+    },
+    {
+      "kind": "place",
+      "record_key": "Pejabat Kamsis",
+      "status": "published",
+      "payload": {
+        "title": {
+          "en": "Kamsis administration office",
+          "ms": "Pejabat pengurusan Kamsis",
+          "zh": "Kamsis 宿舍管理办公室"
+        },
+        "body": {
+          "en": "Pejabat Penyelia Kolej Kediaman Pelajar, beside Coop Mart (student-supplied location). Ask the office about reporting hostel damage; the reporting procedure is student feedback and has not been independently confirmed.",
+          "ms": "Pejabat Penyelia Kolej Kediaman Pelajar, sebelah Coop Mart (lokasi daripada pelajar). Rujuk pejabat tentang laporan kerosakan asrama; prosedur ini daripada maklum balas pelajar dan belum disahkan secara bebas.",
+          "zh": "Pejabat Penyelia Kolej Kediaman Pelajar，位于 Coop Mart 旁（位置由学生提供）。宿舍损坏可向该办公室咨询报修；报修流程来自学生反馈，尚未独立核实。"
+        },
+        "category": "校园设施",
+        "x": null,
+        "y": null,
+        "media_id": null,
+        "photo_path": "photos/kamsis-office-current.jpeg",
+        "closure": "normal",
+        "schedule": [
+          [],
+          [
+            {
+              "a": "08:00",
+              "b": "13:00",
+              "label": ""
+            },
+            {
+              "a": "14:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "13:00",
+              "label": ""
+            },
+            {
+              "a": "14:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "13:00",
+              "label": ""
+            },
+            {
+              "a": "14:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "13:00",
+              "label": ""
+            },
+            {
+              "a": "14:00",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          [
+            {
+              "a": "08:00",
+              "b": "12:15",
+              "label": ""
+            },
+            {
+              "a": "14:45",
+              "b": "17:00",
+              "label": ""
+            }
+          ],
+          []
+        ],
+        "note": {
+          "en": "Hours transcribed from the supplied door notice on 8 October 2026. Friday resumes at 14:45. Notice issue date and public-holiday changes require office confirmation.",
+          "ms": "Waktu disalin daripada notis pintu yang diberikan pada 8 Oktober 2026. Jumaat bersambung 14:45. Tarikh notis dan perubahan cuti umum perlu disemak dengan pejabat.",
+          "zh": "2026年10月8日按提供的门上告示核对。周五下午14:45恢复办公；告示发布日期及公共假期调整请向办公室确认。"
+        },
+        "exceptions": [],
+        "verification": {
+          "date": "",
+          "by": "",
+          "source": ""
+        }
       }
     }
   ],
@@ -626,6 +1564,7 @@
     "photos/athletics-track.jpeg",
     "photos/bandar-pasar.jpeg",
     "photos/bizz-mall-laundry.jpeg",
+    "photos/cafe-akademik-current.jpeg",
     "photos/cafe-koi.jpeg",
     "photos/cafeteria.jpeg",
     "photos/campus-blossoms.jpeg",
@@ -642,7 +1581,9 @@
     "photos/felo-office.jpeg",
     "photos/jkm.png",
     "photos/jph-building.jpeg",
+    "photos/jrkv-building.jpeg",
     "photos/jtmk.png",
+    "photos/kamsis-office-current.jpeg",
     "photos/laundry-card-machine.jpeg",
     "photos/mini-library-notice.jpeg",
     "photos/parcel-hours.jpeg",

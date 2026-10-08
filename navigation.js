@@ -66,7 +66,7 @@
   let lang = "en";
   try {
     lang =
-      localStorage.getItem("pms-language") || existingLanguage?.value || "en";
+      window.PMS_UI?.language || localStorage.getItem("pms-language") || existingLanguage?.value || "en";
   } catch (_) {
     lang = existingLanguage?.value || "en";
   }

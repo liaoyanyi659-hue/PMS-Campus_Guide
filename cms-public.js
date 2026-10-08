@@ -64,7 +64,7 @@
     if (!p) return sourcePhoto(name);
     if (p.media_id) return photo(imgURL(p.media_id), text(p.title));
     if (p.photo_path) return photo(p.photo_path, text(p.title));
-    return "";
+    return sourcePhoto(name);
   };
   matchesPlace = function (p, q) {
     return !hidden.has(p[0]) && sourceMatches(p, q);
@@ -200,6 +200,7 @@
   };
   function setRecords() {
     managed.clear();
+    window.PMS_KAMSIS_RECORD = data.records.find(r=>r.kind==='place' && r.record_key==='Pejabat Kamsis')?.payload || null;
     hidden.clear();
     for (const key of data.hidden_places || []) hidden.add(key);
     for (const r of data.records.filter((r) => r.kind === "place")) {

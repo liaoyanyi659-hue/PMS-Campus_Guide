@@ -2,7 +2,8 @@
 (() => {
   'use strict';
   let language='en';
-  try { const saved=localStorage.getItem('pms-language');if(['en','ms','zh'].includes(saved))language=saved; } catch (_) {}
+  const languageKey=location.pathname.endsWith('admin.html')?'pms-admin-language':'pms-language';
+  try { const saved=localStorage.getItem(languageKey);if(['en','ms','zh'].includes(saved))language=saved; } catch (_) {}
   const rows=window.PMS_UI_COPY||[], aliases=new Map();
   const normal=s=>String(s).replace(/\s+/g,' ').trim();
   for(const row of rows)for(const s of row)if(s&&!aliases.has(normal(s)))aliases.set(normal(s),row);
@@ -39,7 +40,7 @@
     observer?.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['placeholder','aria-label','alt','title']});
   }
   function setLanguage(value){
-    if(!['en','ms','zh'].includes(value))return;language=value;try{localStorage.setItem('pms-language',value);}catch(_){}
+    if(!['en','ms','zh'].includes(value))return;language=value;try{localStorage.setItem(languageKey,value);}catch(_){}
     refresh();document.dispatchEvent(new CustomEvent('pms-language-change',{detail:value}));
   }
   window.PMS_UI={translate,refresh,setLanguage,get language(){return language;}};
@@ -57,7 +58,7 @@
     observer=new MutationObserver(()=>{if(frame===null)frame=requestAnimationFrame(()=>{frame=null;refresh();});});
     document.querySelectorAll('option').forEach(o=>{if(!o.hasAttribute('value'))o.value=o.textContent;});
     document.addEventListener('change',e=>{if(e.target.matches('#language-select,#forum-language,#campus-language,#pms-menu-language'))setLanguage(e.target.value);});
-    window.addEventListener('storage',e=>{if(e.key==='pms-language')setLanguage(e.newValue);});
+    window.addEventListener('storage',e=>{if(e.key===languageKey)setLanguage(e.newValue);});
     refresh();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
