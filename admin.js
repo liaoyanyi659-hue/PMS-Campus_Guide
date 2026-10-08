@@ -369,14 +369,37 @@
     }
     return seed;
   }
+  let importing = false;
   async function importExisting() {
-      if (!confirm("Import existing places and page drafts? Existing database entries are kept."))
-        return;
-      const r = await api("admin_import_cms", {
-        records: (await getSeed()).records,
-      });
+    if (importing) return;
+    if (!confirm("Import existing places and page drafts? Existing database entries are kept.")) return;
+    importing = true;
+    const buttons = [...document.querySelectorAll("#import-guide,[data-import-existing]")];
+    buttons.forEach(b => b.disabled = true);
+    try {
+      const rows = (await getSeed()).records;
+      const batches = [];
+      let batch = [];
+      const bytes = records => new TextEncoder().encode(JSON.stringify({ records })).length;
+      for (const row of rows) {
+        if (bytes([row]) > 60000) throw Error("A guide entry is too large to import. Use the SQL import instead.");
+        if (batch.length && (batch.length >= 20 || bytes([...batch, row]) > 60000)) {
+          batches.push(batch); batch = [];
+        }
+        batch.push(row);
+      }
+      if (batch.length) batches.push(batch);
+      let inserted = 0;
+      for (const records of batches) {
+        const r = await api("admin_import_cms", { records });
+        inserted += Number(r.inserted || 0);
+      }
       await load();
-      say(r.inserted + " guide entries imported. Page copies are drafts until published.");
+      say(inserted + " guide entries imported. Page copies are drafts until published.");
+    } finally {
+      importing = false;
+      buttons.forEach(b => b.disabled = false);
+    }
   }
   $("#import-guide").onclick = (e) => run(e.target, importExisting);
   const slots = [

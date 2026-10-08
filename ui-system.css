@@ -3,7 +3,7 @@ body{background:var(--canvas);color:var(--ink);font-family:Inter,system-ui,-appl
 header,.topbar{background:#fffffff5;border-color:var(--line);color:var(--ink);box-shadow:0 2px 12px #35413f06}
 .logo{background:var(--brand);color:#fff}.brand,.brand b{color:var(--ink)}.brand small{color:var(--muted)}
 button,.button,select,input,textarea{font:inherit}button,.button{min-height:44px;border-radius:12px;cursor:pointer}
-button,.button,.primary{background:var(--brand);color:white;border:1px solid var(--brand)}
+button:not(.post-title):not(.post-actions button),.button,.primary{background:var(--brand);color:white;border:1px solid var(--brand)}
 button.secondary,button.quiet,.button.secondary,.soft-button,.back-guide,.navlink{background:#f3efe7;color:var(--brand);border-color:var(--line)}
 input:not([type=checkbox]):not([type=radio]),select,textarea{background:#fff;color:var(--ink);border:1px solid #d6cdbc;border-radius:11px;min-height:44px;padding:10px 12px;max-width:100%;box-sizing:border-box}
 textarea{resize:vertical}input[type=checkbox],input[type=radio]{accent-color:var(--brand)}

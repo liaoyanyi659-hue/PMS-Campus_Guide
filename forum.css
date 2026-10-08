@@ -322,6 +322,7 @@ textarea {
   color: var(--accent);
 }
 .post-title {
+  color: #303837;
   display: block;
   font-size: 21px;
   font-weight: 700;
@@ -383,6 +384,13 @@ textarea {
   padding: 5px 10px;
   min-height: 37px;
   background: #faf8f4;
+  color: #35413f;
+  border: 1px solid #d6cdbc;
+  min-height: 44px;
+}
+.post-actions button:hover:not(:disabled) {
+  background: #ebe6dc;
+  color: #263330;
 }
 .post-actions button.liked {
   background: #efe3e5;
