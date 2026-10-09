@@ -9,12 +9,15 @@
  };
  let user=null,mode='login',postPage=1;
  const lang=()=>window.PMS_UI?.language||'en', t=k=>(copy[lang()]||copy.en)[k]||k;
+ Object.assign(copy.en,{checkStatus:'Check application status',pendingLabel:'Pending review',statusHint:'Use the application email and password to check the result. If rejected, update the form and submit again.'});
+ Object.assign(copy.ms,{checkStatus:'Semak status permohonan',statusHint:'Gunakan e-mel dan kata laluan permohonan untuk menyemak keputusan. Jika ditolak, kemas kini borang dan hantar semula.'});
+ Object.assign(copy.zh,{checkStatus:'查询申请状态',statusHint:'用申请时填写的电邮和密码查询结果。如被拒绝，可修改表单后重新提交。'});
  const token=()=>sessionStorage.getItem('pms-forum-token')||'';
  function url(action,params={}){const u=new URL(window.PMS_FORUM_CONFIG.api);u.searchParams.set('action',action);Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,v));return u.href;}
  async function api(action,data,params={}){
   const h={'Accept-Language':lang()};if(token())h.Authorization='Bearer '+token();if(data!==undefined&&!(data instanceof FormData))h['Content-Type']='application/json';
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),30000);
-  try{const r=await fetch(url(action,params),{method:data===undefined?'GET':'POST',headers:h,body:data===undefined?undefined:data instanceof FormData?data:JSON.stringify(data),credentials:'omit',cache:'no-store',signal:controller.signal});const j=await r.json();if(!r.ok||!j.ok){if(r.status===401&&action!=='login'){sessionStorage.removeItem('pms-forum-token');user=null;renderAccount();}throw Error(j.error||t('error'));}return j;}catch(e){throw Error(e.name==='AbortError'||e instanceof TypeError?t('error'):e.message);}finally{clearTimeout(timer);}
+  try{const r=await fetch(url(action,params),{method:data===undefined?'GET':'POST',headers:h,body:data===undefined?undefined:data instanceof FormData?data:JSON.stringify(data),credentials:'omit',cache:'no-store',signal:controller.signal});const j=await r.json();if(!r.ok||!j.ok){if(r.status===401&&action!=='login'){sessionStorage.removeItem('pms-forum-token');user=null;renderAccount();}throw Error(j.error||t('error'));}return j;}catch(e){throw Error(e.name==='AbortError'||e.name==='SyntaxError'||e instanceof TypeError?t('error'):e.message);}finally{clearTimeout(timer);}
  }
  const destination=()=>{const v=new URL(location.href).searchParams.get('next');return ['index.html','community.html','campus.html','admin.html','profile.html'].includes(v)?v:'profile.html';};
  function loginLink(){const name=location.pathname.split('/').pop();return 'login.html?next='+encodeURIComponent(['index.html','community.html','campus.html','admin.html','profile.html'].includes(name)?name:'profile.html');}
@@ -43,6 +46,9 @@
  async function busy(form,fn){const button=form.querySelector('[type=submit]');button.disabled=true;try{await fn();}finally{button.disabled=false;}}
  function initLogin(){
   if(!$('#auth-page'))return;
+  const statusButton=document.createElement('button');statusButton.type='button';statusButton.className='secondary';statusButton.dataset.for='club';statusButton.dataset.ac='checkStatus';
+  const hint=document.createElement('p');hint.dataset.for='club';hint.dataset.ac='statusHint';$('#access-form').append(hint,statusButton);
+  statusButton.onclick=async()=>{const form=$('#access-form'),notice=$('#account-notice');if(!form.elements.email.reportValidity()||!form.elements.password.reportValidity())return;statusButton.disabled=true;notice.textContent=t('loading');try{const r=await api('club_status',{email:form.elements.email.value,password:form.elements.password.value});notice.textContent=t(r.status==='pending'?'pendingLabel':r.status)+' '+(r.review_note||'');}catch(e){notice.textContent=e.message;}finally{statusButton.disabled=false;}};
   document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{setMode(b.dataset.mode);$('#account-notice').textContent='';});
   $('#show-password').onclick=()=>{const i=$('#auth-page [name=password]');i.type=i.type==='password'?'text':'password';$('#show-password').textContent=t(i.type==='password'?'show':'hide');};
   $('#access-form').onsubmit=e=>{e.preventDefault();const form=e.currentTarget;busy(form,async()=>{const notice=$('#account-notice');notice.textContent=t('loading');try{const d=Object.fromEntries(new FormData(form));if(new TextEncoder().encode(d.password).length>72)throw Error(t('registerHint'));const submittedMode=mode;const r=await api(submittedMode==='club'?'club_apply':submittedMode,d);if(submittedMode==='club'){form.reset();notice.textContent=t('pending');return;}sessionStorage.setItem('pms-forum-token',r.token);location.assign(destination());}catch(err){notice.textContent=err.message;}});};

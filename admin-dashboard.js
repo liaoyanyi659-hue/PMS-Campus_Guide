@@ -65,7 +65,7 @@
   lastFeed=result;renderFeed(result);
  }
  function renderFeed(result){result.forEach((res,i)=>{const container=$('#'+(i?'recent-posts':'recent-activity'));if(res.status==='rejected'){message(container,'Could not load this panel. Use Refresh to retry.');return;}const rows=i?res.value.posts:res.value.logs;if(!Array.isArray(rows)){message(container,'Could not load this panel. Use Refresh to retry.');return;}container.replaceChildren();if(!rows.length){message(container,i?'No recent posts yet.':'No recent activity yet.');return;}rows.slice(0,4).forEach(row=>i?item(container,row.title,`${row.nickname||''} · ${timestamp(row.created_at)}`,row.status==='published'?`community.html?post=${Number(row.id)}`:null):item(container,String(row.action||'').replace(/_/g,' '),`${row.target||''} · ${timestamp(row.created_at)}`));});}
- document.addEventListener('pms-admin-dashboard-error',()=>{lastData=null;lastFeed=null;epoch++;for(const id of ['recent-activity','recent-posts'])message($('#'+id),'Could not load this panel. Use Refresh to retry.');});
+ document.addEventListener('pms-admin-dashboard-error',()=>{lastData=null;lastFeed=null;epoch++;window.PMS_ADMIN_DASHBOARD=null;$('#stats').replaceChildren();for(const id of ['snapshot-users','snapshot-posts','activity-percent'])$('#'+id).textContent='—';$('#activity-ring-value').setAttribute('stroke-dasharray','0 377');$('#activity-caption').replaceChildren();for(const id of ['recent-activity','recent-posts'])message($('#'+id),'Could not load this panel. Use Refresh to retry.');});
  document.addEventListener('pms-admin-dashboard',e=>overview(e.detail));
  decorate();session(A.user());if(window.PMS_ADMIN_DASHBOARD&&A.user()?.role==='admin')overview(window.PMS_ADMIN_DASHBOARD);
 })();

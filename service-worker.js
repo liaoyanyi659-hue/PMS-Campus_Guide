@@ -19,7 +19,7 @@ self.addEventListener("push", (event) => {
     self.registration.showNotification(
       String(data.title || "PMS Explore").slice(0, 120),
       {
-        body: String(data.body || "Ada info baharu di PMS Explore.").slice(
+        body: String(data.body || ({en:'There is a new update on PMS Explore.',ms:'Ada info baharu di PMS Explore.',zh:'PMS Explore 有新的资讯。'}[data.locale]||'There is a new update on PMS Explore.')).slice(
           0,
           250,
         ),

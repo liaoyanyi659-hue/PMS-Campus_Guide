@@ -189,7 +189,7 @@ function kamsisOfficeMarkup() {
   return `<section class="kamsis-office" data-no-translate><h3>${d[0]}</h3><p>${d[1]}</p><ul><li>${d[2]}: 08:00–13:00 · 14:00–17:00</li><li>${d[3]}: 08:00–12:15 · 14:45–17:00</li><li>${d[4]}: ${d[5]}</li></ul><p>${d[6]}</p><p class="detail-source">${d[7]}</p></section>`;
 }
 function reportButton(name) {
-  return `<div class="data-meta"><span>资料更新：${["学术区食堂", "学生宿舍区"].includes(name) ? "2026-10-03" : guideUpdated}<br>位置${confirmedPositions.has(name) ? "经维护者确认" : "为参考图约略标注"} · 营业时间见来源说明</span><button type="button" class="soft-button" onclick="openReport('${name}')">资料有误？反馈</button></div>`;
+  return `<div class="data-meta"><span>资料更新：${["学术区食堂", "学生宿舍区"].includes(name) ? "2026-10-03" : guideUpdated}<br>位置${confirmedPositions.has(name) ? "经维护者确认" : "为参考图约略标注"} · 营业时间见来源说明</span><button type="button" class="soft-button" data-report-place="${name}">资料有误？反馈</button></div>`;
 }
 
 function feloMarkup() {

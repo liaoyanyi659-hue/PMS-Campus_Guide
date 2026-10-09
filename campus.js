@@ -112,6 +112,13 @@
     remove: ["Delete", "Padam", "删除"],
     send: ["Send notification", "Hantar notifikasi", "发送通知"],
     resume: ["Continue sending", "Sambung penghantaran", "继续发送"],
+    unknown: ["Result unknown", "Keputusan tidak diketahui", "发送结果未知"],
+    subscriptionExpired: ["Subscription expired", "Langganan tamat", "订阅已失效"],
+    retryFailed: ["Retry failed deliveries", "Cuba semula penghantaran gagal", "重试失败的发送"],
+    retryUnknown: ["Retry unknown deliveries", "Cuba semula keputusan tidak diketahui", "重试结果未知的发送"],
+    confirmRetry: ["Retry these deliveries? Each delivery allows at most three attempts.", "Cuba penghantaran semula? Setiap penghantaran dihadkan kepada tiga percubaan.", "重试这些发送？每条最多尝试三次。"],
+    confirmUnknown: ["The notification may already have arrived. Retry may send a duplicate. Continue?", "Notifikasi mungkin telah diterima. Percubaan semula mungkin menghantar pendua. Teruskan?", "通知可能已经送达，重试可能重复发送。是否继续？"],
+    noRetry: ["Nothing eligible to retry (three-attempt limit).", "Tiada penghantaran layak dicuba semula (had tiga percubaan).", "没有可重试的发送（最多三次）。"],
     read: ["Open link ↗", "Buka pautan ↗", "打开链接 ↗"],
     share: ["Share", "Kongsi", "分享"],
     deleted: ["Delete this entry?", "Padam maklumat ini?", "删除这条资讯？"],
@@ -273,7 +280,7 @@
       return j;
     } catch (e) {
       throw Error(
-        e instanceof TypeError || e.name === "AbortError"
+        e instanceof TypeError || e.name === "AbortError" || e.name === 'SyntaxError'
           ? t("connection")
           : e.message,
       );
@@ -480,6 +487,8 @@
       });
     if (b.dataset.resume)
       return busy(b, () => sendJob(Number(b.dataset.resume)));
+    if (b.dataset.retry && confirm(t(b.dataset.state==='unknown'?'confirmUnknown':'confirmRetry')))
+      return busy(b,async()=>{const r=await api('retry_push_job',{job_id:Number(b.dataset.retry),state:b.dataset.state,acknowledge_duplicate:b.dataset.state==='unknown'});if(r.reset)await sendJob(Number(b.dataset.retry));else{message(t('noRetry'));await jobs();}});
     if (b.dataset.share)
       return busy(b, async () => {
         const r = entries.find((x) => Number(x.id) === Number(b.dataset.share));
@@ -507,7 +516,7 @@
     $("#push-jobs").innerHTML = r.jobs
       .map(
         (j) =>
-          `<article class="admin-item"><strong>#${Number(j.id)} · ${esc(date(j.created_at))}</strong><p class="small">${["sent", "failed", "pending", "sending", "cancelled"].map((k) => `${t(k)}: ${j.counts[k]}`).join(" · ")}</p>${j.counts.pending ? `<button class="secondary" data-resume="${Number(j.id)}">${t("resume")}</button>` : ""}</article>`,
+          `<article class="admin-item"><strong>#${Number(j.id)} · ${esc(date(j.created_at))}</strong><p class="small">${["sent", "failed", "pending", "sending", "cancelled", "expired", "unknown"].map((k) => `${t(k==='expired'?'subscriptionExpired':k)}: ${Number(j.counts[k]||0)}`).join(" · ")}</p>${j.counts.pending ? `<button class="secondary" data-resume="${Number(j.id)}">${t("resume")}</button>` : ""}${['failed','unknown'].filter(k=>j.counts[k]>0).map(k=>`<button class="secondary" data-retry="${Number(j.id)}" data-state="${k}">${t(k==='failed'?'retryFailed':'retryUnknown')}</button>`).join('')}</article>`,
       )
       .join("");
   }

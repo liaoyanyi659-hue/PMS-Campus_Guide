@@ -490,8 +490,8 @@ window.PMS_UI_COPY = [
     "查看 Pusat Parcel 包裹查询报表"
   ],
   [
-    "The parcel centre is in Bizz Mall; collection hours are not yet confirmed.",
-    "Pusat Parcel berada di Bizz Mall; waktu pengambilan belum disahkan.",
+    "The parcel centre is in Bizz Mall; see its timetable in the campus map. Confirm temporary changes at the counter.",
+    "Pusat Parcel berada di Bizz Mall; lihat jadualnya pada peta kampus. Sahkan perubahan sementara di kaunter.",
     "包裹中心位于 Bizz Mall，领取时间待补充。"
   ],
   [
@@ -1150,8 +1150,8 @@ window.PMS_UI_COPY = [
     "位于校园中心环形教学区域南侧、UIDM 旁的建筑。位置根据维护者圈选地图标注。"
   ],
   [
-    "In Bizz Mall, confirmed from the maintainer's marked map. Use the report below to check parcels; collection hours are pending.",
-    "Di Bizz Mall, disahkan melalui peta bertanda penyelenggara. Gunakan laporan di bawah untuk semakan bungkusan; waktu pengambilan belum disahkan.",
+    "In Bizz Mall, confirmed from the maintainer's marked map. Use the report below to check parcels; see the timetable for collection hours.",
+    "Di Bizz Mall, disahkan melalui peta bertanda penyelenggara. Gunakan laporan di bawah untuk semakan bungkusan; lihat jadual waktu pengambilan.",
     "位于 Bizz Mall。位置根据维护者圈选地图确认；可通过下方报表查询包裹，领取时间待补充。"
   ],
   [

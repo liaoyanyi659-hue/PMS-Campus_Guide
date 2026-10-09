@@ -179,7 +179,7 @@
     const posts = [...state.posts.values()];
     $("#feed").innerHTML = posts.length
       ? posts.map((p) => card(p)).join("")
-      : `<div class="empty"><h3>${state.q ? "没有找到相关帖子" : "这里还很安静。"}</h3><p>${state.q ? "试试其他关键词，或清空搜索。" : "来分享第一张校园照片，或问一个新生问题吧。"}</p><button class="primary" data-action="compose">＋ 写一篇帖子</button></div>`;
+      : `<div class="empty">${state.q||state.category?`<h3 data-no-translate>${window.PMS_REPAIR?.t('filtered')||'No posts match these filters.'}</h3><button data-action="clear-filters" data-no-translate>${window.PMS_REPAIR?.t('clear')||'Clear filters'}</button>`:'<h3>这里还很安静。</h3><p>来分享第一张校园照片，或问一个新生问题吧。</p><button class="primary" data-action="compose">＋ 写一篇帖子</button>'}</div>`;
   }
   async function loadFeed(append = false) {
     const request = ++state.feedRequest;
@@ -545,7 +545,12 @@
       return;
     b.disabled = true;
     try {
-      if (a === "category") {
+      if (a === "clear-filters") {
+        state.category = ""; state.q = "";
+        document.querySelectorAll('#lf-filters input,#lf-filters select,#search-form input').forEach(x=>x.value='');
+        document.querySelectorAll('[data-action="category"]').forEach(x=>{const selected=!x.dataset.category;x.classList.toggle('selected',selected);x.setAttribute('aria-pressed',String(selected));});
+        await loadFeed();
+      } else if (a === "category") {
         state.category = b.dataset.category;
         document.querySelectorAll('[data-action="category"]').forEach((x) => {
           const selected = x === b;

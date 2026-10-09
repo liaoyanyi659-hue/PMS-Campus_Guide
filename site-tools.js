@@ -200,20 +200,23 @@
     life: "校园生活",
     about: "认识 PMS",
   };
-  const records = places.map((p, i) => ({
-    title: p[0],
+  let records = [];
+  function buildSearchIndex() {
+  records = places.map((p, i) => ({
+    title: window.PMS_CMS?.title(p[0]) || window.PMS_UI.translate(p[0]),
     body: [
       p[4],
       p[5],
       locationHints[p[0]] || "",
-      searchAliases[p[0]] || "",
-    ].join(" "),
+    ].map(v=>window.PMS_UI.translate(v)).join(" "),
+    aliases: searchAliases[p[0]] || "",
     page: "explore",
     place: i,
-  }));
+  })).filter(r => !window.PMS_CMS?.hidden(r.title) && !window.PMS_CMS?.hidden(places[r.place][0]));
   const selector =
     "#guide .guide-block,#guide .club-card,#life .article,#life .outing-place,#life .outing-feature,#about .article,#about .guide-block";
   all(selector).forEach((el) => {
+    if(el.hidden || el.closest('[hidden]')) return;
     const heading = el.querySelector("h2,h3,h4");
     if (!heading) return;
     records.push({
@@ -223,6 +226,10 @@
       target: ensureId(el),
     });
   });
+  }
+  buildSearchIndex();
+  document.addEventListener('pms-cms-updated', buildSearchIndex);
+  document.addEventListener('pms-language-change', () => requestAnimationFrame(buildSearchIndex));
   const searchButton = document.createElement("button");
   searchButton.type = "button";
   searchButton.className = "global-search-button";
@@ -266,10 +273,7 @@
       .forEach((group) => group.forEach((w) => alternatives.add(normal(w))));
     const matches = records
       .map((r, i) => {
-        const title = normal(
-            [r.title, tr(r.title, "en"), tr(r.title, "ms")].join(" "),
-          ),
-          body = normal([r.body, tr(r.body, "en"), tr(r.body, "ms")].join(" "));
+        const title = normal(r.title), body = normal(r.body+' '+(r.aliases||''));
         const score = Array.from(alternatives).reduce(
           (n, q) =>
             Math.max(n, contains(title, q) ? 3 : contains(body, q) ? 1 : 0),
@@ -291,8 +295,8 @@
         title = document.createElement("strong"),
         preview = document.createElement("span");
       small.textContent = tr(pages[r.page]);
-      title.textContent = tr(r.title);
-      preview.textContent = tr(r.body).slice(0, 120);
+      title.textContent = r.title;
+      preview.textContent = r.body.slice(0, 120);
       b.append(small, title, preview);
       container.append(b);
     });

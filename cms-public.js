@@ -50,6 +50,14 @@
     "about",
   ]);
   const backups = new Map();
+  let nativePages={};
+  window.PMS_CMS={title:key=>text(managed.get(key)?.title),hidden:key=>hidden.has(key)};
+  const state=document.createElement('p');state.className='source-note';state.setAttribute('role','status');state.dataset.noTranslate='';
+  const retry=document.createElement('button');retry.type='button';retry.className='soft-button';retry.hidden=true;
+  document.getElementById('today-pms')?.append(state,retry);
+  let phase='loading';
+  function status(){const l=language();const words={en:['Loading the latest guide…','Guide data loaded.','Latest guide unavailable. Showing the bundled guide; information may be outdated.','Try again'],ms:['Memuatkan panduan terkini…','Data panduan telah dimuatkan.','Panduan terkini tidak tersedia. Panduan tersimpan dipaparkan; maklumat mungkin lapuk.','Cuba lagi'],zh:['正在载入最新指南…','指南资料已载入。','最新指南暂时无法读取，现显示内置版本，资料可能不是最新。','重试']}[l]||[];state.textContent=words[{loading:0,current:1,fallback:2}[phase]];retry.textContent=words[3];retry.hidden=phase!=='fallback';}
+  status();
   function imgURL(id) {
     const u = new URL(base);
     u.searchParams.set("action", "cms_media_file");
@@ -146,6 +154,7 @@
       if (content && title) {
         title.firstChild.textContent = text(content.title);
         title.firstChild.parentElement.setAttribute("data-no-translate", "");
+        const sub=title.querySelector('small');if(sub&&sub.textContent.trim()===text(content.title).trim())sub.remove();
       }
     });
     const p = places[selected],
@@ -157,9 +166,8 @@
         title.textContent = text(m.title);
         title.setAttribute("data-no-translate", "");
       }
-      d.querySelectorAll(".detail-source,.data-meta span").forEach((x) =>
-        x.remove(),
-      );
+      const subtitle=d.querySelector('p[lang="ms"]');if(subtitle&&subtitle.textContent.trim()===text(m.title).trim())subtitle.remove();
+      d.querySelectorAll('.schedule').forEach(list=>{if(!list.children.length){const p=document.createElement('p');p.dataset.noTranslate='';p.textContent={en:'Hours unconfirmed',ms:'Waktu belum disahkan',zh:'时间待确认'}[language()];list.replaceWith(p);}});
       const v = m.verification;
       const box = document.createElement("div");
       box.className = "verification";
@@ -242,13 +250,16 @@
     const daily = document.getElementById("daily-services");
     if (daily)
       daily.innerHTML = lifeEntries
-        .filter((e) => !hidden.has(e.name))
+        .filter((e) => !hidden.has(e.name) && !["宿舍洗衣服务","Bizz Mall 旁洗衣服务"].includes(e.name))
         .map((e) => {
           const m = managed.get(e.name),
             v = lifeByName.get(e.name) || e;
-          return `<article class="article"><span class="tag">餐饮 · 购物 · 洗衣</span><h2>${esc(m ? text(m.title) : e.name)}</h2>${photoMarkup(e.name)}<p>${v.ms}</p><p>${v.desc}</p>${todayMarkup(e.name)}${hoursMarkup(v)}${sectionsMarkup(v)}</article>`;
+          const title=m ? text(m.title) : e.name;
+          return `<article class="article"><span class="tag">餐饮 · 购物 · 洗衣</span><h2>${esc(title)}</h2>${photoMarkup(e.name)}${v.ms===esc(title)?'':`<p>${v.ms}</p>`}<p>${v.desc}</p>${todayMarkup(e.name)}${hoursMarkup(v)}${sectionsMarkup(v)}</article>`;
         })
         .join("");
+    const laundry=document.getElementById('laundry-services');
+    if(laundry)laundry.innerHTML=['宿舍洗衣服务','Bizz Mall 旁洗衣服务'].filter(key=>!hidden.has(key)).map(key=>{const v=lifeByName.get(key),p=managed.get(key);return `<article class="article"><h2>${esc(p?text(p.title):key)}</h2>${photoMarkup(key)}<p>${v.desc}</p>${todayMarkup(key)}${hoursMarkup(v)}${sectionsMarkup(v)}</article>`;}).join('');
     const pool = document.getElementById("pool-guide"),
       p = managed.get(poolEntry.name);
     if (pool) pool.hidden = hidden.has(poolEntry.name);
@@ -290,6 +301,9 @@
       const p = r.payload,
         target = document.getElementById(p.slot);
       if (!target) continue;
+      const native=nativePages[r.record_key];
+      // Default imported text is a summary of the original section, not a replacement template.
+      if(native && !p.media_id && ['en','ms','zh'].every(l=>p.title?.[l]===native.title?.[l]) && [native.legacy?.en,native.legacy?.ms,native.legacy?.zh,native.current?.en,native.current?.ms,native.current?.zh].filter(Boolean).includes(text(p.body)))continue;
       const block = document.createElement("article");
       block.className = "article cms-content-block";
       block.dataset.cmsBlock = String(r.id);
@@ -305,7 +319,8 @@
         wrapper.innerHTML = photo(imgURL(p.media_id), text(p.title));
         block.append(wrapper);
       }
-      if (p.replace && leafSlots.has(p.slot) && !backups.has(p.slot)) {
+      const interactive=target.querySelector('a,input,button,details,select,textarea,[data-read-target]');
+      if (p.replace && !interactive && leafSlots.has(p.slot) && !backups.has(p.slot)) {
         backups.set(p.slot, [...target.childNodes]);
         target.replaceChildren(block);
       } else target.append(block);
@@ -316,15 +331,16 @@
     pages();
     document.dispatchEvent(new Event("pms-cms-updated"));
     if (typeof translatePage === "function") translatePage();
+    status();
   }
-  document
-    .getElementById("language-select")
-    ?.addEventListener("change", () => requestAnimationFrame(apply));
+  document.addEventListener('pms-language-change',()=>requestAnimationFrame(apply));
+  async function load(){
+  if(phase==='loading'&&load.busy)return;load.busy=true;phase='loading';status();
   const controller = new AbortController(),
     timer = setTimeout(() => controller.abort(), 15000);
   const url = new URL(base);
   url.searchParams.set("action", "cms_public");
-  fetch(url, {
+  return fetch(url, {
     cache: "no-store",
     credentials: "omit",
     signal: controller.signal,
@@ -336,11 +352,17 @@
     .then((r) => {
       if (r.ok && r.installed) {
         data = r;
+        phase='current';
         apply();
-      }
+      }else throw Error('CMS unavailable');
     })
     .catch(() => {
       /* Original guide remains available if CMS cannot be read. */
+      phase='fallback';status();
     })
-    .finally(() => clearTimeout(timer));
+    .finally(() => {clearTimeout(timer);load.busy=false;});
+  }
+  retry.onclick=load;
+  const nativeController=new AbortController(),nativeTimer=setTimeout(()=>nativeController.abort(),5000);
+  fetch('cms-native.json?v=1.17',{credentials:'omit',signal:nativeController.signal}).then(r=>r.json()).then(r=>nativePages=r).catch(()=>{}).finally(()=>{clearTimeout(nativeTimer);load();});
 })();

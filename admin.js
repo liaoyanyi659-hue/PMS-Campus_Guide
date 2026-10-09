@@ -88,7 +88,7 @@
       throw Error(
         e.name === "AbortError"
           ? "Request timed out. Check your connection and retry."
-          : e instanceof TypeError
+          : e instanceof TypeError || e.name === 'SyntaxError'
             ? "Could not connect to the backend."
             : e.message,
       );
