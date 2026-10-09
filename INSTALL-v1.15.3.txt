@@ -1,0 +1,6 @@
+PMS Explore v1.15.3 — display fix for existing v1.15 / v1.15.2.
+Back up matching files and upload ALL ZIP contents to the GitHub website root, replacing matching files. Keep all other files/photos. No SQL or PHP changes.
+Includes the classic header. Keeps account features and fixed bottom navigation.
+Fixes readable place cards, selected map/card colours, and light text on the dark Discover PMS panel.
+After deployment reload; if old styles persist, test in a private tab.
+Local CSS and selected-state tests only; live/iPhone visual verification not performed.

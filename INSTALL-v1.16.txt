@@ -1,0 +1,15 @@
+PMS Explore Admin Dashboard v1.16
+
+This patch is for the existing v1.15 / v1.15.2 / v1.15.3 website, not a standalone website.
+1. Back up admin.html, admin.js and admin.css.
+2. Upload ALL files in this ZIP to your GitHub website root. Replace matching files; keep all other files and photos.
+3. Wait for GitHub Pages deployment, then open admin.html. Sign in with your existing administrator account.
+4. If old styling persists, try a private tab or clear this website's cached data (this may sign you out).
+
+No SQL or Hostinger PHP changes are needed. Existing CMS, club approval and account APIs stay unchanged. Do not upload this frontend patch into campus-api or replace config.php.
+
+Reference-inspired sidebar and card dashboard; searchable/highlighted menu; mobile drawer; keyboard shortcut /; Escape closes drawer; existing admin actions retained.
+Statistics and recent posts/activity come from authenticated APIs. No fake analytics, server latency, API key cards or random charts. Account ring shows active account STATUS, not online users.
+This patch changes the ADMIN UI only; it does not change the public site's header or bottom navigation.
+
+Verification: local simulated-API tests for all 11 management tabs, menu filtering/highlighting, 3 languages, account counts, club approval, content imports/editor saving, mobile drawer events, logout cleanup and student/guest access. Stylesheets parsed and component colour assertions passed. No live Hostinger/GitHub deployment or real-device visual test was performed.

@@ -10,26 +10,21 @@
     />
     <title>PMS Explore · Admin</title>
     <link rel="stylesheet" href="admin.css?v=1.15" />
-    <link rel="stylesheet" href="polish.css?v=1.15" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="stylesheet" href="navigation.css?v=1.15" />
     <script src="ui-copy.js?v=1.15"></script>
+    <script src="admin-dashboard-copy.js?v=1.16"></script>
     <script src="ui-core.js?v=1.15"></script>
-    <link rel="stylesheet" href="ui-system.css?v=1.15" />
-    <link rel="stylesheet" href="mobile-layout.css?v=1.15" />
-  <link rel="stylesheet" href="accounts.css?v=1.15" />
-<link rel="stylesheet" href="restore-theme.css?v=1.15.2">
+    <link rel="stylesheet" href="admin-dashboard.css?v=1.16">
 </head>
   <body>
-    <header>
+    <div class="admin-public-bar">
       <a class="brand" href="index.html"
         >PMS <span>EXPLORE</span> <small>ADMIN</small></a
       >
       <div>
         <a href="index.html">View website ↗</a>
-        <button id="logout" hidden>Log out</button>
       </div>
-    </header>
+    </div>
     <div id="notice" role="status" aria-live="polite"></div>
     <main id="login-panel">
       <section class="login card">
@@ -57,9 +52,11 @@
       </section>
     </main>
     <main id="workspace" hidden>
-      <aside>
-        <p id="admin-name" class="eyebrow"></p>
-        <nav id="tabs">
+      <aside id="admin-sidebar" aria-label="Administration menu">
+        <div class="sidebar-brand"><a href="index.html" aria-label="PMS Explore website"><span class="brand-emblem" aria-hidden="true">✦</span><span>PMS <b>Explore</b><small>ADMIN WORKSPACE</small></span></a><button id="sidebar-close" class="icon-button" type="button" aria-label="Close menu">×</button></div>
+        <label class="sidebar-search"><span class="search-symbol" aria-hidden="true">⌕</span><input id="menu-search" type="search" placeholder="Search menu" aria-label="Search menu" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
+        <p id="menu-results" class="sr-only" role="status" aria-live="polite"></p>
+        <nav id="tabs" aria-label="Management sections">
           <button data-tab="dashboard" class="active">Overview</button
           ><button data-tab="users">Accounts</button
           ><button data-tab="places">Places & hours</button
@@ -68,12 +65,14 @@
           ><button data-tab="forum">Forum moderation</button
           ><button data-tab="audit">Activity log</button>
         </nav>
-        <a class="navlink" href="campus.html">Updates & notifications ↗</a>
-        <p class="muted">
+        <a class="navlink sidebar-updates" href="campus.html"><span aria-hidden="true">↗</span> Updates & notifications</a>
+        <p class="sidebar-note muted">
           Changes go live after publishing. All times use Malaysia time.
         </p>
+        <div class="sidebar-footer"><a class="admin-identity" href="profile.html"><span id="admin-avatar" aria-hidden="true">P</span><span><strong id="admin-name" data-user-content></strong><small>Administrator</small></span></a><button id="logout" class="secondary" hidden>Log out</button></div>
       </aside>
       <div class="content">
+        <div class="admin-topbar"><button id="sidebar-open" class="icon-button" type="button" aria-label="Open menu" aria-controls="admin-sidebar" aria-expanded="false">☰</button><div><span class="workspace-label">WORKSPACE</span><span class="workspace-name">PMS Campus Explorer</span></div><div class="topbar-actions"><label class="sr-only" for="admin-language">Language</label><select id="admin-language" data-no-translate><option value="en">English</option><option value="ms">Bahasa Melayu</option><option value="zh">中文</option></select><a class="secondary button view-site" href="index.html">View website ↗</a></div></div>
         <div class="section-head">
           <div>
             <p class="eyebrow">PMS EXPLORE / ADMINISTRATION</p>
@@ -82,8 +81,14 @@
           <button id="refresh" class="secondary">Refresh</button>
         </div>
         <section id="dashboard" class="panel">
+          <div class="dashboard-featured"><div class="feature-kicker">YOUR CAMPUS, CONNECTED</div><h2>One workspace.<br>Every campus update.</h2><p>Manage your guide, community and clubs in one place.</p><div class="actions"><a class="button" href="campus.html">Publish an update ↗</a><button type="button" data-dashboard-tab="places" class="secondary">Manage places</button></div><span class="feature-orbit" aria-hidden="true"></span></div>
+          <div class="dashboard-summary card"><p class="eyebrow">COMMUNITY SNAPSHOT</p><div class="snapshot-row"><div><span>Accounts</span><strong id="snapshot-users">—</strong></div><span class="snapshot-icon" aria-hidden="true">↗</span></div><div class="snapshot-row"><div><span>Forum posts</span><strong id="snapshot-posts">—</strong></div><a href="community.html">Open Community ↗</a></div><p class="data-note">Live database counts · refresh to update</p></div>
           <div id="stats" class="stats"></div>
-          <div class="card">
+          <div class="dashboard-health card"><div class="widget-title"><h2>Account status</h2><span class="badge">Current</span></div><div class="activity-ring"><svg viewBox="0 0 160 160" role="img" aria-label="Active accounts as a share of all accounts"><circle class="ring-back" cx="80" cy="80" r="60"/><circle id="activity-ring-value" class="ring-value" cx="80" cy="80" r="60" stroke-dasharray="0 377"/><text id="activity-percent" x="80" y="79" text-anchor="middle">—</text><text id="activity-ring-label" x="80" y="100" text-anchor="middle" class="ring-caption">Active</text></svg></div><p id="activity-caption" class="muted">Loading…</p><button type="button" class="secondary" data-dashboard-tab="users">Manage accounts</button></div>
+          <div class="dashboard-audit card"><div class="widget-title"><div><p class="eyebrow">WORKSPACE HISTORY</p><h2>Recent activity</h2></div><button type="button" class="secondary" data-dashboard-tab="audit">View all</button></div><div id="recent-activity" class="dashboard-list" aria-live="polite"><p class="muted">Loading…</p></div></div>
+          <div class="dashboard-posts card"><div class="widget-title"><div><p class="eyebrow">CAMPUS COMMUNITY</p><h2>Latest posts</h2></div><button type="button" class="secondary" data-dashboard-tab="forum">Moderate</button></div><div id="recent-posts" class="dashboard-list" aria-live="polite"><p class="muted">Loading…</p></div></div>
+          <div class="dashboard-security card"><span class="security-emblem" aria-hidden="true">◇</span><h2>Secure your workspace</h2><p>Review account access and two-step verification.</p><button type="button" class="secondary" data-dashboard-tab="security">Security settings</button></div>
+          <div class="dashboard-actions card">
             <h2>Quick actions</h2>
             <p>
               Manage announcements and send notifications from Campus Updates.
@@ -97,7 +102,7 @@
             </div>
             <p id="push-health" class="muted"></p>
           </div>
-          <div class="card">
+          <div class="dashboard-setup card">
             <h2>First-time setup</h2>
             <p>
               Import the existing guide once to start editing places. Existing
@@ -406,13 +411,9 @@
       </form>
     </dialog>
     <script src="forum-config.js?v=1.15"></script>
-    <script src="admin.js?v=1.15"></script>
+    <script src="admin.js?v=1.16"></script>
     <script src="admin-plus.js?v=1.15"></script>
-    <script src="complete.js?v=1.15"></script>
-    <script src="navigation.js?v=1.15"></script>
-    <script src="ui-friendly.js?v=1.15"></script>
-    <script src="mobile-layout.js?v=1.15"></script>
   <script src="accounts.js?v=1.15"></script>
 <script src="admin-clubs.js?v=1.15"></script>
-<script src="header-classic.js?v=1.15.2"></script></body>
+<script src="admin-dashboard.js?v=1.16"></script></body>
 </html>

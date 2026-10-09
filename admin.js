@@ -32,6 +32,7 @@
   function sessionOff() {
     token = "";
     user = null;
+    document.dispatchEvent(new CustomEvent("pms-admin-session", { detail: null }));
     try {
       sessionStorage.removeItem("pms-forum-token");
     } catch {}
@@ -111,6 +112,7 @@
     $("#workspace").hidden = false;
     $("#logout").hidden = false;
     $("#admin-name").textContent = user.nickname;
+    document.dispatchEvent(new CustomEvent("pms-admin-session", { detail: user }));
   }
   function imageURL(id) {
     const u = new URL(base);
@@ -153,7 +155,9 @@
   async function load() {
     if (window.PMS_PLUS) await window.PMS_PLUS.onTab(tab);
     if (tab === "dashboard") {
-      const r = await api("admin_dashboard");
+      let r;
+      try { r = await api("admin_dashboard"); }
+      catch (e) { document.dispatchEvent(new CustomEvent("pms-admin-dashboard-error")); throw e; }
       const names = {
         users: "Accounts",
         pending_clubs: "Pending club applications",
@@ -167,12 +171,14 @@
       $("#stats").innerHTML = Object.entries(r.stats)
         .map(
           ([k, n]) =>
-            `<div class="stat"><span>${esc(names[k] || k)}</span><strong>${Number(n)}</strong></div>`,
+            `<button type="button" class="stat" data-stat="${esc(k)}"><span>${esc(names[k] || k)}</span><strong>${Number(n)}</strong><small>View details ↗</small></button>`,
         )
         .join("");
       $("#push-health").textContent = r.push_ready
         ? "Notification service configured. A real-device test is still required."
         : "Notification service needs configuration.";
+      window.PMS_ADMIN_DASHBOARD = r;
+      document.dispatchEvent(new CustomEvent("pms-admin-dashboard", { detail: r }));
     }
     if (tab === "users") {
       const r = await api("admin_users", undefined, {
@@ -262,7 +268,7 @@
     document
       .querySelectorAll("[data-tab]")
       .forEach((x) => x.classList.toggle("active", x === b));
-    $("#section-title").textContent = b.textContent;
+    $("#section-title").textContent = b.dataset.label || b.textContent;
     run($("#refresh"), load);
   };
   $("#refresh").onclick = (e) => run(e.target, load);
