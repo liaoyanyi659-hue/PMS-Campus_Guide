@@ -5620,3 +5620,5 @@ window.PMS_UI_COPY = [
     "A translation is not available yet."
   ]
 ];
+
+window.PMS_UI_COPY.push(["Pending club applications","Permohonan kelab belum diluluskan","待审批社团申请"]);

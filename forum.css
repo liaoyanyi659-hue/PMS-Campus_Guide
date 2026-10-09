@@ -1,10 +1,10 @@
 :root {
-  --ink: #303837;
-  --muted: #746f68;
+  --ink: #17344e;
+  --muted: #627486;
   --line: #e5dfd6;
-  --paper: #f8f6f1;
-  --accent: #80565b;
-  --nav: #35413f;
+  --paper: #f2f5fb;
+  --accent: #087e83;
+  --nav: #153f63;
 }
 * {
   box-sizing: border-box;
@@ -160,7 +160,7 @@ main {
   padding: 35px;
   border: 1px solid #e2d9cc;
   border-radius: 22px;
-  background: #eee8de;
+  background: #e3edf5;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -235,7 +235,7 @@ main {
 }
 .categories button.selected,
 .auth-tabs .selected {
-  background: #e9e1d5;
+  background: #dbe3ed;
   color: #705b45;
   border-color: #d1c1ac;
 }
@@ -285,7 +285,7 @@ textarea {
   border-radius: 18px;
   padding: 24px;
   margin-bottom: 16px;
-  box-shadow: 0 5px 20px #30383705;
+  box-shadow: 0 5px 20px #17344e05;
 }
 .post-meta {
   display: flex;
@@ -312,7 +312,7 @@ textarea {
 .badge {
   display: inline-block;
   padding: 3px 8px;
-  background: #f1ece5;
+  background: #edf3f8;
   color: #78604a;
   border-radius: 6px;
   font-size: 11px;
@@ -322,7 +322,7 @@ textarea {
   color: var(--accent);
 }
 .post-title {
-  color: #303837;
+  color: #17344e;
   display: block;
   font-size: 21px;
   font-weight: 700;
@@ -361,7 +361,7 @@ textarea {
   height: 155px;
   object-fit: cover;
   border-radius: 12px;
-  background: #eee9e1;
+  background: #edf3f8;
 }
 .photos.single img {
   height: auto;
@@ -383,9 +383,9 @@ textarea {
   font-size: 12px;
   padding: 5px 10px;
   min-height: 37px;
-  background: #faf8f4;
-  color: #35413f;
-  border: 1px solid #d6cdbc;
+  background: #f3f7fb;
+  color: #153f63;
+  border: 1px solid #ccdbe7;
   min-height: 44px;
 }
 .post-actions button:hover:not(:disabled) {
@@ -582,7 +582,7 @@ label select {
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
-  background: #35413f;
+  background: #153f63;
   color: white;
   border-radius: 12px;
   padding: 12px 20px;
@@ -724,7 +724,7 @@ label select {
   border: 1px solid #ded8cf;
   border-radius: 12px;
   background: #f6f3ee;
-  color: #35413f;
+  color: #153f63;
   font: inherit;
 }
 .post-meta time {

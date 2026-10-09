@@ -156,6 +156,7 @@
       const r = await api("admin_dashboard");
       const names = {
         users: "Accounts",
+        pending_clubs: "Pending club applications",
         active_users: "Active accounts",
         posts: "Forum posts",
         reports: "Pending reports",

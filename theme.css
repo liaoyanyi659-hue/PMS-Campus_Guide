@@ -1,11 +1,11 @@
 :root {
-  --ink: #292929;
-  --green: #292929;
-  --mint: #f3f0ee;
-  --line: #f3f0ee;
+  --ink: #153f63;
+  --green: #153f63;
+  --mint: #e9f1f7;
+  --line: #e9f1f7;
   --orange: #f5b74f;
-  --muted: #666464;
-  --blue: #292929;
+  --muted: #627486;
+  --blue: #153f63;
 }
 * {
   box-sizing: border-box;
@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: #faf9f7;
+  background: #f2f5fb;
   font:
     16px/1.75 system-ui,
     "PingFang SC",
@@ -127,7 +127,7 @@ nav button.active {
 .draft {
   font-size: 13px;
   color: var(--green);
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   border-radius: 30px;
   padding: 5px 12px;
   white-space: nowrap;
@@ -164,7 +164,7 @@ p {
 }
 .intro > span {
   font-size: 12px;
-  color: #666464;
+  color: #627486;
 }
 .selectrow {
   margin: 0 4% 12px;
@@ -200,12 +200,12 @@ p {
   border-radius: 20px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 12px 35px #29292909;
+  box-shadow: 0 12px 35px #153f6309;
 }
 .map {
   position: relative;
   height: 700px;
-  background: #f3f0ee;
+  background: #e9f1f7;
   min-width: 0;
 }
 .maplabel {
@@ -215,7 +215,7 @@ p {
   z-index: 6;
   padding: 8px 15px;
   background: #fffffff2;
-  box-shadow: 0 3px 12px #29292920;
+  box-shadow: 0 3px 12px #153f6320;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 700;
@@ -247,7 +247,7 @@ p {
   color: white;
   font-size: 14px;
   font-weight: 750;
-  box-shadow: 0 3px 12px #29292960;
+  box-shadow: 0 3px 12px #153f6360;
   z-index: 2;
   padding: 0 7px;
 }
@@ -262,11 +262,11 @@ p {
 }
 .pin.selected {
   background: var(--orange);
-  color: #292929;
+  color: #153f63;
   z-index: 5;
   box-shadow:
     0 0 0 5px #f5b74f40,
-    0 3px 15px #29292940;
+    0 3px 15px #153f6340;
 }
 .pin.selected:after {
   border-top-color: var(--orange);
@@ -286,7 +286,7 @@ p {
   font-size: 13px;
   line-height: 1.5;
   pointer-events: none;
-  box-shadow: 0 3px 12px #29292925;
+  box-shadow: 0 3px 12px #153f6325;
 }
 .pin.selected span,
 .pin:hover span,
@@ -306,7 +306,7 @@ p {
   background: white;
   padding: 4px;
   border-radius: 12px;
-  box-shadow: 0 3px 18px #29292930;
+  box-shadow: 0 3px 18px #153f6330;
 }
 .zoom button {
   width: 44px;
@@ -400,7 +400,7 @@ li {
 }
 .detail-source {
   font-size: 12px !important;
-  color: #666464;
+  color: #627486;
 }
 .note,
 .highlight {
@@ -416,7 +416,7 @@ li {
 .side a.external {
   display: inline-block;
   background: var(--mint);
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   padding: 10px 13px;
   border-radius: 8px;
   font-size: 14px;
@@ -426,7 +426,7 @@ li {
 }
 .colocated {
   padding: 12px;
-  background: #faf9f7;
+  background: #f2f5fb;
   border-radius: 10px;
   margin: 16px 0;
 }
@@ -476,7 +476,7 @@ li {
 }
 .directory button:hover {
   border-color: var(--green);
-  box-shadow: 0 3px 12px #29292909;
+  box-shadow: 0 3px 12px #153f6309;
 }
 .directory button[aria-pressed="true"] {
   background: var(--blue);
@@ -485,7 +485,7 @@ li {
 }
 .place-index {
   flex-shrink: 0;
-  background: #faf9f7;
+  background: #f2f5fb;
   border-radius: 9px;
   display: grid;
   place-items: center;
@@ -509,7 +509,7 @@ li {
   overflow-wrap: anywhere;
 }
 .directory button[aria-pressed="true"] small {
-  color: #e3dddd;
+  color: #dbe3ed;
 }
 .resourcebar {
   margin: 0 4% 30px;
@@ -518,11 +518,11 @@ li {
   gap: 12px;
 }
 .resourcebar a {
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   border-radius: 12px;
   padding: 19px 20px;
   color: var(--ink);
-  background: #f3f0ee;
+  background: #e9f1f7;
   text-decoration: none;
   font-weight: 700;
 }
@@ -535,7 +535,7 @@ li {
 }
 .resourcebar a:hover {
   border-color: var(--green);
-  background: #f3f0ee;
+  background: #e9f1f7;
 }
 .page {
   display: none;
@@ -597,7 +597,7 @@ li {
 .schedule {
   font-size: 15px;
   margin: 18px 0;
-  background: #faf9f7;
+  background: #f2f5fb;
   border-radius: 10px;
   padding: 3px 15px;
 }
@@ -622,7 +622,7 @@ li {
 }
 .location-photo a {
   display: block;
-  background: #f3f0ee;
+  background: #e9f1f7;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -663,7 +663,7 @@ li {
   margin: 14px 0;
 }
 .about p {
-  color: #f3f0ee;
+  color: #e9f1f7;
 }
 .about .eyebrow {
   color: #aaa4a4;
@@ -749,7 +749,7 @@ button:hover:not(.active):not(.pin):not([aria-pressed="true"]) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4px;
-    box-shadow: 0 -4px 20px #2929290a;
+    box-shadow: 0 -4px 20px #153f630a;
   }
   header {
     backdrop-filter: none;
@@ -973,7 +973,7 @@ dialog textarea {
   font: inherit;
   font-size: 16px;
   padding: 11px 13px;
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   border-radius: 9px;
   background: white;
   color: var(--ink);
@@ -985,9 +985,9 @@ dialog textarea {
   font-size: 14px;
   min-height: 44px;
   padding: 9px 14px;
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   border-radius: 9px;
-  background: #faf9f7;
+  background: #f2f5fb;
   color: var(--blue);
   cursor: pointer;
 }
@@ -999,8 +999,8 @@ dialog textarea {
 }
 .today-panel {
   padding: 16px;
-  border: 1px solid #e3dddd;
-  background: #faf9f7;
+  border: 1px solid #dbe3ed;
+  background: #f2f5fb;
   border-radius: 12px;
   margin: 16px 0;
 }
@@ -1149,7 +1149,7 @@ dialog {
   color: var(--ink);
 }
 dialog::backdrop {
-  background: #29292988;
+  background: #153f6388;
 }
 dialog h2 {
   font-size: 23px;
@@ -1234,7 +1234,7 @@ dialog :focus-visible {
   margin-right: 5px;
 }
 .quick-places button {
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   background: white;
   padding: 8px 15px;
   border-radius: 9px;
@@ -1316,10 +1316,10 @@ html[lang="ms"] nav button {
 .pin-guides line {
   stroke: #ffffff;
   stroke-width: 3;
-  filter: drop-shadow(0 1px 1px #292929);
+  filter: drop-shadow(0 1px 1px #153f63);
 }
 .pin-guides circle {
-  fill: #292929;
+  fill: #153f63;
   stroke: white;
   stroke-width: 1.5;
 }
@@ -1379,7 +1379,7 @@ html[lang="ms"] nav button {
   align-items: center;
   min-height: 44px;
   padding: 8px 13px;
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   border-radius: 9px;
   background: white;
   font-size: 14px;
@@ -1422,7 +1422,7 @@ html[lang="ms"] nav button {
   border: 0;
   border-radius: 12px;
   margin: 12px 0;
-  background: #f3f0ee;
+  background: #e9f1f7;
 }
 .outing-places {
   display: grid;
@@ -1438,7 +1438,7 @@ html[lang="ms"] nav button {
 }
 .outing-tip {
   padding: 17px;
-  background: #f3f0ee;
+  background: #e9f1f7;
   border-radius: 12px;
   margin-top: 18px;
 }
@@ -1482,7 +1482,7 @@ html[lang="ms"] nav button {
   width: 100%;
   max-height: 320px;
   object-fit: contain;
-  background: #faf9f7;
+  background: #f2f5fb;
   border-radius: 12px;
 }
 .outing-photos figcaption {
@@ -1613,10 +1613,10 @@ html[lang="ms"] nav button {
 }
 .guide-contents a {
   padding: 12px 16px;
-  background: #f3f0ee;
+  background: #e9f1f7;
   border-radius: 10px;
   text-decoration: none;
-  color: #292929;
+  color: #153f63;
 }
 .guide-block,
 .outing-feature,
@@ -1630,13 +1630,13 @@ html[lang="ms"] nav button {
 }
 .opening-card {
   background: #fff;
-  border: 1px solid #e3dddd;
+  border: 1px solid #dbe3ed;
   border-top: 4px solid #aaa4a4;
   border-radius: 12px;
   padding: 18px;
 }
 .opening-card.open {
-  border-top-color: #666464;
+  border-top-color: #627486;
 }
 .opening-card.closed {
   border-top-color: #a77b39;
@@ -1650,7 +1650,7 @@ html[lang="ms"] nav button {
 }
 .opening-card small,
 .updated-meta {
-  color: #666464;
+  color: #627486;
   font-size: 0.8rem;
 }
 .updated-meta {
@@ -1668,7 +1668,7 @@ html[lang="ms"] nav button {
   transform: translateX(-50%);
   padding: 12px 25px;
   border-radius: 30px;
-  background: #292929;
+  background: #153f63;
   color: white;
 }
 .gallery-viewer {
@@ -1676,12 +1676,12 @@ html[lang="ms"] nav button {
   max-height: 92dvh;
   border: 0;
   border-radius: 18px;
-  background: #292929;
+  background: #153f63;
   color: #fff;
   padding: 52px 20px 20px;
 }
 .gallery-viewer::backdrop {
-  background: #292929e8;
+  background: #153f63e8;
 }
 .gallery-viewer > img {
   display: block;
@@ -1698,7 +1698,7 @@ html[lang="ms"] nav button {
 }
 .gallery-viewer button {
   background: #fff;
-  color: #292929;
+  color: #153f63;
   border: 0;
   border-radius: 10px;
   min-width: 44px;
@@ -1804,7 +1804,7 @@ html[lang="ms"] nav button {
   gap: 14px;
   padding: 0 0 16px;
   margin-bottom: 18px;
-  border-bottom: 1px solid #e3dddd;
+  border-bottom: 1px solid #dbe3ed;
 }
 #guide .guide-chapter-heading > span {
   display: grid;
@@ -1880,11 +1880,11 @@ html[lang="ms"] nav button {
 #guide .updated-meta {
   padding-top: 14px;
   margin: 20px 0 0;
-  border-top: 1px solid #f3f0ee;
+  border-top: 1px solid #e9f1f7;
 }
 #guide #orientation-clothes {
   border-left: 4px solid var(--green);
-  background: #f3f0ee;
+  background: #e9f1f7;
 }
 #guide #orientation-clothes p {
   margin-bottom: 0;
@@ -1895,7 +1895,7 @@ html[lang="ms"] nav button {
 #guide .hostel-tips article {
   padding: 18px 0;
   border: 0;
-  border-bottom: 1px solid #f3f0ee;
+  border-bottom: 1px solid #e9f1f7;
   border-radius: 0;
   background: transparent;
 }
@@ -1920,7 +1920,7 @@ html[lang="ms"] nav button {
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #faf9f7;
+  background: #f2f5fb;
 }
 #guide #student-systems .hostel-tips {
   gap: 14px;
@@ -1942,7 +1942,7 @@ html[lang="ms"] nav button {
 #guide .check-grid fieldset {
   padding: 12px 18px;
   border-radius: 12px;
-  background: #faf9f7;
+  background: #f2f5fb;
 }
 #guide .check-grid legend {
   font-size: 16px;
@@ -1951,7 +1951,7 @@ html[lang="ms"] nav button {
   padding: 10px 0;
   margin: 0;
   gap: 12px;
-  border-bottom: 1px solid #f3f0ee;
+  border-bottom: 1px solid #e9f1f7;
   line-height: 1.6;
   font-size: 16px;
 }
@@ -1973,7 +1973,7 @@ html[lang="ms"] nav button {
 }
 #guide .contact-card {
   padding: 20px;
-  background: #faf9f7;
+  background: #f2f5fb;
 }
 #guide .contact-card:last-child {
   grid-column: 1/-1;
@@ -2145,7 +2145,7 @@ html[lang="ms"] nav button {
   padding: 4px 9px;
   border-radius: 6px;
   background: var(--mint);
-  color: #292929;
+  color: #153f63;
   font-size: 13px;
   font-weight: 650;
 }
@@ -2183,7 +2183,7 @@ html[lang="ms"] nav button {
 }
 #guide #club-joining {
   border-left: 4px solid var(--green);
-  background: #f3f0ee;
+  background: #e9f1f7;
 }
 #guide .guide-action {
   display: inline-flex;
@@ -2217,7 +2217,7 @@ html[lang="ms"] nav button {
   border-bottom: 1px solid var(--line);
 }
 #guide .timetable-key thead {
-  background: #f3f0ee;
+  background: #e9f1f7;
 }
 #guide .timetable-key tr:last-child th,
 #guide .timetable-key tr:last-child td {
@@ -2245,7 +2245,7 @@ html[lang="ms"] nav button {
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 10px 14px;
-  background: #f3f0ee;
+  background: #e9f1f7;
   color: var(--ink);
   font-weight: 650;
   white-space: nowrap;
@@ -2258,10 +2258,10 @@ html[lang="ms"] nav button {
   border: 0;
   border-radius: 18px;
   color: var(--ink);
-  box-shadow: 0 24px 80px #29292933;
+  box-shadow: 0 24px 80px #153f6333;
 }
 .global-search-dialog::backdrop {
-  background: #292929aa;
+  background: #153f63aa;
 }
 .search-dialog-top {
   display: flex;
@@ -2315,7 +2315,7 @@ html[lang="ms"] nav button {
   color: var(--muted);
 }
 .global-search-result:hover {
-  background: #faf9f7;
+  background: #f2f5fb;
 }
 .source-badge {
   display: inline-block;
@@ -2323,13 +2323,13 @@ html[lang="ms"] nav button {
   line-height: 1.5;
   padding: 4px 9px;
   border-radius: 6px;
-  background: #f3f0ee;
-  color: #292929;
+  background: #e9f1f7;
+  color: #153f63;
   margin: 0 0 8px;
 }
 .source-badge.official {
-  background: #faf9f7;
-  color: #292929;
+  background: #f2f5fb;
+  color: #153f63;
 }
 .source-badge.notice {
   background: #fbf1dc;
@@ -2415,7 +2415,7 @@ html[lang="ms"] nav button {
   border-radius: 24px;
   padding: 10px 16px;
   font-size: 14px;
-  box-shadow: 0 5px 20px #29292933;
+  box-shadow: 0 5px 20px #153f6333;
   min-height: 44px;
 }
 .back-to-top[hidden] {

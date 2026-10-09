@@ -1,0 +1,96 @@
+/* v1.14: a consistent blue account shell across the entire site. */
+[hidden]{display:none!important}
+body>header.account-header{display:grid!important;grid-template-columns:minmax(190px,1fr) auto auto;align-items:center;gap:12px 24px;padding:16px max(4%,calc((100% - 1280px)/2));background:#fff;border-bottom:1px solid #dbe5ee;position:relative;top:0;z-index:40;min-height:0}
+.account-header>.brand{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none;margin:0}
+.account-header .brand b,.account-header .brand-name{font-size:18px;color:#17344e;line-height:1.3}
+.account-header .brand small{font-size:10px;letter-spacing:.06em}
+.account-header .logo{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:0 0 56px;width:56px;height:56px;padding:5px;border-radius:15px;background:#153f63;line-height:1;color:white;box-shadow:none}
+.account-header .logo .logo-word{font:800 23px/1 Arial,sans-serif;letter-spacing:.02em}
+.account-header .logo small{font:700 6px/1.4 Arial,sans-serif;letter-spacing:1px;margin:5px 0 0;color:white}
+.account-header .compact-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin:0;grid-column:auto;width:auto}
+#shared-account{display:flex;align-items:center;gap:8px}
+#shared-auth,.account-header .pms-forum-direct,.account-header .profile-link{min-height:42px;display:inline-flex;align-items:center;justify-content:center;padding:9px 15px;border-radius:12px;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none}
+.account-header .profile-link{color:#153f63;background:#edf4fa}
+.account-header .pms-navigation-actions{position:static;display:flex;gap:8px;margin:0;flex:0 0 auto}
+.account-header .pms-menu-trigger{width:44px;height:44px;min-height:44px;padding:10px;border-radius:12px;background:#edf4fa;color:#153f63;border:1px solid #dbe5ee}
+.account-header #account-button,.account-header #logout,.account-header .compact-view-site{display:none!important}
+.account-header select{max-width:170px;min-width:0;width:100%;font-size:14px;background:#fff}
+.account-header .language-control{margin:0;grid-column:2;grid-row:1}
+.account-header>nav{grid-column:1/-1;grid-row:2;justify-content:center;margin:0}
+.account-header .global-search-button{grid-column:1/-1;grid-row:auto;width:100%;margin:0}
+.account-shell,.profile-shell{padding:0;width:min(1120px,92%);margin:44px auto 90px}
+.account-shell{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.account-intro{padding:46px 32px;border-radius:28px;color:#fff;background:linear-gradient(150deg,#153f63,#096d78);min-height:420px;position:sticky;top:24px}
+.account-intro h1{color:white;font-size:clamp(30px,4vw,48px);line-height:1.15;margin:18px 0}
+.account-intro p{color:#e3f1fa;max-width:34ch}
+.account-intro .eyebrow{color:#a9dfdf}
+.intro-mark{font-size:28px;font-weight:800;letter-spacing:.08em;line-height:1.1;margin-top:65px;color:#ffffff50}
+.account-card{padding:28px;background:#fff;border:1px solid #dbe5ee;border-radius:22px;box-shadow:0 8px 32px #153f6306;min-width:0}
+.account-card label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;margin:16px 0}
+.account-card input,.account-card textarea{width:100%;min-width:0}
+.account-card button[type=submit]{padding:12px 22px}
+#access-form>button[type=submit]{width:100%;margin-top:12px}
+.auth-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:5px;background:#f1f5f9;border-radius:14px}
+.auth-tabs button{flex:1;min-width:105px;background:transparent!important;color:#4f6377!important;border:0!important;padding:10px;font-size:13px}
+.auth-tabs button.selected{background:#153f63!important;color:white!important;box-shadow:0 3px 8px #153f6320}
+.account-info{background:#e9f5f5;color:#245960;border-radius:12px;padding:14px;font-size:14px}
+#account-notice:empty{display:none}
+#account-notice{padding:14px 16px;border-radius:12px;background:#e9f3fa;color:#153f63;overflow-wrap:anywhere}
+.profile-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}
+.profile-heading h1{margin:6px 0}
+.profile-grid{display:grid;grid-template-columns:340px 1fr;gap:24px}
+.profile-avatar{width:94px;height:94px;border-radius:50%;background:#e1eff7;color:#153f63;display:grid;place-items:center;font-size:36px;font-weight:800;overflow:hidden}
+.profile-avatar img,.post-meta .avatar img{width:100%;height:100%;object-fit:cover}
+.post-meta .avatar{overflow:hidden}
+#profile-email{overflow-wrap:anywhere}
+.profile-feed{margin-top:32px}
+.profile-post{padding:24px;background:#fff;border:1px solid #dbe5ee;border-radius:18px;margin:16px 0}
+.profile-post h3{margin:10px 0}.profile-post p{white-space:pre-wrap;overflow-wrap:anywhere;max-height:140px;overflow:auto}
+.profile-post-meta{font-size:13px;color:#637689}
+/* Administration: aligned sidebar, readable statistics, compact record panels. */
+#workspace{max-width:1320px;width:92%;margin:32px auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:26px;align-items:start}
+#workspace>aside{padding:20px 14px;background:#fff;border:1px solid #dbe5ee;box-shadow:0 4px 20px #153f6305;border-radius:20px;position:sticky;top:20px}
+#workspace #admin-name{padding:0 12px;color:#087e83;overflow-wrap:anywhere;font-size:13px}
+#tabs{display:grid;gap:5px}
+#tabs button{padding:11px 14px;background:transparent;border:0;text-align:left;color:#52677b;font-size:14px;border-radius:11px}
+#tabs button.active{background:#153f63;color:white}
+#workspace aside>.muted{font-size:12px;line-height:1.6;padding:0 12px}
+#workspace .navlink{display:block;margin:14px 0;padding:12px;background:#eaf5f5;color:#087078;border:0;border-radius:11px;font-size:13px;text-decoration:none}
+#workspace .section-head{padding:6px 0 18px;margin:0;align-items:center}
+#workspace .section-head h1{font-size:30px;margin:4px 0}
+#workspace .section-head .eyebrow{font-size:10px;color:#637689}
+#workspace .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:24px}
+#workspace .stat{padding:22px;border:1px solid #dbe5ee;border-radius:18px;display:flex;flex-direction:column;justify-content:space-between;min-height:130px;box-shadow:none;background:#fff}
+#workspace .stat:first-child{background:#153f63;color:white;border-color:#153f63}
+#workspace .stat span{font-size:13px;line-height:1.5;color:#627486}
+#workspace .stat:first-child span{color:#d0e8fa}
+#workspace .stat strong{font-size:36px;line-height:1.2;color:#153f63;margin-top:12px}
+#workspace .stat:first-child strong{color:white}
+#dashboard>.card{margin-bottom:18px;padding:24px;border-radius:18px}
+#dashboard h2{font-size:18px;margin-top:0}
+.club-filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.club-filters button{padding:9px 14px}.club-filters button:not(.selected){background:#fff;color:#153f63;border-color:#dbe5ee}
+.club-request{background:white;padding:24px;border:1px solid #dbe5ee;border-radius:18px;margin:16px 0;overflow-wrap:anywhere}
+.club-request h2{margin:0;font-size:21px}.club-request p{white-space:pre-wrap}
+.club-request .club-details{color:#627486;font-size:13px}.club-request textarea{width:100%;display:block;margin:8px 0 16px}
+.club-request .actions{display:flex;gap:8px;flex-wrap:wrap}.club-request button{padding:10px 16px}
+.club-pages{display:flex;gap:12px;margin:18px 0}
+@media(max-width:850px){
+ body>header.account-header{grid-template-columns:minmax(0,1fr) 128px;padding:13px 4%;gap:10px 12px}
+ .account-header>.brand{gap:9px}.account-header .brand b,.account-header .brand-name{font-size:15px}.account-header .brand>div>small{display:none}
+ .account-header .logo{width:46px;height:46px;flex-basis:46px;border-radius:12px}.account-header .logo .logo-word{font-size:19px}.account-header .logo small{font-size:5px}
+ .account-header .compact-toolbar{grid-column:1/-1;grid-row:2;justify-content:space-between;gap:8px;width:100%}
+ .account-header .pms-navigation-actions{margin-left:auto}.account-header select{font-size:13px;min-height:40px;padding:8px}
+ #shared-auth,.account-header .pms-forum-direct,.account-header .profile-link{padding:9px 12px;font-size:13px;min-height:40px}
+ .account-header .global-search-button{grid-row:3}
+ .pms-guide-header.account-header>nav{position:fixed;grid-row:auto;bottom:calc(10px + env(safe-area-inset-bottom));left:4%;right:4%;width:92%;z-index:80;background:#fff;border:1px solid #dbe5ee;padding:6px;border-radius:20px;display:flex}
+ .pms-guide-header.account-header>nav button{flex:1;min-width:0;font-size:11px;padding:9px 3px;background:white;color:#627486;border:0}
+ .pms-guide-header.account-header>nav button.active{background:#153f63;color:white}
+ .account-shell{grid-template-columns:1fr;margin-top:24px;gap:20px}.account-intro{position:static;min-height:0;padding:28px}.account-intro h1{font-size:30px}.intro-mark{display:none}
+ .account-card{padding:22px}.profile-grid{grid-template-columns:1fr}.profile-heading{flex-wrap:wrap}
+ #workspace{grid-template-columns:1fr;gap:18px;margin-top:20px}#workspace>aside{position:static;padding:14px}
+ #workspace aside>.muted{display:none}#tabs{display:flex;overflow-x:auto;padding-bottom:4px;gap:5px}#tabs button{flex-shrink:0;white-space:nowrap;width:auto;font-size:13px}
+ #workspace .navlink{margin-bottom:0}#workspace .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#workspace .stat{min-height:112px;padding:17px}#workspace .stat strong{font-size:30px}
+ #workspace .section-head h1{font-size:26px}.profile-shell{margin-top:25px}
+}
+@media(max-width:360px){#shared-auth,.account-header .pms-forum-direct,.account-header .profile-link{font-size:12px;padding:8px}#shared-account{gap:4px}.account-header .brand-name{font-size:14px}}
