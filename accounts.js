@@ -32,6 +32,10 @@
   let toolbar=h.querySelector('.compact-toolbar');if(!toolbar){toolbar=document.createElement('div');toolbar.className='compact-toolbar';h.append(toolbar);const a=h.querySelector('.pms-navigation-actions');if(a)toolbar.append(a);}
   const controls=document.createElement('div');controls.id='shared-account';controls.setAttribute('data-no-translate','');toolbar.prepend(controls);
   const logo=h.querySelector('.logo');if(logo){logo.setAttribute('data-no-translate','');logo.innerHTML='<span class="logo-word">PMS</span><small>EXPLORE</small>';}
+  let search=h.querySelector('.global-search-button');
+  if(!search){search=document.createElement('button');search.type='button';search.className='global-search-button';search.setAttribute('data-no-translate','');search.textContent=({en:'Search this site',ms:'Cari dalam laman',zh:'全站搜索'})[lang()]||'Search this site';search.onclick=()=>location.assign('index.html?search=1');document.addEventListener('pms-language-change',()=>{search.textContent=({en:'Search this site',ms:'Cari dalam laman',zh:'全站搜索'})[lang()]||'Search this site';});}
+  toolbar.prepend(search);
+  if(location.pathname.endsWith('index.html')&&new URL(location.href).searchParams.get('search')==='1')search.click();
   renderAccount();
  }
  function translate(){document.querySelectorAll('[data-ac]').forEach(e=>e.textContent=t(e.dataset.ac));const select=$('#account-language');if(select)select.value=lang();renderAccount();if($('#auth-page'))setMode(mode);}

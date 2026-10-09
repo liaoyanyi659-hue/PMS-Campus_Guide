@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   padding: 24px;
   background: #fff;
-  border: 1px solid #dbe3ed;
+  border: 1px solid #e4ddd2;
   border-radius: 24px;
 }
 #life .campus-entry {
@@ -28,10 +28,10 @@ body {
   margin: 0;
 }
 .today-date {
-  background: #e9f1f7;
+  background: #f3efe8;
   padding: 6px 10px;
   border-radius: 20px;
-  color: #627486;
+  color: #746d63;
   white-space: nowrap;
   font-size: 12px;
 }
@@ -41,8 +41,8 @@ body {
   gap: 16px;
 }
 #today-pms .today-panel {
-  background: #f2f5fb;
-  border: 1px solid #dbe3ed;
+  background: #f8f6f1;
+  border: 1px solid #ece6dd;
   border-radius: 18px;
   padding: 20px;
   min-width: 0;
@@ -57,8 +57,8 @@ body {
   width: 36px;
   height: 36px;
   flex: 0 0 36px;
-  background: #e4f2f2;
-  color: #153f63;
+  background: #e7ece5;
+  color: #35413f;
   border-radius: 11px;
   font-size: 23px;
   line-height: 1;
@@ -70,11 +70,11 @@ body {
 #today-pms p {
   font-size: 14px;
   margin: 6px 0 14px;
-  color: #627486;
+  color: #746d63;
 }
 #today-pms small {
   font-size: 12px;
-  color: #627486;
+  color: #746d63;
 }
 .today-stats {
   display: grid;
@@ -93,11 +93,11 @@ body {
 .today-stats strong {
   font-size: 28px;
   line-height: 1.2;
-  color: #153f63;
+  color: #35413f;
 }
 .today-stats span {
   font-size: 12px;
-  color: #627486;
+  color: #746d63;
 }
 #today-pms .today-link {
   margin-top: auto;
@@ -109,7 +109,7 @@ body {
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  color: #153f63;
+  color: #35413f;
 }
 #life .service-heading h2 {
   margin: 0 0 8px;
@@ -118,7 +118,7 @@ body {
 #life .service-heading p {
   margin: 0 0 20px;
   font-size: 15px;
-  color: #627486;
+  color: #746d63;
 }
 #life .campus-entry-actions {
   display: grid;
@@ -129,11 +129,11 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  border: 1px solid #dbe3ed;
+  border: 1px solid #e4ddd2;
   border-radius: 16px;
   padding: 18px;
-  color: #153f63;
-  background: #f2f5fb;
+  color: #35413f;
+  background: #f8f6f1;
   font-size: 15px;
   text-decoration: none;
   min-width: 0;
@@ -144,7 +144,7 @@ body {
 #life .service-tile small {
   display: block;
   font-size: 12px;
-  color: #627486;
+  color: #746d63;
   margin-top: 4px;
 }
 .service-arrow {
@@ -173,7 +173,7 @@ body > header.compact-header {
 .compact-header .brand-name,
 .compact-header .brand > span:last-child:not(.logo) {
   min-width: 0;
-  color: #153f63;
+  color: #35413f;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -198,7 +198,7 @@ body > header.compact-header {
   text-align: center;
   line-height: 1;
   font-weight: 800;
-  background: #153f63;
+  background: #35413f;
   color: #fff;
   letter-spacing: 0;
 }
@@ -276,8 +276,8 @@ body > header.compact-header {
   padding: 28px;
   margin-top: 24px;
   border-radius: 24px;
-  background: #edf3f8;
-  border: 1px solid #dbe3ed;
+  background: #eee9df;
+  border: 1px solid #e4ddd2;
 }
 .compact-header ~ main .hero h1 {
   font-size: clamp(26px, 4vw, 40px);
@@ -305,7 +305,7 @@ body > header.compact-header {
 }
 .notifications {
   background: #fff;
-  border: 1px solid #dbe3ed;
+  border: 1px solid #e4ddd2;
   border-radius: 24px;
   padding: 24px;
   gap: 16px;
@@ -337,7 +337,7 @@ body > header.compact-header {
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: #f2f5fb;
+  background: #f8f6f1;
   border-radius: 10px;
   font-size: 14px;
   min-height: 44px;
@@ -364,9 +364,9 @@ body > header.compact-header {
 }
 .feed-tools .categories button {
   flex: 0 0 auto;
-  background: #e9f1f7;
-  color: #153f63;
-  border: 1px solid #dbe3ed;
+  background: #f3efe8;
+  color: #35413f;
+  border: 1px solid #e4ddd2;
   border-radius: 24px;
   font-size: 13px;
   padding: 8px 14px;
@@ -374,9 +374,9 @@ body > header.compact-header {
   white-space: nowrap;
 }
 .feed-tools .categories button.selected {
-  background: #153f63;
+  background: #35413f;
   color: #fff;
-  border-color: #153f63;
+  border-color: #35413f;
 }
 .feed-tools form {
   display: flex;
