@@ -1,4 +1,11 @@
 window.PMS_UI_COPY = [
+["JTMK building, with teaching laboratories and the JMSK department. See the floor directory below.", "Bangunan JTMK dengan makmal pengajaran dan jabatan JMSK. Lihat panduan tingkat di bawah.", "JTMK 大楼设有教学实验室和 JMSK 部门，具体地点请看下方楼层目录。"],
+["This building houses JP, JPA and the Examination Unit. BK classrooms and UPLI are listed below; JMSK is in the JTMK building.", "Bangunan ini menempatkan JP, JPA dan Unit Peperiksaan. Bilik BK dan UPLI disenaraikan di bawah; JMSK berada di bangunan JTMK.", "此大楼设有 JP、JPA 和考试单位；BK 课室与 UPLI 位置见下方目录。JMSK 位于 JTMK 大楼。"],
+["JTMK building · courtyard and staircase", "Bangunan JTMK · ruang tengah dan tangga", "JTMK 大楼 · 中庭与楼梯"],
+["JP / JPA / Examination Unit building · entrance", "Bangunan JP / JPA / Unit Peperiksaan · pintu masuk", "JP／JPA／考试单位大楼 · 入口"],
+["MKT and network laboratories are in the JTMK building. MSKD 1–2 are on G; JMSK is on floor 2. Open the map for the full floor directory.", "Makmal MKT dan rangkaian berada di bangunan JTMK. MSKD 1–2 di aras G; JMSK di tingkat 2. Buka peta untuk panduan tingkat penuh.", "MKT 和网络实验室位于 JTMK 大楼；MSKD 1–2 在 G 层，JMSK 在 2 楼。打开地图可查看完整楼层目录。"],
+["In the JP / JPA building: BK 18–19 on floor 1; BK 25–27 and BK 37–38 on floor 2. Open the map for directions and the floor directory.", "Di bangunan JP / JPA: BK 18–19 di tingkat 1; BK 25–27 dan BK 37–38 di tingkat 2. Buka peta untuk arah dan panduan tingkat.", "JP／JPA 大楼：BK 18–19 在 1 楼；BK 25–27、BK 37–38 在 2 楼。打开地图可查看方向和楼层目录。"],
+["No opening hours scheduled today.","Tiada waktu dibuka dijadualkan hari ini.","今天没有开放时段"],
 ["Student contribution · 8 October 2026", "Perkongsian pelajar · 8 Oktober 2026", "学生分享 · 2026年10月8日"],
 ["Muadzam Shah bus terminal", "Terminal Bas Muadzam Shah", "Muadzam Shah 巴士总站"],
 ["If you cannot find a Grab, try the taxis behind the bus station.", "Kalau susah dapat Grab, boleh cuba teksi di belakang stesen bas.", "如果找不到 Grab，可以尝试巴士站后面的 Taxi。"],
@@ -2840,9 +2847,9 @@ window.PMS_UI_COPY = [
     "协助 Pusat Islam／清真寺管理与相关事务。"
   ],
   [
-    "Few Chinese members; members are friendly.",
-    "Ahli berbangsa Cina masih kurang; ahli kelab mesra.",
-    "华人成员较少，成员友善。"
+    "Contact the club for current membership, activities and how to join.",
+    "Hubungi kelab untuk maklumat ahli semasa, aktiviti dan cara menyertai.",
+    "请向社团了解当前成员、活动和加入方式。"
   ],
   [
     "A club under the student representative committee (JPP).",
@@ -2905,9 +2912,9 @@ window.PMS_UI_COPY = [
     "学生会，需参加竞选。"
   ],
   [
-    "The contributing senior does not particularly recommend it: the workload can be tiring. Consider your studies and time commitments before joining.",
-    "Senior yang berkongsi kurang mengesyorkannya: tugas agak banyak dan memenatkan. Pertimbangkan komitmen akademik dan masa sebelum menyertai.",
-    "学长姐个人不太推荐：工作较多、比较累，加入前先考虑课业与时间安排。"
+    "Student representation takes time. Check the responsibilities, election process and study commitments before joining.",
+    "Perwakilan pelajar memerlukan masa. Semak tanggungjawab, proses pilihan raya dan komitmen akademik sebelum menyertai.",
+    "参与学生代表工作需要投入时间，加入前请了解职责、竞选安排及课业时间。"
   ],
   [
     "Election required",
@@ -5622,3 +5629,4 @@ window.PMS_UI_COPY = [
 ];
 
 window.PMS_UI_COPY.push(["Pending club applications","Permohonan kelab belum diluluskan","待审批社团申请"]);
+
