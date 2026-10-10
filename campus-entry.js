@@ -5,24 +5,24 @@
       title: "Info & Aktiviti Kampus",
       body: "Nak tahu apa jadi di PMS? Semak info semasa, aktiviti dan aktifkan notifikasi.",
       open: "Tengok info & aktiviti",
-      aduan: "Aduan fasiliti ↗",
-      hint: "Buka sistem eComplaint PMS",
+      aduan: "Aduan fasiliti",
+      hint: "Sediakan dokumen untuk Pejabat Felo",
       lost: "Barang hilang? Tengok Lost & Found dalam Forum.",
     },
     en: {
       title: "Campus Updates & Events",
       body: "What’s happening at PMS? Check campus updates, activities and turn on notifications.",
       open: "View updates & events",
-      aduan: "Report a facility issue ↗",
-      hint: "Opens PMS eComplaint",
+      aduan: "Report a facility issue",
+      hint: "Prepare documents for Pejabat Felo",
       lost: "Lost something? Visit Lost & Found in the Forum.",
     },
     zh: {
       title: "校园资讯与活动",
       body: "查看 PMS 即时资讯、校园活动，并订阅手机通知。",
       open: "查看资讯与活动",
-      aduan: "设施报修 ↗",
-      hint: "打开 PMS eComplaint 系统",
+      aduan: "设施报修",
+      hint: "准备文件，亲自交到 Pejabat Felo",
       lost: "遗失物品？前往 Forum 的失物招领。",
     },
   };
@@ -40,7 +40,7 @@
     } catch {}
     const d = dict[l] || dict.en;
     root.setAttribute("data-no-translate", "");
-    root.innerHTML = `<div class="service-heading"><h2>${d.title}</h2><p>${d.body}</p></div><div class="campus-entry-actions"><a class="service-tile" href="campus.html"><span class="service-icon" aria-hidden="true">▤</span><span>${d.open}</span><span class="service-arrow" aria-hidden="true">→</span></a><a class="service-tile" href="http://app.pms.edu.my/ecomplaint/" target="_blank" rel="noopener noreferrer"><span class="service-icon" aria-hidden="true">⚒</span><span>${d.aduan}<small>${d.hint}</small></span><span class="service-arrow" aria-hidden="true">↗</span></a><a class="service-tile" href="community.html?category=lost_found"><span class="service-icon" aria-hidden="true">⌕</span><span>${d.lost}</span><span class="service-arrow" aria-hidden="true">→</span></a></div>`;
+    root.innerHTML = `<div class="service-heading"><h2>${d.title}</h2><p>${d.body}</p></div><div class="campus-entry-actions"><a class="service-tile" href="campus.html"><span class="service-icon" aria-hidden="true">▤</span><span>${d.open}</span><span class="service-arrow" aria-hidden="true">→</span></a><a class="service-tile" href="complaints.html"><span class="service-icon" aria-hidden="true">⚒</span><span>${d.aduan}<small>${d.hint}</small></span><span class="service-arrow" aria-hidden="true">→</span></a><a class="service-tile" href="community.html?category=lost_found"><span class="service-icon" aria-hidden="true">⌕</span><span>${d.lost}</span><span class="service-arrow" aria-hidden="true">→</span></a></div>`;
   }
   render();
   root

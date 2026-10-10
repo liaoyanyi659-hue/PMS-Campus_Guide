@@ -17,11 +17,11 @@
       "Info semasa dan aktiviti kampus, senang nak semak.",
       "校园即时资讯与活动，集中在这里查看。",
     ],
-    aduan: ["Report a facility issue ↗", "Aduan fasiliti ↗", "设施报修 ↗"],
+    aduan: ["Report a facility issue", "Aduan fasiliti", "设施报修"],
     external: [
-      "Opens the PMS eComplaint website in a new tab.",
-      "Buka laman eComplaint PMS dalam tab baharu.",
-      "新窗口打开 PMS eComplaint 网站。",
+      "Prepare documents, then print and hand them to Pejabat Felo.",
+      "Sediakan dokumen, kemudian cetak dan serahkan kepada Pejabat Felo.",
+      "准备文件后打印，亲自交到 Pejabat Felo。",
     ],
     notifications: [
       "Stay in the loop",

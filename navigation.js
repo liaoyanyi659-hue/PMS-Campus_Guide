@@ -10,7 +10,7 @@
       "Close menu",
       "Campus services",
       "Forum",
-      "Facility complaint ↗",
+      "Facility complaint",
       "Lost & Found",
       "Info & Events",
       "Explore PMS",
@@ -28,7 +28,7 @@
       "Tutup menu",
       "Perkhidmatan kampus",
       "Forum",
-      "Aduan Fasiliti ↗",
+      "Aduan Fasiliti",
       "Lost & Found",
       "Info & Acara",
       "Terokai PMS",
@@ -46,7 +46,7 @@
       "关闭菜单",
       "校园服务",
       "论坛",
-      "设施报修 ↗",
+      "设施报修",
       "失物招领",
       "资讯与活动",
       "探索 PMS",
@@ -84,7 +84,7 @@
   dialog.id = "pms-navigation-menu";
   dialog.setAttribute("aria-labelledby", "pms-menu-title");
   dialog.setAttribute("data-no-translate", "");
-  dialog.innerHTML = `<div class="pms-menu-heading"><div><small>PMS EXPLORE</small><h2 id="pms-menu-title">${text(0)}</h2></div><button class="pms-menu-close" type="button" aria-label="${labels[lang][1]}" autofocus>×</button></div><nav class="pms-menu-links" aria-label="${labels[lang][0]}"><h3>${text(2)}</h3><a href="community.html">${text(3)}</a><a href="http://app.pms.edu.my/ecomplaint/" target="_blank" rel="noopener noreferrer">${text(4)}</a><a href="community.html?category=lost_found">${text(5)}</a><a href="campus.html">${text(6)}</a><h3>${text(7)}</h3>${["explore", "guide", "life", "about"].map((page, i) => `<a href="index.html#${page}" data-menu-page="${page}">${text(8 + i)}</a>`).join("")}<h3>${text(12)}</h3><a href="login.html" id="pms-menu-account">${text(13)}</a><a href="profile.html" id="pms-menu-profile" hidden>My profile</a><a href="admin.html" id="pms-menu-admin" hidden>${text(15)}</a></nav><label class="pms-menu-language">${text(14)}<select id="pms-menu-language"><option value="en">English</option><option value="ms">Bahasa Melayu</option><option value="zh">中文</option></select></label>`;
+  dialog.innerHTML = `<div class="pms-menu-heading"><div><small>PMS EXPLORE</small><h2 id="pms-menu-title">${text(0)}</h2></div><button class="pms-menu-close" type="button" aria-label="${labels[lang][1]}" autofocus>×</button></div><nav class="pms-menu-links" aria-label="${labels[lang][0]}"><h3>${text(2)}</h3><a href="community.html">${text(3)}</a><a href="complaints.html">${text(4)}</a><a href="community.html?category=lost_found">${text(5)}</a><a href="campus.html">${text(6)}</a><h3>${text(7)}</h3>${["explore", "guide", "life", "about"].map((page, i) => `<a href="index.html#${page}" data-menu-page="${page}">${text(8 + i)}</a>`).join("")}<h3>${text(12)}</h3><a href="login.html" id="pms-menu-account">${text(13)}</a><a href="profile.html" id="pms-menu-profile" hidden>My profile</a><a href="admin.html" id="pms-menu-admin" hidden>${text(15)}</a></nav><label class="pms-menu-language">${text(14)}<select id="pms-menu-language"><option value="en">English</option><option value="ms">Bahasa Melayu</option><option value="zh">中文</option></select></label>`;
   document.body.append(dialog);
   const trigger = actions.querySelector("button"),
     selector = dialog.querySelector("select");

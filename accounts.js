@@ -19,8 +19,8 @@
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),30000);
   try{const r=await fetch(url(action,params),{method:data===undefined?'GET':'POST',headers:h,body:data===undefined?undefined:data instanceof FormData?data:JSON.stringify(data),credentials:'omit',cache:'no-store',signal:controller.signal});const j=await r.json();if(!r.ok||!j.ok){if(r.status===401&&action!=='login'){sessionStorage.removeItem('pms-forum-token');user=null;renderAccount();}throw Error(j.error||t('error'));}return j;}catch(e){throw Error(e.name==='AbortError'||e.name==='SyntaxError'||e instanceof TypeError?t('error'):e.message);}finally{clearTimeout(timer);}
  }
- const destination=()=>{const v=new URL(location.href).searchParams.get('next');return ['index.html','community.html','campus.html','admin.html','profile.html'].includes(v)?v:'profile.html';};
- function loginLink(){const name=location.pathname.split('/').pop();return 'login.html?next='+encodeURIComponent(['index.html','community.html','campus.html','admin.html','profile.html'].includes(name)?name:'profile.html');}
+ const destination=()=>{const v=new URL(location.href).searchParams.get('next');return ['index.html','community.html','campus.html','admin.html','profile.html','complaints.html'].includes(v)?v:'profile.html';};
+ function loginLink(){const name=location.pathname.split('/').pop();return 'login.html?next='+encodeURIComponent(['index.html','community.html','campus.html','admin.html','profile.html','complaints.html'].includes(name)?name:'profile.html');}
  async function logout(){const b=$('#shared-auth');if(b)b.disabled=true;try{await api('logout',{});}catch(e){if(token()){alert(e.message);if(b)b.disabled=false;return;}}sessionStorage.removeItem('pms-forum-token');location.assign('login.html');}
  function renderAccount(){
   const controls=$('#shared-account');if(controls)controls.innerHTML=(user?`<a class="profile-link" href="profile.html">${esc(t('profile'))}</a>`:'')+`<button type="button" id="shared-auth">${esc(t(user?'logout':'login'))}</button>`;
