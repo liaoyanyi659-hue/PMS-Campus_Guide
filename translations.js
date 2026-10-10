@@ -2218,3 +2218,23 @@ Object.assign(translations, {
     ms: "Lihat bahan kursus, arahan tugasan dan tarikh akhir",
   },
 });
+
+// Building details provided on 10 October 2026.
+Object.assign(translations, {
+  "JTMK 大楼设有教学实验室和 JMSK 部门，具体地点请看下方楼层目录。": {
+    "en": "JTMK building, with teaching laboratories and the JMSK department. See the floor directory below.",
+    "ms": "Bangunan JTMK dengan makmal pengajaran dan jabatan JMSK. Lihat panduan tingkat di bawah."
+  },
+  "此大楼设有 JP、JPA 和考试单位；BK 课室与 UPLI 位置见下方目录。JMSK 位于 JTMK 大楼。": {
+    "en": "This building houses JP, JPA and the Examination Unit. BK classrooms and UPLI are listed below; JMSK is in the JTMK building.",
+    "ms": "Bangunan ini menempatkan JP, JPA dan Unit Peperiksaan. Bilik BK dan UPLI disenaraikan di bawah; JMSK berada di bangunan JTMK."
+  },
+  "JTMK 大楼 · 中庭与楼梯": {
+    "en": "JTMK building · courtyard and staircase",
+    "ms": "Bangunan JTMK · ruang tengah dan tangga"
+  },
+  "JP／JPA／考试单位大楼 · 入口": {
+    "en": "JP / JPA / Examination Unit building · entrance",
+    "ms": "Bangunan JP / JPA / Unit Peperiksaan · pintu masuk"
+  }
+});

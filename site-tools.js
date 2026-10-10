@@ -208,6 +208,7 @@
       p[4],
       p[5],
       locationHints[p[0]] || "",
+      window.PMS_BUILDINGS.searchText(p[0]),
     ].map(v=>window.PMS_UI.translate(v)).join(" "),
     aliases: searchAliases[p[0]] || "",
     page: "explore",

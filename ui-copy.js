@@ -1,4 +1,8 @@
 window.PMS_UI_COPY = [
+["JTMK building, with teaching laboratories and the JMSK department. See the floor directory below.", "Bangunan JTMK dengan makmal pengajaran dan jabatan JMSK. Lihat panduan tingkat di bawah.", "JTMK 大楼设有教学实验室和 JMSK 部门，具体地点请看下方楼层目录。"],
+["This building houses JP, JPA and the Examination Unit. BK classrooms and UPLI are listed below; JMSK is in the JTMK building.", "Bangunan ini menempatkan JP, JPA dan Unit Peperiksaan. Bilik BK dan UPLI disenaraikan di bawah; JMSK berada di bangunan JTMK.", "此大楼设有 JP、JPA 和考试单位；BK 课室与 UPLI 位置见下方目录。JMSK 位于 JTMK 大楼。"],
+["JTMK building · courtyard and staircase", "Bangunan JTMK · ruang tengah dan tangga", "JTMK 大楼 · 中庭与楼梯"],
+["JP / JPA / Examination Unit building · entrance", "Bangunan JP / JPA / Unit Peperiksaan · pintu masuk", "JP／JPA／考试单位大楼 · 入口"],
 ["Student contribution · 8 October 2026", "Perkongsian pelajar · 8 Oktober 2026", "学生分享 · 2026年10月8日"],
 ["Muadzam Shah bus terminal", "Terminal Bas Muadzam Shah", "Muadzam Shah 巴士总站"],
 ["If you cannot find a Grab, try the taxis behind the bus station.", "Kalau susah dapat Grab, boleh cuba teksi di belakang stesen bas.", "如果找不到 Grab，可以尝试巴士站后面的 Taxi。"],
