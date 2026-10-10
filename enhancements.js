@@ -29,6 +29,11 @@ const searchAliases = {
   学生宿舍区:
     "kamsis hostel 住宿 男生 女生 lelaki perempuan block 1 2 3 4 5 a b c d e",
 };
+// Include floor-directory room names in the existing place search.
+for (const [key, building] of Object.entries(window.PMS_BUILDINGS.records)) {
+  searchAliases[key] = [searchAliases[key] || '', building.aliases,
+    ...['en', 'ms', 'zh'].map(l => window.PMS_BUILDINGS.searchText(key, l))].join(' ');
+}
 function matchesPlace(p, query) {
   const key = (p.join(" ") + " " + (searchAliases[p[0]] || ""))
     .normalize("NFKC")
@@ -165,10 +170,10 @@ function todaySchedule(name, now = new Date()) {
 }
 function todayMarkup(name) {
   const t = todaySchedule(name);
-  return `<div class="today-panel" data-today="${name}"><h3>今天 · ${["周日", "周一", "周二", "周三", "周四", "周五", "周六"][t.clock.day]}</h3><strong>${t.status}</strong><p>${t.slots.map((s) => `${s.a}–${s.b}${s.label ? " · " + s.label : ""}`).join("<br>") || "暂无开放时段"}</p><small>${t.note}</small><small>马来西亚时间 · ${t.clock.date}</small></div>`;
+  return `<div class="today-panel" data-today="${name}"><h3>今天 · ${["周日", "周一", "周二", "周三", "周四", "周五", "周六"][t.clock.day]}</h3><strong>${t.status}</strong><p>${t.slots.map((s) => `${s.a}–${s.b}${s.label ? " · " + s.label : ""}`).join("<br>") || (t.state === "closed" ? "今天没有开放时段" : "暂无开放时段")}</p><small>${t.note}</small><small>马来西亚时间 · ${t.clock.date}</small></div>`;
 }
 function placeExtras(p) {
-  return `${["Bizz Mall", "食堂"].includes(p[0]) || (p[1] === "教学区域" && p[0] !== "图书馆") ? "" : todayMarkup(p[0])}${p[0] === "学生宿舍区" ? '<div class="detail">' + kamsisOfficeMarkup() + feloMarkup() + "</div>" : ""}<div class="wayfinding"><h3>入口与楼层</h3><p>${locationHints[p[0]] || "地图标示设施所在区域；具体入口与楼层待补充，请参照现场指示。"}</p></div>`;
+  return `${["Bizz Mall", "食堂"].includes(p[0]) || (p[1] === "教学区域" && p[0] !== "图书馆") ? "" : todayMarkup(p[0])}${window.PMS_BUILDINGS.markup(p[0])}${p[0] === "学生宿舍区" ? '<div class="detail">' + kamsisOfficeMarkup() + feloMarkup() + "</div>" : ""}${window.PMS_BUILDINGS.records[p[0]] ? "" : `<div class="wayfinding"><h3>入口与楼层</h3><p>${locationHints[p[0]] || "地图标示设施所在区域；具体入口与楼层待补充，请参照现场指示。"}</p></div>`}`;
 }
 function kamsisOfficeMarkup() {
   const managed=window.PMS_KAMSIS_RECORD;
@@ -189,9 +194,10 @@ function kamsisOfficeMarkup() {
   return `<section class="kamsis-office" data-no-translate><h3>${d[0]}</h3><p>${d[1]}</p><ul><li>${d[2]}: 08:00–13:00 · 14:00–17:00</li><li>${d[3]}: 08:00–12:15 · 14:45–17:00</li><li>${d[4]}: ${d[5]}</li></ul><p>${d[6]}</p><p class="detail-source">${d[7]}</p></section>`;
 }
 function reportButton(name) {
-  return `<div class="data-meta"><span>资料更新：${["学术区食堂", "学生宿舍区"].includes(name) ? "2026-10-03" : guideUpdated}<br>位置${confirmedPositions.has(name) ? "经维护者确认" : "为参考图约略标注"} · 营业时间见来源说明</span><button type="button" class="soft-button" data-report-place="${name}">资料有误？反馈</button></div>`;
+  return `<div class="data-meta"><span>资料更新：${window.PMS_BUILDINGS.records[name] ? window.PMS_BUILDINGS.updated : ["学术区食堂", "学生宿舍区"].includes(name) ? "2026-10-03" : guideUpdated}<br>位置${confirmedPositions.has(name) ? "经维护者确认" : "为参考图约略标注"} · 营业时间见来源说明</span><button type="button" class="soft-button" data-report-place="${name}">资料有误？反馈</button></div>`;
 }
 
 function feloMarkup() {
   return '<h3>宿舍有事，找 Felo</h3><p>生病时请致电当天值班的 Felo-on-call，说明自己的 Block、房号和情况。值班电话请查看宿舍最新值班表。</p><p>Felo 办公室每天 21:00–23:00 开放，包括周末；此安排与 Kamsis 管理办公室的日间办公时间不同。</p><h4>紧急值班 · Felo-on-call</h4><ul><li>周一至周五：17:00 至隔天 08:00。</li><li>周六、周日：24 小时紧急值班。</li></ul><p>宿舍主任（Ketua Felo）：En. Akhwan Hafis bin Akmal Hidzri</p><p><a href="tel:+60132899987">013-289 9987</a></p><details><summary>什么事情可以找 Felo？</summary><ul><li>紧急情况下申请夜间离开宿舍。</li><li>回乡申请及 i-Kamsis 批准手续；请通过 SPMP 的 i-Kamsis 至少提前 3 天申请。</li><li>办公时间后的住宿问题。</li><li>办公时间后或周末，需要送院的紧急情况。</li></ul></details><p class="detail-source">根据你提供的现场告示整理，值班人员与安排以宿舍最新通知为准。</p><p><a href="photos/felo-office.jpeg" target="_blank" rel="noopener noreferrer">查看 Felo 办公室告示</a> · <a href="photos/felo-board.jpeg" target="_blank" rel="noopener noreferrer">查看宿舍 Felo 名单</a></p>';
 }
+

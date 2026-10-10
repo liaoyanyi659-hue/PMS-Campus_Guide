@@ -1,0 +1,33 @@
+PMS Explore — UI refresh + academic building update
+Updated: 10 October 2026
+
+INSTALL / 上传说明
+1. Extract this ZIP. It contains the earlier UI refresh and the new building information.
+   解压此 ZIP；已包含上一包界面更新及这次建筑资料，不需要先上传旧包。
+2. Upload the code files to the GitHub repository ROOT, overwriting same-name files.
+   把代码文件上传至 GitHub 仓库根目录，覆盖同名文件。
+3. Put the two new JPEGs inside the existing photos/ folder; keep all other photos.
+   两张新照片放进现有 photos 文件夹，保留原有其他照片。
+4. Include building-directory.js, campus-refresh.js and campus-refresh.css.
+   请一起上传 building-directory.js、campus-refresh.js 和 campus-refresh.css。
+5. Wait for GitHub Pages deployment and refresh the page.
+   等待 GitHub Pages 部署完成，再刷新网页。
+
+THIS UPDATE / 本次更新
+- JTMK building photo and JP / JPA / Examination Unit building photo.
+- Text-only floor directories: JTMK G–3; JP / JPA G–2.
+- BK 18–19: floor 1, right; BK 25–27: floor 2, left; BK 37–38: floor 2, right.
+- UPLI: G, left. Directions follow the supplied signs from their photographed viewpoints.
+- JMSK: JTMK floor 2. MSKD 1–2: JTMK G.
+- Information Technology Laboratory 2 appears on both floors 1 and 3 in the signs;
+  the directory preserves this and asks students to check room-door labels.
+- Updated timetable guide, room search and English / BM / Chinese text.
+- Only the first two building photographs are included. Signboard photos are NOT displayed.
+
+The ZIP is an update package, not a complete standalone website.
+It retains the earlier UI refresh. Existing forum accounts, data, API and database require no changes.
+Nothing has been uploaded to the live website automatically.
+
+VALIDATION
+JavaScript syntax checks and programmatic floor-directory, translation, language-switch,
+room-search and asset checks passed. This revision has not been visually reviewed in a browser.

@@ -11,17 +11,18 @@
     <title>PMS Explore | Info & Aktiviti</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="apple-touch-icon" href="icons/pms-192.png" />
-    <link rel="stylesheet" href="campus.css?v=1.17" />
-    <link rel="stylesheet" href="polish.css?v=1.17" />
+    <link rel="stylesheet" href="campus.css?v=1.18" />
+    <link rel="stylesheet" href="polish.css?v=1.18" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="stylesheet" href="navigation.css?v=1.17" />
-    <script src="ui-copy.js?v=1.17"></script>
-    <script src="ui-core.js?v=1.17"></script>
-    <link rel="stylesheet" href="ui-system.css?v=1.17" />
-    <link rel="stylesheet" href="mobile-layout.css?v=1.17" />
-  <link rel="stylesheet" href="accounts.css?v=1.17" />
-<link rel="stylesheet" href="restore-theme.css?v=1.17">
-<link rel="stylesheet" href="display-fix.css?v=1.17">
+    <link rel="stylesheet" href="navigation.css?v=1.18" />
+    <script src="ui-copy.js?v=1.18"></script>
+    <script src="ui-core.js?v=1.18"></script>
+    <link rel="stylesheet" href="ui-system.css?v=1.18" />
+    <link rel="stylesheet" href="mobile-layout.css?v=1.18" />
+  <link rel="stylesheet" href="accounts.css?v=1.18" />
+<link rel="stylesheet" href="restore-theme.css?v=1.18">
+<link rel="stylesheet" href="display-fix.css?v=1.18">
+<link rel="stylesheet" href="campus-refresh.css?v=1.18">
 </head>
   <body>
     <a href="#updates" class="skip">Skip to updates</a>
@@ -52,30 +53,6 @@
         <p class="small" data-t="external"></p>
       </section>
       <div id="message" role="status" aria-live="polite"></div>
-      <section class="notifications">
-        <div>
-          <h2 data-t="notifications"></h2>
-          <p data-t="notifyIntro"></p>
-          <p id="push-status" class="small"></p>
-        </div>
-        <div class="notify-controls">
-          <label
-            ><input type="checkbox" id="info-enabled" checked /><span
-              data-t="info"
-            ></span></label
-          ><label
-            ><input type="checkbox" id="event-enabled" checked /><span
-              data-t="event"
-            ></span></label
-          ><button id="enable-push" data-t="enable" disabled></button
-          ><button
-            id="disable-push"
-            class="secondary"
-            data-t="disable"
-          ></button>
-        </div>
-        <p class="small" data-t="iphone"></p>
-      </section>
       <section aria-labelledby="list-title">
         <div class="section-head">
           <h2 id="list-title" data-t="active"></h2>
@@ -101,6 +78,30 @@
         </div>
         <div id="updates" class="cards" aria-live="polite"></div>
       </section>
+      <details class="notifications"><summary data-t="notifications"></summary>
+        <div>
+
+          <p data-t="notifyIntro"></p>
+          <p id="push-status" class="small"></p>
+        </div>
+        <div class="notify-controls">
+          <label
+            ><input type="checkbox" id="info-enabled" checked /><span
+              data-t="info"
+            ></span></label
+          ><label
+            ><input type="checkbox" id="event-enabled" checked /><span
+              data-t="event"
+            ></span></label
+          ><button id="enable-push" data-t="enable" disabled></button
+          ><button
+            id="disable-push"
+            class="secondary"
+            data-t="disable"
+          ></button>
+        </div>
+        <p class="small" data-t="iphone"></p>
+      </details>
       <section id="admin-panel" hidden>
         <div class="section-head">
           <h2 data-t="admin"></h2>
@@ -228,12 +229,13 @@
         <button type="submit" data-t="login"></button>
       </form>
     </dialog>
-    <script src="forum-config.js?v=1.17"></script>
-    <script src="campus.js?v=1.17"></script>
-    <script src="complete.js?v=1.17"></script>
-    <script src="navigation.js?v=1.17"></script>
-    <script src="ui-friendly.js?v=1.17"></script>
-    <script src="mobile-layout.js?v=1.17"></script>
-  <script src="accounts.js?v=1.17"></script>
-<script src="header-classic.js?v=1.17"></script><script src="repair.js?v=1.17"></script></body>
+    <script src="forum-config.js?v=1.18"></script>
+    <script src="campus.js?v=1.18"></script>
+    <script src="complete.js?v=1.18"></script>
+    <script src="navigation.js?v=1.18"></script>
+    <script src="ui-friendly.js?v=1.18"></script>
+    <script src="mobile-layout.js?v=1.18"></script>
+  <script src="accounts.js?v=1.18"></script>
+<script src="header-classic.js?v=1.18"></script><script src="repair.js?v=1.18"></script><script src="campus-refresh.js?v=1.18"></script></body>
 </html>
+

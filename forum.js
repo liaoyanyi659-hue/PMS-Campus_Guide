@@ -177,9 +177,11 @@
   }
   function renderFeed() {
     const posts = [...state.posts.values()];
+    const filtered = state.q || ["lf-kind","lf-resolved","lf-location","lf-from","lf-to"].some(id => document.getElementById(id)?.value);
+    const lostFound = state.category === "lost_found";
     $("#feed").innerHTML = posts.length
       ? posts.map((p) => card(p)).join("")
-      : `<div class="empty">${state.q||state.category?`<h3 data-no-translate>${window.PMS_REPAIR?.t('filtered')||'No posts match these filters.'}</h3><button data-action="clear-filters" data-no-translate>${window.PMS_REPAIR?.t('clear')||'Clear filters'}</button>`:'<h3>这里还很安静。</h3><p>来分享第一张校园照片，或问一个新生问题吧。</p><button class="primary" data-action="compose">＋ 写一篇帖子</button>'}</div>`;
+      : `<div class="empty">${filtered ? `<h3 data-no-translate>${window.PMS_REPAIR?.t('filtered')||'No posts match these filters.'}</h3><button data-action="clear-filters" data-no-translate>${window.PMS_REPAIR?.t('clear')||'Clear filters'}</button>` : lostFound ? `<h3 data-no-translate>${({en:'No lost or found items posted yet.',ms:'Belum ada siaran barang hilang atau dijumpai.',zh:'目前还没有失物招领帖子。'})[window.PMS_UI.language]}</h3><p data-no-translate>${({en:'Include the location and date when reporting an item.',ms:'Sertakan lokasi dan tarikh semasa melaporkan barang.',zh:'发布时请注明地点和日期，方便同学寻找。'})[window.PMS_UI.language]}</p><button class="primary" data-action="compose" data-no-translate>${({en:'Report an item',ms:'Laporkan barang',zh:'发布失物招领'})[window.PMS_UI.language]}</button>` : '<h3>这里还很安静。</h3><p>来分享第一张校园照片，或问一个新生问题吧。</p><button class="primary" data-action="compose">＋ 写一篇帖子</button>'}</div>`;
   }
   async function loadFeed(append = false) {
     const request = ++state.feedRequest;
@@ -217,7 +219,7 @@
       connection(e.message, true);
       if (!append)
         $("#feed").innerHTML =
-          '<div class="empty"><h3>暂时无法读取帖子</h3><p>如果是第一次安装，请先完成 Hostinger 后台配置。</p><button data-action="refresh">重新连接</button></div>';
+          '<div class="empty"><h3>暂时无法读取帖子</h3><p>请稍后重试。</p><button data-action="refresh">重新连接</button></div>';
       throw e;
     }
   }
@@ -695,3 +697,4 @@
   }
   start();
 })();
+
