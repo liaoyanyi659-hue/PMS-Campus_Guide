@@ -115,7 +115,7 @@ places.push(
     78.4,
     38.3,
     "JTMK",
-    "JTMK 大楼设有教学实验室和 JMSK 部门，具体地点请看下方楼层目录。",
+    "根据设施参考图中的 JTMK 区域标注。",
   ],
   [
     "学生事务处",
@@ -130,8 +130,8 @@ places.push(
     "教学区域",
     57.5,
     35.5,
-    "JP / JPA / Unit Peperiksaan",
-    "此大楼设有 JP、JPA 和考试单位；BK 课室与 UPLI 位置见下方目录。JMSK 位于 JTMK 大楼。",
+    "JP / JPA / JMSK",
+    "参考图将这一区域标为 JP / JPA / JMSK，具体部门入口待补充。",
   ],
   [
     "学术区食堂",
@@ -268,7 +268,7 @@ const parcelEntry = {
   sections: [],
 };
 lifeByName.set(parcelEntry.name, parcelEntry);
-let selected = places.findIndex(p => p[0] === "图书馆"),
+let selected = 0,
   filter = "all",
   zoom = 1,
   searchQuery = "";
@@ -293,8 +293,7 @@ const locationPhotos = {
   ],
   田径场: ["photos/athletics-track.jpeg", "田径场跑道与草地"],
   机械工程系: ["photos/jkm.png", "JKM 活动合照"],
-  资讯与通讯科技系: ["photos/jtmk-building-current.jpeg", "JTMK 大楼 · 中庭与楼梯"],
-  "JP / JPA / JMSK 教学区域": ["photos/jp-jpa-building-current.jpeg", "JP／JPA／考试单位大楼 · 入口"],
+  资讯与通讯科技系: ["photos/jtmk.png", "JTMK 教学楼走廊与中庭"],
   伊斯兰中心: ["photos/pusat-islam.jpeg", "Pusat Islam 伊斯兰中心外观与湖畔"],
   "Cafe Koi": ["photos/cafe-koi.jpeg", "Cafe Koi 店面与入口"],
   食堂: ["photos/cafeteria.jpeg", "校园食堂的摊位与用餐区"],
@@ -462,4 +461,3 @@ document.getElementById("daily-services").innerHTML = lifeEntries
 
 document.getElementById("pool-guide").innerHTML =
   `<span class="tag">运动与休闲</span><h2>游泳池 · Kolam Renang PMS</h2>${photoMarkup(poolEntry.name)}<p>位于 JPH 旁，按日期及使用人群分时开放。</p>${todayMarkup(poolEntry.name)}${hoursMarkup(poolEntry)}${sectionsMarkup(poolEntry)}<p class="detail-source">来源：泳池现场告示照片 · 2026年10月2日整理。</p>${poolPhotoMarkup()}`;
-
