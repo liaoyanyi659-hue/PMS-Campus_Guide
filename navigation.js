@@ -153,15 +153,9 @@
     }
   });
   function fromHash() {
-    const page = location.hash.slice(1) || "explore";
+    const page = location.hash.slice(1);
     if (pages.includes(page)) showPage(page);
   }
-  header.querySelectorAll("nav button[data-page]").forEach(button => {
-    button.addEventListener("click", () => {
-      const hash = "#" + button.dataset.page;
-      if (location.hash !== hash) history.pushState(null, "", hash);
-    });
-  });
   window.addEventListener("hashchange", fromHash);
   window.addEventListener("popstate", fromHash);
   fromHash();
@@ -223,4 +217,3 @@
       .finally(() => clearTimeout(timer));
   }
 })();
-

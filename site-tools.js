@@ -2,14 +2,7 @@
 (() => {
   const $ = (s) => document.querySelector(s),
     all = (s) => Array.from(document.querySelectorAll(s));
-  const text = (el) => {
-    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-    const parts = []; let node;
-    while ((node = walker.nextNode())) {
-      if (!node.parentElement?.closest("[hidden],script,style,.source-badge,.detail-source")) parts.push(node.nodeValue);
-    }
-    return parts.join(" ").replace(/\s+/g, " ").trim();
-  };
+  const text = (el) => el.textContent.replace(/\s+/g, " ").trim();
   const esc = (s) =>
     String(s).replace(
       /[&<>"']/g,
@@ -215,7 +208,6 @@
       p[4],
       p[5],
       locationHints[p[0]] || "",
-      window.PMS_BUILDINGS.searchText(p[0]),
     ].map(v=>window.PMS_UI.translate(v)).join(" "),
     aliases: searchAliases[p[0]] || "",
     page: "explore",
@@ -303,16 +295,8 @@
         title = document.createElement("strong"),
         preview = document.createElement("span");
       small.textContent = tr(pages[r.page]);
-      b.setAttribute("data-no-translate", "");
-      title.textContent = tr(r.title);
-      const body = tr(r.body);
-      const hit = Array.from(alternatives).map(q => normal(body).indexOf(q)).filter(i => i >= 0).sort((a,b) => a-b)[0] || 0;
-      let start = Math.max(0, hit - 35);
-      if (start) { const boundary = body.indexOf(" ", start); if (boundary >= 0 && boundary < hit) start = boundary + 1; }
-      const excerpt = body.slice(start, start + 160);
-      preview.textContent = PMS_UI.language !== "zh" && /[\u3400-\u9fff]/.test(excerpt)
-        ? ({en:"Open this page for details.",ms:"Buka halaman ini untuk maklumat lanjut."})[PMS_UI.language]
-        : (start ? "… " : "") + excerpt + (start + 160 < body.length ? "…" : "");
+      title.textContent = r.title;
+      preview.textContent = r.body.slice(0, 120);
       b.append(small, title, preview);
       container.append(b);
     });
@@ -321,8 +305,6 @@
   searchButton.onclick = () => {
     scrollBefore = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    PMS_UI.refresh();
-    buildSearchIndex();
     dialog.showModal();
     search();
     $("#global-search-input").focus();
@@ -397,4 +379,3 @@
     passive: true,
   });
 })();
-

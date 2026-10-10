@@ -104,7 +104,7 @@
   today.id = "today-pms";
   today.className = "plus-card";
   today.setAttribute("data-ui-copy", "");
-  $("#explore .maplayout")?.after(today);
+  $("#explore .intro")?.after(today);
   let updates = [],
     updateError = false;
   function drawToday() {
@@ -115,11 +115,11 @@
     const unknown = places.filter(
       (p) => matchesPlace(p, "") && todaySchedule(p[0]).state === "unknown",
     ).length;
-    today.innerHTML = `<div class="today-heading"><h2>${L("Today at PMS", "Hari Ini di PMS", "今日 PMS")}</h2><small class="today-date">${esc(date)} · MYT</small></div><div class="plus-grid"><div class="today-panel today-schedule"><span class="service-icon" aria-hidden="true">◷</span><h3>${L("Open by timetable", "Dibuka mengikut jadual", "按时间表开放")}</h3><div class="today-stats"><div><strong>${open.length}</strong><span>${L("places", "tempat", "个地点")}</span></div><div><strong>${unknown}</strong><span>${L("unconfirmed", "belum disahkan", "时间待确认")}</span></div></div>${
+    today.innerHTML = `<div class="today-heading"><h2>${L("Today at PMS", "Hari Ini di PMS", "Hari Ini di PMS")}</h2><small class="today-date">${esc(date)} · MYT</small></div><div class="plus-grid"><div class="today-panel today-schedule"><span class="service-icon" aria-hidden="true">◷</span><h3>${L("Open by timetable", "Dibuka mengikut jadual", "按时间表开放")}</h3><div class="today-stats"><div><strong>${open.length}</strong><span>${L("places", "tempat", "个地点")}</span></div><div><strong>${unknown}</strong><span>${L("unconfirmed", "belum disahkan", "时间待确认")}</span></div></div>${
       open.length
         ? "<ul>" +
           open
-            .slice(0, 3)
+            .slice(0, 5)
             .map(
               (p) =>
                 `<li><button class="soft-button" data-today-place="${esc(p[0])}">${esc(tr(p[0]))}</button></li>`,
@@ -258,4 +258,3 @@
     }
   };
 })();
-
